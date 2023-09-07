@@ -1,0 +1,326 @@
+﻿@using HabanMVC.Services;
+@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model List<FavoriteJobVM>
+@{
+    Layout = "~/Views/Shared/_LayoutSidebarCandidate.cshtml";
+    ViewData["Title"] = "FavoriteJob";
+
+    int Active = (int)ViewData["active"];
+    int activePage = (int)ViewData["ActivePage"];
+    int pages = (int)ViewData["Pages"];
+}
+
+<!-- 內容放這邊 \(0ㄅ0)/ -->
+<!-- ---------------------- -->
+@section breadcrumb{
+    <div class="hi row m-0">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">我的帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">收藏職缺</li>
+            </ol>
+        </nav>
+    </div>
+
+}
+
+            <div id="content">
+                <h2>收藏職缺</h2>
+                <!-- <div class="mb-2 text-end">
+                    <span>新增收藏夾： </span> <input class="input-collection_company" type="text" value="請輸入收藏夾名稱" onclick="if($(this).val()==='請輸入收藏夾名稱'){ $(this).val('');}" maxlength="20">
+                    <input class="btn-query" type="submit" value="新增">
+                </div> -->
+                <div class="card">
+                    <!-- <div class="card-header card-header-1 p-1">
+                        <ul class="row list-unstyled my-1">
+                            <li class="col-12 text-start ps-3 pe-0"><input class="mx-2" type="checkbox"><a href="#">刪除勾選職務</a>｜<a href="#">放入收藏夾</a></li>
+
+                        </ul>
+                    </div> -->
+                    <div class="card-header card-header-2 p-1 py-2">
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                <li class="col-5 record"><span class="ps-3">職缺名稱</span></li>
+                <li class="col-3 record"><span class="ps-3">公司名稱</span></li>
+
+                            <li class="col-4 text-content record">
+                                <!-- <span class="pe-3 text-start">已收藏筆數</span> -->
+                                <span class="">建立日期／刪除</span>
+                            </li>
+                            @*                           <li class="col-6 record">
+                            <span class="ps-3 fs-6">職缺名稱</span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">建立日期</span><span class="pe-2 ps-3">
+                            刪除
+                            </span>
+                            </li>*@
+                        </ul>
+
+                    </div>
+                    <div class="card-body p-1 py-2">
+                        <!-- <p class="card-text text-center">目前尚未建立任何檔案夾。</p> -->
+                        <!-- <ul class="row list-unstyled">
+                            <li class="col-6 record mb-2"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></li>
+                            <li class="col-6 text-center record mb-2">2023/08/14<a href="#">刪除</a></li>
+
+                        </ul> -->
+
+
+
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                            <partial name="~/Views/Candidate/PartialView/FavoriteJob/FavoriteJob.cshtml" model="Model" />
+                            @* <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                            <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                            <a href="#">
+                            <span class="material-symbols-outlined">
+                            close
+                            </span>
+                            </a>
+                            </span>
+                            </li>
+                            <li class="col-6 record">
+                            <span class="ps-3 fs-6"><a href="#">.net工程師[全台最大辦公用品供應商].net工程師[全台最大辦公用品供應商]</a></span>
+                            </li>*@
+
+
+
+
+                        </ul>
+                    </div>
+
+
+
+
+                </div>
+                @*<nav class="mt-1" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                <li class="page-item">
+                <a class="page-link border-0" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                </a>
+                </li>
+                <li class="page-item"><a class="page-link border-0" href="#">1</a></li>
+                <li class="page-item"><a class="page-link border-0" href="#">2</a></li>
+                <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
+                <li class="page-item">
+                <a class="page-link border-0" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                </a>
+                </li>
+                </ul>
+                </nav>*@
+
+
+                <nav class="mt-1" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a scroll="no" class="page-link border-0" href="/Candidate/FavoriteJob/@(pages-pages+1)">&laquo;</a>
+                        </li>
+
+
+
+                        @for (int i = 1; i <= pages; i++)
+                        {
+                            <li class="page-item @(i==activePage? "active":"")"><a scroll="no" class="page-link border-0" href="/Candidate/FavoriteJob/@i">@i</a></li>
+                        }
+
+
+
+                        <li class="page-item">
+                            <a class="page-link border-0" scroll="no" href="/Candidate/FavoriteJob/@(pages)">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+
+
+                <!-- <p class="mx-4 px-2"><a href="#">刪除勾選職務</a>｜<a href="#">放入收藏夾</a></p> -->
+            </div>
+
+
+@section topCSS{
+
+
+    <link href="~/css/Candidate/favoritejobs/favoritejobs.css" rel="stylesheet" />
+
+}
+
+@section endJS{
+
+}
+
+

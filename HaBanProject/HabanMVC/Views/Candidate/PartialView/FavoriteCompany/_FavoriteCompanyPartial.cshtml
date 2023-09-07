@@ -1,0 +1,24 @@
+﻿@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model List<CollectionCompanyViewModel>
+
+
+@foreach (var item in Model)
+{
+
+    <li class="col-3 record">
+        <span class="ps-3 fs-6"><a href="#">@item.Name</a></span>
+    </li>
+    <li class="col-3 record">
+        <span class="ps-3 fs-6"><a href="#">@item.Category</a></span>
+    </li>
+    <li class="col-5 record text-center">
+        <span style="vertical-align: top;" class="pe-4 fs-6">@item.CreationDate</span><span class="pe-2 ps-3">
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </a>
+        </span>
+    </li>
+}

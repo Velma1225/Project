@@ -1,0 +1,57 @@
+﻿@using HabanMVC.ViewModels;
+@{
+    ViewData["Title"] = "CompanyRegister";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<section class="form_information">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="title">企業註冊</h1>
+            <form class="form-list">
+                <div class="mobile">
+                    <h3 class="text mb-0">請輸入E-mail</h3>
+                    <div class="col-auto">
+                        <input type="email" class="mobilenum w-100" id="" placeholder="例 : example@HaBan.com">
+                    </div>
+                </div>
+                <!-- <div class="verifyCode">
+                    <h3 class="text mb-0">驗證碼</h3>
+                    <input type="text" class="verifyCodenum w-100" placeholder="請輸入四位簡訊驗證碼">
+                </div> -->
+                <div class="nextstep pb-3">
+                    <button class="rounded w-100 disable">寄出驗證信</button>
+                </div>
+                <!-- <div class="remark">
+                    <p class="text text-center ">不開放僑生、外籍人士註冊使用唷。
+                        <a href="#">說明</a>
+                    </p>
+                </div> -->
+                <div class="or">
+                    <p class="hr text-center"><span>或</span></p>
+                </div>
+                <div class="third_party-inbox text-center">
+                    <a class="third_party-href apple" href="#">
+                        <img class="rounded-circle" src="~/images/login_resume-img/ic_login_apple.svg" alt="">
+                    </a>
+                    <a class="third_party-href fb" href="#">
+                        <img class="rounded-circle" src="~/images/login_resume-img/ic_login_fb.svg" alt="">
+                    </a>
+                    <a class="third_party-href google" href="#">
+                        <img class="rounded-circle" src="~/images/login_resume-img/ic_login_google.svg" alt="">
+                    </a>
+                </div>
+                <div>
+                    <p class="has-account text-center">
+                        已有 HaBan 會員？
+                        <a href="#">立即登入</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+</section>
+
+@section topCSS{
+    <link href="~/css/company/register/companyregister.css" rel="stylesheet" />
+}
+

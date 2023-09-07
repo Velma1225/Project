@@ -1,0 +1,327 @@
+body {
+    font-family: Arial, "新微軟正黑體", Helvetica, Meiryo, Microsoft JhengHei, "微軟正黑體", sans-serif;
+}
+
+/* 麵包屑 */
+.breadcrumb,
+.breadcrumb li a {
+    color: #232A35;
+    font-size: 11px;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.dropdown-menu .dropdown-item span {
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-left: 10px;
+}
+
+
+.member-list .dropdown-menu img {
+    width: 18px;
+    height: 18px;
+}
+
+
+/* 履歷列表 */
+.pageTitle {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2B3340;
+    margin-bottom: 16px;
+}
+
+.resumeList {
+    border: 1px solid #E9EAEB;
+    border-radius: 4px;
+    padding: 40px;
+}
+
+.title h2 {
+    font-size: 22px;
+    line-height: 24px;
+    font-weight: bold;
+    padding-left: 8px;
+    border-left: 6px solid #FB6184;
+    color: #2B3340;
+    display: inline-flex;
+    align-items: flex-end;
+}
+
+.title h2 span {
+    color: #80858C;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: initial;
+    padding-left: 4px;
+}
+
+
+.resumeList .resumeNew {
+    color: #fff;
+    background: #FA1E50;
+    border: 1px solid #FA3461;
+    padding: 10px 30px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.resumeList .title,
+.settingresume .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+    margin-bottom: 25px;
+}
+
+.resumeCard {
+    position: relative;
+    display: flex;
+    border: solid 1px #E9EAEB;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(11, 59, 108, 0.05), 0 4px 8px 0 rgba(11, 59, 108, 0.05);
+    cursor: pointer;
+}
+
+.resumeCard:hover {
+    box-shadow: 0 4px 8px 0 rgba(11, 59, 108, 0.05), 0 8px 16px 0 rgba(11, 59, 108, 0.05);
+}
+
+.resumeCard_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding: 16px;
+}
+
+.resumeCard_contentName {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B3340;
+}
+
+.resumeCard_contentFunc .list-menu-box .list-menu-btn:before {
+    display: block;
+    content: "";
+    width: 24px;
+    height: 24px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url('../../../images/login_resume-img/ic_more_24.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.resumeCard_contentFunc .list-menu-box .list-menu-btn {
+    border: none;
+}
+
+.resumeCard_contentTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumeCard_contentDate {
+    text-align: right;
+    font-size: 13px;
+    color: #95999F;
+}
+
+.resumeCard_contentLabel {
+    white-space: nowrap;
+    color: white;
+    font-size: 12px;
+    padding: 2px 5px;
+    background-color: #555C66;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+/* 履歷設定 */
+.settingresume {
+    border: 1px solid #E9EAEB;
+    border-radius: 4px;
+    padding: 40px;
+    margin-top: 20px;
+}
+
+.settingresume .settingGroup_title {
+    font-size: 16px;
+    color: #6A7079;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-right: 32px;
+}
+
+.settingresume .settingGroup {
+    display: inline-flex;
+    margin-bottom: 32px;
+}
+
+.settingresume .radio-label {
+    margin-right: 30px;
+}
+
+.settingresume .settingGroup_itemExtend {
+    padding: 16px 24px;
+    border-radius: 4px;
+    background: #F2F5F9;
+    margin-top: 8px;
+}
+
+.settingresume .settingGroup_itemExtend p {
+    margin-bottom: 8px;
+}
+
+.settingresume .settingGroup_itemExtend:hover label {
+    color: #2369FF;
+}
+
+.settingresume .settingGroup_itemForm_list p:hover {
+    color: #2369FF;
+}
+
+.settingresume .setting_itemFormInput {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.settingresume input[type=text] {
+    border-radius: 4px;
+    border: 1px solid #BFC1C5;
+    outline: none;
+    width: 80%;
+    padding: 10px 16px;
+}
+
+.settingresume .setting_itemFormNum {
+    margin-right: 8px;
+}
+
+.settingresume .setting_itemFormDelect {
+    margin-left: 16px;
+    align-items: center;
+    font-size: 16px;
+    color: #FB6184;
+    align-items: center;
+    display: inline-flex;
+}
+
+    .settingresume .setting_itemFormDelect::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url('../../../images/login_resume-img/ic_trash.svg');
+        margin-right: 4px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+.settingresume .setting_itemFormDelect:hover {
+    opacity: .8;
+}
+
+.settingresume .setting_itemFormLink {
+    font-size: 16px;
+    color: #2369FF;
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
+    .settingresume .setting_itemFormLink::before {
+        content: "";
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-image: url('../../../images/login_resume-img/ic_add.svg');
+        margin-right: 4px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+.settingresume .save {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.settingresume button {
+    font-size: 18px;
+    padding: 10px 16px;
+    border-radius: 4px;
+    color: #fff;
+    background: #FA1E50;
+    border: solid 1px #FA1E50;
+}
+
+.settingresume button:hover {
+    opacity: .8;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .resumeCard {
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 414px) {
+    .pageHead h1 {
+        display: none;
+    }
+
+    .resumeCard .card-text_content {
+        display: none;
+    }
+
+    .resumeList,
+    .settingresume {
+        padding: 15px;
+    }
+
+    .resumeCard_content {
+        width: 70%;
+        padding: 12px 16px;
+    }
+
+    .resumeCard_banner img {
+        width: 100%;
+    }
+
+    .resumeList .btn_content {
+        background: #fff;
+        padding: 16px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .resumeList .resumeNew {
+        padding: 10px 90px;
+    }
+}

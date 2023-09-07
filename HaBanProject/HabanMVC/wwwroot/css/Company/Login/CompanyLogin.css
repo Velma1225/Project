@@ -1,0 +1,108 @@
+body{
+    font: normal normal 12px Verdana,Arial,'新微軟正黑體',Helvetica,sans-serif;
+}
+
+.form_information{
+    width: 100%;
+    padding: 58px 0px 50px;
+    margin: auto;
+    max-width: 375px;
+}
+.form_information h1{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 25px;
+    border-left: 6px solid #FB6184;
+}
+.form_information .SMSaccount{
+    padding-bottom: 30px;
+}
+.SMSaccount .input-wrap{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+.form_information .SMSaccount h3, .password h3{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.SMSaccount .mobilenum{
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #BFC1C5;
+    border-radius: 4px;
+}
+.input-password .passwordnum{
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #BFC1C5;
+    border-radius: 4px;
+}
+.form_information .password{
+    padding-bottom: 30px;
+}
+
+.form_information .password .passwordnum{
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #BFC1C5;
+    border-radius: 4px;
+    
+}
+.form_information .input-password{
+    position: relative;
+}
+.form_information .show-password {
+    background: url('../../../images/login_resume-img/ic_eye_18_hidden.svg') no-repeat center;
+    background-size: 24px;
+}
+.form_information .password .is-password-icon {
+    width: 36px;
+    height: 100%;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+.password a{
+    font-weight:normal;
+    color: #2B3340;
+    text-decoration: none;
+}
+.password a:hover {
+    font-weight:normal;
+    color: #2b334070;
+    text-decoration: none;
+}
+.login button{
+    font-size: 16px;
+    background-color: #FDA5B9;
+    border: #FDA5B9;
+    color:white;
+    padding: 10px 16px;
+}
+.form_information .link{
+    padding-bottom: 30px;
+}
+.form_information .link a{
+    font-size: 14px;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #2369ff;
+    text-decoration: none;
+}
+
+
+
+.link a:hover{
+    color: #2369ffb4;
+    text-decoration: none;
+}
+

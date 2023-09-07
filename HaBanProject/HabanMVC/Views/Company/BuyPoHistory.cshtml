@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "CompanyBuyPoHistory";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+    <div id="content" class="col-12 col-lg-12 px-0">
+        <!-- 右側內容 -->
+        <h2>新鮮美味蛤購買紀錄</h2>
+        <!-- 確認訂單內容 -->
+        <div class="order-content">
+            <div class="order-history card card-no-radius mb-3">
+                <div class="card-header card-title-p">
+                    <ul class="fw-bold d-flex justify-content-between align-items-center">
+                        <li class="col-2">訂單編號</li>
+                        <li class="col-4">購買方案</li>
+                        <li class="col-3">訂單金額</li>
+                        <li class="col-3">購買日期</li>
+                    </ul>
+                </div>
+                <div class="card-body text-secondary">
+                    <ul class="row list-unstyled">
+                        <li class="col-2">0035</li>
+                        <li class="col-4">會員開通/月繳</li>
+                        <li class="col-3">2,800元</li>
+                        <li class="col-3">2023/08/26 ~ 2023/09/26</li>
+                    </ul>
+                    <ul class="row list-unstyled">
+                        <li class="col-2">0012</li>
+                        <li class="col-4">會員開通/季繳</li>
+                        <li class="col-3">5,200元</li>
+                        <li class="col-3">2023/02/10 ~ 2023/03/10</li>
+                    </ul>
+                    <ul class="row list-unstyled">
+                        <li class="col-2">0005</li>
+                        <li class="col-4">會員開通/季繳</li>
+                        <li class="col-3">5,200元</li>
+                        <li class="col-3">2022/10/05 ~ 2022/12/05</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">新鮮美味蛤會員開通</li>
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+    <link href="~/css/company/buy/buyhistory.css" rel="stylesheet" /> 
+}

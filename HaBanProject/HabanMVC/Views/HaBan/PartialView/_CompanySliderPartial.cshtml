@@ -1,0 +1,21 @@
+﻿
+@using HabanMVC.ViewModels.HaBan;
+@model List<CompanySlider>
+
+@foreach (var item in Model)
+{
+
+    <div class="slider-item">
+        <a href="@item.Hyperlink" target="_blank" class="logo">
+            <div class="border">
+                <img src="~/images/HaBan/index/@item.ImageUrl" alt="@item.ImageAlt">
+            </div>
+            <h3 class="company"
+                style="max-width: 95px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                @item.Name
+            </h3>
+            <p class="salary">月薪最高 $@(item.HighestPaying)K</p>
+
+        </a>
+    </div>
+}

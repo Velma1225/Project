@@ -1,0 +1,69 @@
+﻿@*@using HabanMVC.ViewModels;*@
+@{
+    ViewData["Title"] = "CandidateLogin";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<section class="form_information">
+    <div class="container">
+        <div class="row justify-content-center">
+            <h1 class="title">求職登入</h1>
+            <form class="from-list">
+                <div class="SMSaccount">
+                    <div class="title">
+                        <h3 class="text mb-0">
+                            帳號
+                            <a href="#">忘記帳號？</a>
+                        </h3>
+                    </div>
+                    <div class="input-wrap space-between">
+                        <input class="mobilenum w-100" placeholder="身分證號碼">
+                    </div>
+                </div>
+                <div class="password">
+                    <h3 class="title mb-0">
+                        密碼
+                        <a href="#" tabindex="-1">忘記密碼？</a>
+                    </h3>
+                    <div class="input-password">
+                        <input type="password" class="passwordnum w-100" placeholder="6-20個英數字">
+                        <!-- TODO 密碼顯示 -->
+                        <div class="icon-box">
+                            <a href="#" class="is-password-icon show-password" id="show-password"></a>
+                            <a href="#" class="is-password-icon close-password" id="close-password"
+                               style="display: none;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="login pb-3">
+                    <button type="submit" class="rounded w-100 disable">登入</button>
+                </div>
+                <div class="link text-center">
+                    <a href="#">快速註冊</a>
+                </div>
+                <div class="or">
+                    <p class="hr text-center"><span>或</span></p>
+                </div>
+                <div class="third_party-inbox text-center">
+                    <a class="third_party-href apple"
+                       href="#">
+                        <img class="rounded-circle" src="~/images/login_resume-img/ic_login_apple.svg" alt="">
+                    </a>
+                    <a class="third_party-href fb"
+                       href="#">
+                        <img class="rounded-circle" src="~/images/login_resume-img/ic_login_fb.svg" alt="">
+                    </a>
+                    <a class="third_party-href google"
+                       href="#">
+                        <img class="rounded-circle" src="~/images/login_resume-img/ic_login_google.svg" alt="">
+                    </a>
+                </div>
+
+            </form>
+        </div>
+</section>
+
+@section topCSS{
+    <link href="~/css/candidate/login/candidatelogin.css" rel="stylesheet" />
+}
+

@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ApplicationCore.Enums
+{
+    public enum JobDescriptionEnum
+    {
+        None = 0,
+        PayByHour = 1,
+        PayByMonth =2
+
+    }
+}

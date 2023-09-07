@@ -1,0 +1,797 @@
+﻿
+
+/* ----- 提示框 ----- */
+
+.alert-box {
+    padding: 5px;
+    font-size: 11px;
+    color: #3978FF;
+    background: #F4F7FF;
+}
+
+    .alert-box a {
+        font-size: 11px;
+        color: #6596FF;
+    }
+
+.member-homepage.container {
+    padding: 0 25px;
+}
+
+.card-no-radius {
+    border-radius: 0;
+}
+
+.card-title-p a {
+    padding: 0;
+    font-size: 11px;
+}
+
+.card-title-p {
+    padding: 5px;
+    font-size: 11px;
+}
+
+
+.card-text a {
+    text-decoration: none;
+    color: #6A7079;
+}
+
+.card-text-info::before {
+    content: "\2022";
+    margin-right: 1px;
+}
+
+.card-text,
+.card-title {
+    color: #6A7079;
+    font-size: 11px;
+}
+
+.card-text-info {
+    font-size: 12px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------右側內容------- */
+#content .row .remark {
+    font-size: 14px;
+    color: #FA1E50;
+}
+
+li {
+    text-decoration: none
+}
+
+.card-text-red:hover {
+    color: red;
+}
+
+.card-text-red {
+    color: #6C757D;
+}
+
+.card-header-tabs .nav-link {
+    color: #6A7079 !important;
+    font-weight: 600;
+}
+
+.card-header-tabs .nav-item:hover {
+    color: #000 !important;
+}
+
+#tab1 li,
+#tab2 li,
+.card {
+    font-size: 12px;
+    color: #6A7079;
+    font-weight: normal;
+}
+
+
+@media (max-width: 768px) {
+
+    /* .member-homepage .hi {
+        display: none;
+    } */
+
+    .Interview {
+        display: none;
+    }
+
+    .alert-box.alert {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .customer-service-info span {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* -------- 新增 -------- */
+
+#content h2 {
+    color: #2b3340;
+    border-left: 5px solid #fa1e50;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    padding-left: 20px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+/* ----- 進度條 ----- */
+.stepsBox {
+    width: 100%;
+    padding-left: 0;
+}
+
+    .stepsBox li {
+        padding: 0 20px;
+        line-height: 30px;
+        background-color: #F4F5F5;
+        display: inline-block;
+        color: #6A7079;
+        font-size: 13px;
+        position: relative;
+        text-align: center;
+        box-sizing: border-box;
+        margin-bottom: 5px;
+    }
+
+        .stepsBox li.is-complete {
+            background-color: #fa1e50;
+            color: #fff;
+        }
+
+            .stepsBox li.is-complete::after {
+                content: "";
+                position: absolute;
+                bottom: -8px;
+                left: calc(50% - 15px);
+                border-top: 10px solid #fa1e50;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                z-index: 3;
+            }
+
+            .stepsBox li.is-complete:last-child::after {
+                border-top: 12px solid transparent;
+            }
+
+        .stepsBox li.is-doing {
+            background-color: #ffdee6;
+            color: #fa1e50;
+        }
+
+            .stepsBox li.is-doing::after {
+                content: "";
+                position: absolute;
+                bottom: -9px;
+                left: calc(50% - 16px);
+                border-top: 10px solid #ffdee6;
+                border-left: 16px solid transparent;
+                border-right: 16px solid transparent;
+                z-index: 3;
+            }
+
+            .stepsBox li.is-doing:last-child::after {
+                border-top: 12px solid transparent;
+            }
+
+
+
+
+
+/* --- 電腦版 --- */
+@media (min-width: 992px) {
+    .member-homepage {
+        --bs-gutter-x: 0rem;
+    }
+
+    .stepsBox {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        padding-left: 0;
+    }
+
+        .stepsBox li {
+            padding: 0 20px;
+            font-size: 13px;
+            margin-right: 5px;
+            margin-bottom: 0;
+            line-height: 36px;
+            margin-bottom: 8px;
+        }
+
+        .stepsBox .col-lg-3 {
+            width: calc(25% - 4px);
+        }
+
+        .stepsBox li::after {
+            content: "";
+            display: block;
+            border-top: 18px solid transparent;
+            border-bottom: 18px solid transparent;
+            position: absolute;
+            right: -18px;
+            top: 0;
+            z-index: 3;
+        }
+
+        .stepsBox li::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .stepsBox li:first-child {
+            border-radius: 6px 0 0 6px;
+            padding-left: 25px;
+        }
+
+            .stepsBox li:first-child::before {
+                display: none;
+            }
+
+        .stepsBox li:last-child {
+            border-radius: 0 6px 6px 0;
+            padding-right: 25px;
+        }
+
+            .stepsBox li:last-child::after {
+                display: none;
+            }
+
+        .stepsBox li.is-complete {
+            background-color: #fa1e50;
+            color: #fff;
+        }
+
+            .stepsBox li.is-complete::after {
+                border-left: 18px solid #fa1e50;
+                bottom: 0;
+                left: initial;
+                right: -17px;
+                border-top: 18px solid transparent;
+                border-right: none;
+                z-index: 1;
+            }
+
+            .stepsBox li.is-complete::before {
+                border-top: 18px solid #fa1e50;
+                border-bottom: 18px solid #fa1e50;
+                border-left: 18px solid #fff;
+            }
+
+        .stepsBox li.is-doing {
+            background-color: #ffdee6;
+            color: #fa1e50;
+        }
+
+            .stepsBox li.is-doing::after {
+                border-left: 18px solid #ffdee6;
+                bottom: 0;
+                left: initial;
+                right: -17px;
+                border-top: 18px solid transparent;
+                border-right: none;
+                z-index: 1;
+            }
+
+            .stepsBox li.is-doing::before {
+                border-top: 18px solid #ffdee6;
+                border-bottom: 18px solid #ffdee6;
+                border-left: 18px solid #fff;
+            }
+
+        .stepsBox li {
+            background-color: #F4F5F5;
+        }
+
+            .stepsBox li::after {
+                border-left: 18px solid #F4F5F5;
+                right: -17px;
+            }
+
+            .stepsBox li::before {
+                border-top: 18px solid #F4F5F5;
+                border-bottom: 18px solid #F4F5F5;
+                border-left: 18px solid #fff;
+            }
+}
+
+.job-content .card-header {
+    background-image: linear-gradient(#fff, #f5f5f5);
+}
+
+.job-content .card-body {
+    padding: 0;
+}
+
+/* --- 原opening 開始 --- */
+.requirement img {
+    width: 3%;
+    padding-right: 10px;
+}
+
+.mark-text-red {
+    color: #fa1e50;
+}
+
+.mark-text-blue {
+    color: #0d6efd;
+}
+
+.btn-save {
+    background-color: #FA1E50;
+    color: #fff;
+}
+
+.opening-intro {
+    margin-right: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .job-content .card-header {
+        border-bottom: 1px solid #aaa;
+    }
+
+    .table-rwd tbody tr {
+        display: block;
+    }
+
+        .table-rwd tbody tr td {
+            display: block;
+            text-align: center;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+        }
+
+    .opening-list input {
+        width: 100%;
+    }
+
+    .opening-card {
+        padding: 10px 0;
+        border-bottom: 1px solid #E9EAEB;
+    }
+}
+
+@media screen and (min-width:996px) {
+    .opening-card {
+        display: flex;
+        padding: 10px;
+        border-bottom: 1px solid #E9EAEB;
+    }
+}
+
+/* --- 原opening end --- */
+
+/*  --- table 內容 ---  */
+
+/* 工作內容 */
+#SalaryPayment {
+    text-align: center;
+}
+
+    #SalaryPayment div {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+#AddressPart select,
+#WorkingHours input {
+    margin-top: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+#AddressPart input {
+    padding: 5px;
+    margin-bottom: 10px !important;
+}
+
+#WorkingHours {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+    #WorkingHours input {
+        width: 40%;
+        padding: 5px;
+    }
+
+
+
+.job-category-btn {
+    border: 1px solid #FA1E50;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #FA1E50;
+    padding: 8px;
+}
+
+/* 職缺條件 */
+
+
+#EmploymentCategory .col-3,
+#JobShift .col-3,
+#Management .col-6,
+#JobTenure .col-4,
+#Education .col-4,
+#Language .col-4,
+#ComputerSkill .col-4,
+#DrivingLicense .col-6,
+#VancancyNumber .col-6,
+#JobFeature .col-4 {
+    display: flex;
+    /* justify-content: center; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    #EmploymentCategory .col-3 input,
+    #JobShift .col-3 input,
+    #Management .col-6 input,
+    #JobTenure .col-4 input,
+    #Education .col-4 input,
+    #Language .col-4 input,
+    #ComputerSkill .col-4 input,
+    #DrivingLicense .col-6 input,
+    #VancancyNumber .col-6 input,
+    #JobFeature .col-4 input {
+        margin-right: 8px;
+    }
+
+
+#VancancyNumber #NumberInput {
+    width: 50px;
+    margin-right: 5px;
+}
+
+@media screen and (min-width:996px) {
+    #WorkingHours {
+        justify-content: left;
+    }
+
+    .job-content tr td:first-child {
+        padding-top: 18px;
+        /* background-color: #ff0; */
+    }
+
+    #EmploymentCategory .col-3,
+    #JobShift .col-3,
+    #Management .col-6 {
+        justify-content: left;
+    }
+}
+
+
+
+.back-next a.btn {
+    border: 1px solid #FA1E50;
+    background-color: #fff;
+    border-radius: 4px;
+    color: #FA1E50;
+    padding: 7px 15px;
+    font-size: 14px;
+    display: block;
+    margin: 11px auto 0 auto;
+    text-align: center;
+    transition: .2s;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.back-next a.btn.next {
+    background-color: #FA1E50;
+    color: #fff;
+}
+
+
+
+    /* 預覽畫面 */
+    .job-description {
+        padding: 20px;
+    }
+
+.job-description h2 {
+    font-size: 18px;
+    color: #2b3340;
+    font-weight: bold;
+    padding-left: 8px;
+    margin-bottom: 16px;
+    border-left: 6px solid #FB6184;
+    line-height: 1;
+}
+
+.job-description-details p {
+    font-size: 14px;
+    padding-left: 2rem;
+    color: #232a35;
+}
+
+.jd-details-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.job-items li {
+    color: #666;
+    line-height: 2.5;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job-items li span {
+    /* max-width: 75%; */
+    color: #232a35;
+    margin-left: 1em;
+}
+
+.job-features span a{
+    margin-bottom:0.25em;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----- 搜尋框 Modal ----- */
+
+/* 共用 */
+.modal-category {
+    border-radius: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+    .modal-category .modal-content {
+        border-radius: 0;
+    }
+
+.modal-header {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+    .modal-header h1 {
+        color: #232a35;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .modal-header .btn-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+.modal-body-top {
+    text-align: center;
+}
+
+    .modal-body-top .btn-group .btn {
+        color: #2B3340;
+        border: 1px solid #353D49;
+        width: 128px;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 15px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    .modal-body-top .btn-group .active {
+        color: #fff;
+        background-color: #353D49;
+    }
+
+.modal-footer .row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 45px;
+}
+
+.modal-footer .btn-clear {
+    border: 1px solid #FA1E50;
+    color: #FA1E50;
+    width: calc(40% - 15px);
+}
+
+.modal-footer .btn-submit {
+    border: 1px solid #FA1E50;
+    background-color: #FA1E50;
+    color: #fff;
+    width: 60%;
+}
+
+/* 捲軸 */
+
+.list-group-job {
+    /* max-height: 400px;
+    min-height: 400px; */
+    height: 400px;
+}
+
+.distance-selector {
+    padding: 15px 30px;
+    max-height: 400px;
+}
+
+
+.list-group-category,
+.list-group-job {
+    max-height: 460px;
+}
+
+.list-group-category,
+.list-group-job,
+.modal-location-history .modal-body {
+    overflow-y: scroll;
+}
+
+    .list-group-category::-webkit-scrollbar,
+    .list-group-job::-webkit-scrollbar {
+        width: 5px;
+        height: 8px;
+        /* or add it to the track */
+    }
+
+    .list-group-category::-webkit-scrollbar-thumb,
+    .list-group-job::-webkit-scrollbar-thumb {
+        background: #aaa;
+    }
+
+/* -------- 職務類別 -------- */
+
+.modal-category .modal-body {
+    padding: 0;
+}
+
+.modal-category ul {
+    --bs-list-group-border-color: none;
+    width: 100%;
+}
+
+    .modal-category ul li {
+        width: 100%;
+        border-bottom: 1px solid #F2F5F9;
+        padding: 0;
+        font-size: 15px;
+        color: #6A7079;
+    }
+
+        .modal-category ul li:nth-last-child(1) {
+            border-bottom: none;
+        }
+
+        .modal-category ul li:hover {
+            background: #F2F5F9;
+        }
+
+/* --- 類別 選單 --- */
+.modal-category .list-group-category li label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.modal-category .list-group-category li input {
+    opacity: .3;
+}
+
+.modal-category label span {
+    color: #232A35;
+}
+
+/* --- 群組-細項 選單 --- */
+.modal-category .item-category {
+    background: #F2F5F9;
+}
+
+    .modal-category .item-category label {
+        align-items: center;
+        display: flex;
+    }
+
+        .modal-category .item-category label input {
+            display: none;
+        }
+
+ul.list-group-job li {
+    padding: 15px 30px;
+}
+
+.list-group-job .job-checkbox-group li {
+    padding-left: 60px;
+    border-top: 1px solid #F2F5F9;
+}
+
+.list-group-job .group-all-job {
+    /* display: flex;
+    align-items: center;
+    justify-content: space-between; */
+    position: relative;
+}
+
+.modal-category ul li.group-all-job {
+    background: #fff !important;
+    padding: 0;
+}
+
+.list-group-job .group-all-job .all-checkbox {
+    padding: 15px 30px;
+}
+
+.list-group-job .group-all-job .more-checkbox {
+    padding: 15px 30px 15px 90px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.list-group-job .group-all-job #MoreJobCheckbox-gp1,
+.list-group-job .group-all-job #MoreJobCheckbox-gp2 {
+    display: none;
+}
+
+.job-checkbox-group {
+    display: none;
+}
+
+.list-group-job #MoreJobCheckbox-gp1:checked + ul.job-checkbox-group,
+.list-group-job #MoreJobCheckbox-gp2:checked + ul.job-checkbox-group {
+    display: block;
+}
+
+/* 個別工作 */
+
+/* --- 電腦版 --- */
+@media (min-width: 992px) {
+
+    .modal-location,
+    .modal-category {
+        --bs-modal-width: 450px;
+    }
+}

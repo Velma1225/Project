@@ -1,0 +1,29 @@
+﻿@using HabanMVC.ViewModels.Company;
+
+@model List<WorkShareViewModel>
+
+
+@foreach (var item in Model)
+{
+    <li>
+        <div class="employee">
+            來自
+            <a href="">@item.PositionCategory</a>
+            留言
+        </div>
+        <div class="star">
+            @for(int i =0;i<item.ShareEvaluation;i++)
+            {
+                <img src="~/images/Company/CompanyProfile/yellow-star.svg" alt="">
+            }
+            @for (int i = 5 - item.ShareEvaluation; i >0; i--)
+            {
+                <img src="~/images/Company/CompanyProfile/gray_star.svg" alt="">
+            }
+
+        </div>
+        <p class="comment">
+            @item.ShareContent
+        </p>
+    </li>
+}

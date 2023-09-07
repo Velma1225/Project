@@ -1,0 +1,305 @@
+﻿@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model List<CollectionCompanyViewModel>
+@{
+
+    Layout = "~/Views/Shared/_LayoutSidebarCandidate.cshtml";
+
+
+
+    ViewData["Title"] = "FavoriteCompany";
+
+    //int Active = (int)ViewData["active"];
+    int activePage = (int)ViewData["ActivePage"];
+    int pages = (int)ViewData["Pages"];
+}
+@section breadcrumb{
+    <div class="hi row m-0">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">我的帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">收藏公司</li>
+            </ol>
+        </nav>
+    </div>
+
+}
+
+            <div id="content">
+                <h2>收藏公司</h2>
+                <!-- <div class="mb-2 text-end">
+                    <span>新增收藏夾： </span> <input class="input-collection_company" type="text" value="請輸入收藏夾名稱" onclick="if($(this).val()==='請輸入收藏夾名稱'){ $(this).val('');}" maxlength="20">
+                    <input class="btn-query" type="submit" value="新增">
+                </div> -->
+
+
+
+
+                <div class="card">
+                    <!-- <div class="card-header card-header-1 p-1">
+                        <ul class="row list-unstyled my-1">
+                            <li class="col-12 text-start ps-3 pe-0"><input class="mx-2" type="checkbox"><a href="#">刪除勾選職務</a>｜<a href="#">放入收藏夾</a></li>
+
+                        </ul>
+                    </div> -->
+                    <div class="card-header card-header-2 p-1 py-2">
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                            <li class="col-3 record"><span class="ps-3">公司名稱</span></li>
+                            <li class="col-3 record"><span class="ps-3">產業別</span></li>
+                            <li class="col-5 text-center">
+                                <!-- <span class="pe-3 text-start">已收藏筆數</span> -->
+                                <span class="pe-5 record">　建立日期/刪除</span>
+                                @*<span class="pe-1">刪除</span>*@
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="card-body p-1 py-2">
+                        <!-- <p class="card-text text-center">目前尚未建立任何檔案夾。</p> -->
+                        <!-- <ul class="row list-unstyled">
+                            <li class="col-6 record mb-2"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></li>
+                            <li class="col-6 text-center record mb-2">2023/08/14<a href="#">刪除</a></li>
+
+                        </ul> -->
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                            <partial name="~/Views/Candidate/PartialView/FavoriteCompany/_FavoriteCompanyPartial.cshtml" model="Model" />
+                           @* <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-6 record text-center">
+                                <span style="vertical-align: top;" class="pe-4 fs-6">2023/08/14</span><span class="pe-2 ps-3">
+                                    <a href="#">
+                                        <span class="material-symbols-outlined">
+                                            close
+                                        </span>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="col-6 record">
+                                <span class="ps-3 fs-6"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>*@
+
+
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <nav class="mt-1" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            @*                            <a class="page-link border-0" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            </a>*@
+                            <a scroll="no" class="page-link border-0" href="/Candidate/FavoriteCompany/@(pages-pages+1)">&laquo;</a>
+                        </li>
+
+                        @for (int i = 1; i <= pages; i++)
+                        {
+                            <li class="page-item @(i==activePage? "active":"")"><a scroll="no" class="page-link border-0" href="/Candidate/FavoriteCompany/@i">@i</a></li>
+                        }
+
+                        @*        <li class="page-item  active"><a class="page-link" href="/Prod/Index/1">1</a></li>
+                        <li class="page-item"><a class="page-link" href="/Prod/Index/2">2</a></li>
+                        <li class="page-item"><a class="page-link" href="/Prod/Index/3">3</a></li>
+                        <li class="page-item"><a class="page-link" href="/Prod/Index/4">4</a></li>
+                        <li class="page-item"><a class="page-link" href="/Prod/Index/5">5</a></li>*@
+
+
+                        <li class="page-item">
+                            @*                            <a class="page-link border-0" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            </a>*@
+                            <a class="page-link border-0" scroll="no" href="/Candidate/FavoriteCompany/@(pages)">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- <p class="mx-4 px-2"><a href="#">刪除勾選職務</a>｜<a href="#">放入收藏夾</a></p> -->
+            </div>
+
+
+
+
+@section topCSS{
+
+
+    <link href="~/css/Candidate/FavoriteCompany/FavoriteCompany.css" rel="stylesheet" />
+
+
+}
+
+@section endJS{
+
+}

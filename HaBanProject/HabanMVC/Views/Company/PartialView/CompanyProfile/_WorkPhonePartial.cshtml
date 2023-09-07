@@ -1,0 +1,18 @@
+﻿@using HabanMVC.ViewModels.Company;
+  
+@model List<WorkViewModel>
+
+
+@foreach (var item in Model)
+{
+    <li class="work">
+        <a href="">
+            <div class="workname">@item.WorkName</div>
+            <div class="workplace">@item.WorkDistrict</div>
+            <div class="treatmentArea">
+                <div class="treatment">工作待遇：@item.SalaryRange</div>
+                <div class="date">@item.Date.ToString("M/d")</div>
+            </div>
+        </a>
+    </li>
+}

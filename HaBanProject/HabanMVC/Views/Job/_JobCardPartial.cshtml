@@ -1,0 +1,31 @@
+﻿@using HabanMVC.ViewModels.Job.Description;
+@model WidgetJDViewModel
+
+<h2>@Model.Title</h2>
+<div class="job-card-list">
+    @foreach (var item in Model.CardList)
+    {
+        <div class="job-card">
+            <div class="job-intro">
+                <h3 class="job-title">@item.JobTitle</h3>
+                <div class="company">
+                    <a href="@item.CompanyUrl">
+                        @item.Company<i></i>
+                    </a>
+                </div>
+                <div class="job-salary">@item.SalaryPayment</div>
+                <div class="job-conditions">
+                    <div class="job-area">@item.City - @item.District</div>
+                    <div class="job-experience">經歷<span>@item.JobTenure</span></div>
+                    <div class="job-education">學歷<span>@item.Education</span></div>
+                </div>
+                <div class="job-tags for-sp">
+                    <div><span>關渡站走路7分鐘</span></div>
+                    <div><span>回復率100%</span></div>
+                    <div><span>防疫企業</span></div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>

@@ -1,0 +1,259 @@
+﻿@model List<JobList>
+@{
+    ViewData["Title"] = "JobList";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+
+<!-- 右側內容 -->
+<h2 class="d-inline-flex">職缺清單</h2>
+
+<div class="row">
+
+    <!-- 職缺清單 -->
+
+    <div class="job-list">
+        <div class="card card-no-radius mb-3">
+            <div class="card-header card-title-p d-flex fw-bold">
+                職缺清單
+            </div>
+
+            <div class="card-body">
+
+                @*邏輯判斷*@
+
+                @{
+                    var jobTenure = "";
+                    var jobEducation = "";
+                    foreach (var job in Model)
+                    {
+                        @switch (@job.JobTenure)
+                        {
+                            case 1:
+                                jobTenure = "經歷不拘";
+                                break;
+                            case 2:
+                                jobTenure = "經歷1年";
+                                break;
+                            case 3:
+                                jobTenure = "經歷3年";
+                                break;
+                        }
+                        @switch (@job.Education)
+                        {
+                            case 1:
+                                jobEducation = "學歷不拘";
+                                break;
+                            case 2:
+                                jobEducation = "學歷高中";
+                                break;
+                            case 3:
+                                jobEducation = "學歷大學";
+                                break;
+                        }
+
+
+
+
+                        <div class="job-card @(@job.OpenOrNot == true ? String.Empty : "is-discontinued" ) d-lg-flex justify-content-lg-between ">
+                            <div class="job-intro col-lg-9 col-12">
+                                <h3 class="job-title">@job.JobName</h3>
+                                <div class="company">
+                                    <a href="https://www.518.com.tw/company-yvM8ME.html">
+                                        @job.CompanyName<i></i>
+                                    </a>
+                                </div>
+                                <div class="job-salary">時薪 @(job.PayByHour)元</div>
+                                <div class="job-conditions">
+                                    <div class="job-area">@job.Location</div>
+                                    <div class="job-experience">@jobTenure</div>
+                                    <div class="job-education">@jobEducation</div>
+                                </div>
+                                <div class="job-description for-pc">
+                                    <p>
+                                        @job.JobDescription
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="using-state col-lg-3 col-12 ">
+                                <div class="row">
+                                    <div class="count-down-day col-lg-10 col-5">
+                                        剩餘置頂天數 :<br>
+                                        <span class="day">7天</span>
+                                    </div>
+                                    <div class="btn-box col-lg-10 col-6">
+                                        <button type="button" class="btn btn-outline-danger btn-sm">編輯</button>
+                                        <button type="button" class="delete-btn btn btn-outline-danger btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#useTOPModal">
+                                            刪除
+                                        </button>
+                                        <button type="button" class="discontinued-btn btn btn-outline-danger btn-sm">下架</button>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    }
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+                @*<!--原始假資料-->
+
+                <div class="job-card d-lg-flex justify-content-lg-between " job-id="000000" job-url="https://www.518.com.tw/job-000000.html">
+
+                    <div class="job-intro col-lg-9 col-12">
+                        <h3 class="job-title">(隔日匯185)晚班理貨員-近關渡大橋A2AAAAAAAAAAAAAAAAAAAAAAAAAAA</h3>
+                        <div class="company">
+                            <a href="https://www.518.com.tw/company-yvM8ME.html">
+                                力信股份有限公司<i></i>
+                            </a>
+                        </div>
+                        <div class="job-salary">時薪 185元</div>
+                        <div class="job-conditions">
+                            <div class="job-area">台北市-北投區</div>
+                            <div class="job-experience">經歷不拘</div>
+                            <div class="job-education">學歷國中</div>
+                        </div>
+                        <div class="job-description for-pc">
+                            <p>
+                                工作內容：四輪推車卸貨並將貨品依項目分類擺放、需搬運、疊放 。
+
+                                -工作時間：
+                                A)16:00-20:30
+                                B)17:00-20:30
+                                -休假制度：週休二日
+                                -工作薪資：時薪185元隔日21點前匯款，假日順延Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aspernatur at repudiandae consectetur explicabo, accusamus reprehenderit mollitia maiores tenetur, impedit obcaecati quibusdam hic vel eaque veritatis cum dolor ex adipisci cupiditate id, minus sunt fuga quis. Ipsam atque maiores minima perspiciatis, debitis non, ullam nihil, quaerat veritatis eos labore accusantium. Quas minima at doloribus aliquid laboriosam, vero ratione distinctio sunt natus ad ea laborum quos illo ex tenetur fugiat facilis porro modi a temporibus beatae, vitae veritatis sit. Dicta eaque dolorum ad animi, inventore, ea eveniet libero voluptatem autem quasi molestiae distinctio quos voluptatum itaque enim quae culpa voluptates sunt?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="using-state col-lg-3 col-12 ">
+                        <div class="row">
+                            <div class="count-down-day col-lg-10 col-5">
+                                剩餘置頂天數 :<br>
+                                <span class="day">7天</span>
+                            </div>
+                            <div class="btn-box col-lg-10 col-6">
+                                <button type="button" class="btn btn-outline-danger btn-sm">編輯</button>
+                                <button type="button" class="delete-btn btn btn-outline-danger btn-sm"
+                                        data-bs-toggle="modal" data-bs-target="#useTOPModal">
+                                    刪除
+                                </button>
+                                <button type="button" class="discontinued-btn btn btn-outline-danger btn-sm">下架</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 下架職缺資料 -->
+
+                <div class="is-discontinued job-card d-lg-flex justify-content-lg-between " job-id="000000" job-url="https://www.518.com.tw/job-000000.html">
+
+                    <div class="job-intro col-lg-9 col-12">
+                        <h3 class="job-title">(隔日匯185)晚班理貨員-近關渡大橋A2AAAAAAAAAAAAAAAAAAAAAAAAAAA</h3>
+                        <div class="company">
+                            <a href="https://www.518.com.tw/company-yvM8ME.html">
+                                力信股份有限公司<i></i>
+                            </a>
+                        </div>
+                        <div class="job-salary">時薪 185元</div>
+                        <div class="job-conditions">
+                            <div class="job-area">台北市-北投區</div>
+                            <div class="job-experience">經歷不拘</div>
+                            <div class="job-education">學歷國中</div>
+                        </div>
+                        <div class="job-description for-pc">
+                            <p>
+                                工作內容：四輪推車卸貨並將貨品依項目分類擺放、需搬運、疊放 。
+
+                                -工作時間：
+                                A)16:00-20:30
+                                B)17:00-20:30
+                                -休假制度：週休二日
+                                -工作薪資：時薪185元隔日21點前匯款，假日順延Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus aspernatur at repudiandae consectetur explicabo, accusamus reprehenderit mollitia maiores tenetur, impedit obcaecati quibusdam hic vel eaque veritatis cum dolor ex adipisci cupiditate id, minus sunt fuga quis. Ipsam atque maiores minima perspiciatis, debitis non, ullam nihil, quaerat veritatis eos labore accusantium. Quas minima at doloribus aliquid laboriosam, vero ratione distinctio sunt natus ad ea laborum quos illo ex tenetur fugiat facilis porro modi a temporibus beatae, vitae veritatis sit. Dicta eaque dolorum ad animi, inventore, ea eveniet libero voluptatem autem quasi molestiae distinctio quos voluptatum itaque enim quae culpa voluptates sunt?
+                            </p>
+                        </div>
+                    </div>
+                    <div class="using-state col-lg-3 col-12 ">
+                        <div class="row">
+                            <div class="count-down-day col-lg-10 col-5">
+                                剩餘置頂天數 :<br>
+                                <span class="day">7天</span>
+                            </div>
+                            <div class="btn-box col-lg-10 col-6">
+                                <button type="button" class="btn btn-outline-danger btn-sm">編輯</button>
+                                <button type="button" class="delete-btn btn btn-outline-danger btn-sm"
+                                        data-bs-toggle="modal" data-bs-target="#useTOPModal">
+                                    刪除
+                                </button>
+                                <button type="button" class="discontinued-btn btn btn-outline-danger btn-sm">下架</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                *@
+
+
+            </div>
+        </div>
+
+
+        <nav aria-label="Page navigation example" class="for-pc">
+            <ul class="pagination justify-content-end for-pc">
+                <li class="page-item">
+                    <a class="page"><i class="fa-solid fa-angle-left"></i> 上一頁</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page" href="#">下一頁 <i class="fa-solid fa-angle-right"></i></a>
+                </li>
+                <span>第1/50頁</span>
+            </ul>
+
+        </nav>
+
+        <div class="job-loading for-sp col-12 text-center">
+            <div class="spinner-border spinner-job-loading" role="status"></div>
+            資料讀取中...
+        </div>
+
+
+
+
+    </div>
+</div>
+<!-- 職缺清單end -->
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">職缺刊登管理</li>
+                <li class="breadcrumb-item" aria-current="page">編輯現有職缺</li>
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+    <link href="~/css/company/joblist/stylesheet.css" rel="stylesheet" />
+}

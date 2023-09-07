@@ -1,0 +1,31 @@
+﻿@model List<ChatListViewModel>
+
+@for (int j = 0; j < Model.Count; j++)
+{
+    <button class="nav-link chat_company @(j == 0 ? "active" : "") " id="v-pills-home-tab" data-bs-toggle="pill"
+            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+            aria-selected="true">
+
+
+        <input type="checkbox" class="checkone">
+        <div class="comp_logo">
+            <img src="~/images/Candidate/Chat/@Model[j].Pic" alt="">
+        </div>
+        <div class="text">
+            <div class="compname">
+                <div class="name">@Model[j].SenderName</div>
+                <div class="datetime">
+                    @Model[j].MessageTime.ToString("yyyy/M/d")
+                </div>
+            </div>
+            <a class="position">
+                @Model[j].JobName
+            </a>
+            <p class="chatmessage">
+                <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                @Model[j].ChatContent
+            </p>
+        </div>
+    </button>
+}
+

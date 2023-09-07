@@ -1,0 +1,261 @@
+﻿@using HabanMVC.ViewModels.Job.Description;
+@model JobDescriptionViewModel
+@{
+    ViewData["Title"] = "JobDescription";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/Job/Description/Job_Description.css" />
+    
+
+    
+<div class="container sticky-header for-sp">
+    <a class="btn to-prev" href="#" role="button">
+        <i class="fa-solid fa-chevron-left"></i>
+    </a>
+    <h1>@Model.JobTitle</h1>
+    <a class="btn to-member" href="#" role="button">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </a>
+</div>
+
+<div class="job-header">
+    <div class="container job-header-container">
+
+        <div class="job-title-group">
+            <div class="job-title">
+                <h1>@Model.JobTitle</h1>
+            </div>
+            <div class="subheader-btn-group">
+                <button type="button" class="btn for-sp" data-bs-toggle="modal" data-bs-target="#jobFavoriteModal">
+                    <img src="./images/ic_heart_off_darkblue20.svg" alt="">
+                </button>
+                <a class="btn btn-outline-danger btn-chat" href="#" role="button">
+                    <i></i>去聊聊
+                    <div class="chat-tooltip">直接線上詢問！</div>
+                </a>
+
+                <button type="button" class="btn btn-danger btn-apply" data-bs-toggle="modal"
+                        data-bs-target="#ApplyModal">
+                    <i></i>蛤快投
+                </button>
+
+            </div>
+        </div>
+        <div class="company-group">
+            <div class="company">
+                <a href="@Model.CompanyUrl">
+                    @Model.Company
+                    <img src="./images/ic-certification.svg" alt="">
+                    <i class="fa-solid fa-chevron-right for-sp"></i>
+                    <!-- <i></i> -->
+                </a>
+                <div class="gap-line for-pc"></div>
+                <a href="" class="for-pc">該公司其他職缺(<span>269</span>)</a>
+            </div>
+            <div class="job-favorite">
+                <button type="button" class="btn for-pc" data-bs-toggle="modal" data-bs-target="#jobFavoriteModal">
+                    <i></i>收藏職缺
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<main class="container job-container">
+    <!-- <div class="for-pc"> -->
+    <div class="breadcrumb-and-share for-pc">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-job">
+                目前位置：
+                <li class="breadcrumb-item"><a href="#">首頁</a></li>
+                <li class="breadcrumb-item"><a href="#">找工作</a></li>
+                <li class="breadcrumb-item"><a href="#">台北市</a></li>
+                <li class="breadcrumb-item"><a href="#">倉儲或運輸輔助業 </a></li>
+                <li class="breadcrumb-item"><a href="#">力信股份有限公司</a></li>
+                <li class="breadcrumb-item active" aria-current="page">(隔日匯185)晚班理貨員-近關渡大橋A2</li>
+            </ol>
+        </nav>
+        <div class="share-group">
+            <a href="" class="btn btn-outline-primary btn-share-fb" alt="fb分享"><i></i>分享</a>
+            <a href="" class="btn btn-outline-success btn-share-line" alt="line分享"><i></i>分享</a>
+            <a href="" class="btn btn-outline-secondary btn-copy" alt="複製連結"><i></i>複製</a>
+        </div>
+    </div>
+    <!-- </div> -->
+
+
+    <div class="job-description">
+        <div class="job-description-details">
+            <h2 class="jd-details-title">
+                工作內容
+                <span>更新日期:@Model.UpdateAt</span>
+            </h2>
+            <p>
+                @Model.JobDescription
+            </p>
+
+        </div>
+
+        <div class="job-info">
+            <h2>職缺資訊</h2>
+
+            <div class="job-items">
+                <ul>
+                    <li>
+                        薪資待遇
+                        <span>
+                            @Model.SalaryPayment
+                            @*                            <span class="ms-0">@Model.MinSalary</span>元 ~
+                            <span class="ms-0">@Model.MaxSalary</span>元*@
+                        </span>
+                    </li>
+                    <!-- <li>支薪方式<span>匯款</span></li> -->
+                    <!-- <li>發薪資日<span>隔日晚間九點入帳，假日順延假日順延假日順延假日順延假日順延</span></li> -->
+
+
+                    <li class="job-location">
+                        上班地點
+                        <span>
+                            @Model.Address
+                            <a href=""><i></i>地圖</a>
+                        </span>
+                        <!-- <a href="">#捷運關渡站走路7分鐘</a>                       -->
+                    </li>
+                    <!-- <div class="job-location-tag">
+                        <a href="">#捷運關渡站走路7分鐘</a>
+                    </div> -->
+
+
+                    <li>上班時段<span>@Model.JobShift / @Model.WorkingHours</span></li>
+                    <!-- <li>排班制度<span>排班制，每週更新班表</span></li> -->
+                    <!-- <li>休假制度<span>週休二日</span></li> -->
+                    <li class="job-category">
+                        職務類別<span>
+                            @foreach (var item in @Model.JobCategoryList)
+                            {
+                                <a href="" target="_blank">@item</a>
+                                @if (item != Model.JobCategoryList.Last())
+                                {
+                                    <span class="ms-0">、</span>
+                                }
+                            }
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="job-conditions">
+            <h2>職缺條件</h2>
+            <div class="job-items">
+                <ul>
+                    <li>
+                        工作性質<span>@Model.EmploymentCategory</span>
+                        <a href="https://www.tasker.com.tw/case/list?a_id=2244">兼差接案</a>
+                    </li>
+                    <li>管理責任<span>@Model.Management</span></li>
+                    @*<li>工作經驗<span>@Model.JobTenure</span></li>*@
+                    <li>學歷要求<span>@Model.Education</span></li>
+                    <li>語文能力<span>@Model.Language</span></li>
+                    <li>需備駕照<span>@Model.DrivingLicense</span></li>
+                    <li>電腦專長<span>@Model.ComputerSkill</span></li>
+                    <li>需求人數<span>@Model.VacancyNumber</span></li>
+                    <li class="job-features">
+                        職缺特色<span>
+                            @foreach (var item in Model.JobFeatureList)
+                            {
+                                <a class="btn btn-outline-primary" href="#" role="button">@item</a>
+                            }
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="company-policies">
+            <h2>公司福利</h2>
+            <div class="job-items-gray company-features">
+                <h3>公司特色</h3>
+                <a class="btn btn-outline-primary" href="#" role="button">外商公司</a>
+                <a class="btn btn-outline-primary" href="#" role="button">上市櫃公司</a>
+                <a class="btn btn-outline-primary" href="#" role="button">員購優惠</a>
+                <a class="btn btn-outline-primary" href="#" role="button">進修補助</a>
+            </div>
+            <div class="job-items-gray">
+                <h3>獎金禮品</h3>
+                <p>激勵獎金 、 績效獎金</p>
+            </div>
+            <div class="job-items-gray">
+                <h3>生活娛樂</h3>
+                <p>員工餐廳 、 按摩室 、 員工定期聚餐 、 慶生會 、 尾牙 、 春酒 、 下午茶</p>
+            </div>
+            <div class="job-items-gray">
+                <h3>保險撫卹</h3>
+                <p>員工/眷屬團保 、 員工/眷屬住院慰問金</p>
+            </div>
+        </div>
+        <div class="ask-more">
+            <h2><i></i>我想問老闆更多...</h2>
+            <div class="btn-ask-group">
+                <a class="btn btn-outline-primary" href="#" role="button"><i></i>問休假時間</a>
+                <a class="btn btn-outline-primary" href="#" role="button"><i></i>問經驗要求</a>
+                <a class="btn btn-outline-primary" href="#" role="button"><i></i>問面試時間</a>
+                <a class="btn btn-outline-primary" href="#" role="button"><i></i>問是否招人</a>
+                <a class="btn btn-outline-primary" href="#" role="button"><i></i>問幾點上班</a>
+            </div>
+
+        </div>
+        <div class="apply-and-interview">
+            <h2>應徵與面試</h2>
+            <div class="job-items">
+                <ul>
+                    <li>職務聯絡人<span>@Model.ContactName</span></li>
+                    <li>聯絡 Email<span>@Model.ContactEmail</span></li>
+                    <li>電　　　洽<span>@Model.ContactPhone</span></li>
+                    <li class="job-location">
+                        親　　　洽<span>@Model.ContactAddress</span>
+                        <a href=""><i></i>地圖</a>
+                    </li>
+                    <li>
+                        備　　　註
+                        <span>@Model.PostScript</span>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="notice">
+            ※ 518熊班提醒您
+            <span>．別忘了告知雇主，您是在518熊班看到這則職務。</span>
+            <span>．面試時，請勿交付提款卡及密碼、存摺、信用卡或個人證件。</span>
+        </div>
+        <div class="job-apply for-pc">
+            <button type="button" class="btn btn-danger btn-apply" data-bs-toggle="modal"
+                    data-bs-target="#ApplyModal">
+                <i></i>蛤快投
+            </button>
+        </div>
+
+        <div class="report-misinfo">
+            發現資訊有誤？
+            <a href="https://www.518.com.tw/other-jianju.html?type=2&amp;id=LX1qeM&amp;str=%E7%BE%8E%E5%AE%B9%E5%B8%AB%E6%97%A9%E7%8F%AD-%E4%B8%AD%E5%92%8C%E9%A4%A8+%2F+%E6%99%B6%E9%87%87%E5%A4%A2%E7%94%B7%E5%A5%B3%E6%99%82%E5%B0%9A%E8%88%92%E5%A3%93%E6%9C%83%E9%A4%A8"
+               target="_blank" class="flag-this">我要檢舉</a>
+        </div>
+
+        <div class="similar-jobs">
+            <partial name="_JobCardPartial" model="Model.SimilarJob" />
+        </div>
+    </div>
+
+    <div class="most-visited-and-records for-pc">
+        <div class="most-visited-cards">
+            <partial name="_JobCardPartial" model="Model.MostVisitedJob" />
+        </div>
+        <div class="visited-records">
+            <partial name="_JobCardPartial" model="Model.VisitedJob" />
+        </div>
+    </div>
+
+</main>
+

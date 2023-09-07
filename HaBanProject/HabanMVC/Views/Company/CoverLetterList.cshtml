@@ -1,0 +1,162 @@
+﻿@using HabanMVC.ViewModels.Company;
+@model CoverLetterListViewModel
+@{
+    ViewData["Title"] = "CoverLetterList";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+    
+}
+
+<h2>職缺應徵紀錄</h2>
+
+
+
+<form asp-action="CoverLetterList" method="post">
+    <select id="select-job" class="select-job form-select mb-4" aria-label="Default select example" name="jobDescID" asp-items="@Model.JobSelectItems">
+    <!-- <option selected>請選擇顯示的職缺</option> -->
+
+</select>
+</form>
+
+@{
+   
+}
+
+<!-- 求職者應徵紀錄 -->
+<div class="candidate-list ">
+    <div class="card card-no-radius mb-3">
+        <div class="card-header card-title-p">
+            <ul class="fw-bold d-flex justify-content-between align-items-center">
+                <li class="col-2">邀約面試</li>
+                <li class="col-3">求職者 / 聊聊</li>
+                <li class="col-2">履歷</li>
+                <li class="col-3">應徵日期</li>
+                <li class="col-2">刪除</li>
+            </ul>
+        </div>
+        <!-- 無應徵求職者 -->
+        <!-- <div class="card-body text-secondary">
+            <ul class="row list-unstyled">
+                <li class="col-12">
+                    目前無應徵求職者
+                </li>
+            </ul>
+        </div> -->
+        <div class="card-body text-secondary">
+
+            @foreach (var cl in Model.JobDescList)
+            {
+                <ul class="@(cl.ReadStatus == true ? "already-read" : String.Empty) candidate row list-unstyled">
+
+                    <li class="col-2">
+                        <button class="@(cl.InterviewStatus == true ? "already-send" : String.Empty) admit-btn" data-bs-toggle="modal"
+                        @(cl.InterviewStatus == true ? String.Empty : "data-bs-target = \"#admitModal\"")>
+                            <span class="material-symbols-outlined">
+                                outgoing_mail
+                            </span>
+                        </button>
+                    </li>
+                    <li class="name col-3">
+                        @cl.CandidateName
+                        <a href="Candidate/Chat/@cl.CandidateId">
+                            <span class="material-symbols-outlined">sms</span></a>
+                    </li>
+                    <li class="col-2">
+                        <a href="Candidate/ResumeDisplay/@cl.ResumeSnapshotId" class="resume">履歷</a>
+                    </li>
+                    <li class="col-3">@cl.CreateAt.ToString("d")</li>
+                    <li class="col-2">
+                        <button class="delete-btn">
+                            <span class="material-symbols-outlined">delete</span>
+                        </button>
+                    </li>
+                </ul>
+            }
+
+
+
+           
+        </div>
+    </div>
+</div>
+
+
+
+@section endJS
+    {
+    <script>
+
+        // TODO : 確認現在被選中的職缺ID
+        window.onload = function () {
+            let selectJob = document.getElementById('select-job')
+            selectJob.addEventListener("change",function(e){
+                e.target.parentElement.submit()
+            })
+        }
+       
+        // TODO : 抓到與 被選中的職缺ID 相同的應徵紀錄
+        // TODO : 迭代出 應徵紀錄
+
+        
+
+
+        // TODO : 此應徵紀錄 按下履歷按鈕後  --> 彈出 ResumeSnapshot頁面(根據 ResumeSnapshotID)
+        // TODO : --> 應徵紀錄 的 已讀欄位 改為True
+        // TODO : --> 應徵紀錄 的 已讀欄位值 儲存到資料庫
+        // TODO : --> 應徵紀錄 的 顯示畫面改成已讀狀態(ul加上already-read)
+
+        // TODO : 此應徵紀錄 按下面試按鈕後  --> 彈出 面試通知確認Model
+        // TODO : --> 應徵紀錄 的 面試欄位 改為True
+        // TODO : --> 應徵紀錄 的 面試欄位值 儲存到資料庫
+        // TODO : --> 應徵紀錄 的 面試按鈕改成鎖住(變灰 無法按)
+
+
+
+    </script>
+}
+
+
+
+
+
+@section topModal{
+    <!-- 確認錄取Modal -->
+    <div class="modal fade" id="admitModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title" id="exampleModalLabel">確認錄取</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    您確定要邀約{{Name}}面試嗎?<br>
+                    系統將會傳送聊聊訊息及email通知應徵者!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">確定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+}
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">
+                    <a href="./myAccount.html" class="text-decoration-none">企業帳戶</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">廣告加值服務</li>
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+    <link href="~/css/company/coverletterlist/stylesheet.css" rel="stylesheet" />
+}
+

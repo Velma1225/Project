@@ -1,0 +1,11 @@
+﻿@using HabanMVC.ViewModels.Company;
+
+ 
+@model List<CompanyFeatureViewModel>
+@foreach (var item in Model)
+{
+<li>
+        <a href="">@item.CompanyFeatureName</a>
+</li>
+
+}

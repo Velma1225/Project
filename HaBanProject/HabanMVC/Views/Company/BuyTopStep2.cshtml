@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "BuyTopStep1";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+<!-- 購買張數 -->
+<div id="content" class="col-12 col-md-9 col-lg-12 px-0">
+
+    <div class="d-flex justify-content-between">
+        <h2>置頂蛤蠣</h2>
+        <div class="edit">
+            <img src="~/images/company/buy/note.png" />
+            觀看購買紀錄
+        </div>
+    </div>
+
+    <ol class="stepsBox">
+        <li class="is-complete col-12 col-lg-3">1.置頂制度說明</li>
+        <li class="is-doing col-12 col-lg-3">2.選取購買張數</li>
+        <li class=" col-12 col-lg-3">3.確認訂單內容</li>
+        <li class=" col-12 col-lg-3">4.完成購買</li>
+    </ol>
+  
+    <div class="buy-how-many">
+        <div class="order-cost card card-no-radius mb-3">
+            <div class="card-header card-title-p">
+                <div class="fw-bold d-flex justify-content-between align-items-center">
+                    <span>訂單內容</span>
+                </div>
+            </div>
+            <div class="card-body text-secondary">
+                <div class="explain-box d-flex align-items-center justify-content-center">
+                    <div class="pic">
+                        <img src="~/images/company/buy/stickertop.png" />
+                    </div>
+                    <p>一顆蛤蠣<br>可以維持一個職缺 7天置頂效果</p>
+                </div>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th class="col-6">購買顆數:</th>
+                            <td class="col-6">
+                                <div class="count-group">
+                                    <button type="button" class="btn btn-primary">-</button>
+                                    <input type="number" id="tentacles" name="tentacles" min="1" max="100" value="1" />
+                                    <button type="button" class="btn btn-primary">+</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="col-6">總金額:</th>
+                            <td class="col-6">$ 1,800元</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <div class="back-next row">
+            <button type="button" class="col-6 btn">上一步</button>
+            <button type="button" class="next col-6 btn">下一步</button>
+        </div>
+    </div>
+</div>
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">置頂蛤蠣服務</li>
+
+            </ol>
+        </nav>
+    </div>
+}
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">置頂蛤蠣服務</li>
+
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+    <link href="~/css/company/buy/buy.css" rel="stylesheet" />
+}

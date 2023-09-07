@@ -1,0 +1,462 @@
+﻿
+/* ----- 側邊欄 ----- */
+
+/*.side-bar- .list-group a {
+    text-decoration: none;
+    color: #6A7079;
+}
+
+.side-bar- .list-group .count {
+    color: #999999;
+}
+
+.side-bar- .list-group li {
+    border-top: none;
+    border-bottom: none;
+    font-size: 11px;
+}
+
+.side-bar- .list-group .count {
+    color: #999999;
+}
+
+
+.side-bar- .list-group-item a:hover {
+    color: black;
+}
+
+.side-bar- .customer-service-info .list-group-item p:nth-child(n+1) {
+    text-align: center;
+    margin: 2px;
+}*/
+
+/* ----- 麵包屑 ----- */
+
+/*.breadcrumb,
+.breadcrumb li a {
+    color: #232A35;
+    font-size: 11px;
+}*/
+
+/* ----- 提示框 ----- */
+
+.alert-box {
+    padding: 5px;
+    font-size: 11px;
+    color: #3978FF;
+    background: #F4F7FF;
+}
+
+    .alert-box a {
+        font-size: 11px;
+        color: #6596FF;
+    }
+
+.member-homepage.container {
+    padding: 0 25px;
+}
+
+.card-no-radius {
+    border-radius: 0;
+}
+
+.card-title-p a {
+    padding: 0;
+    font-size: 11px;
+}
+
+.card-title-p {
+    padding: 5px;
+    font-size: 11px;
+}
+
+
+.card-text a {
+    text-decoration: none;
+    color: #6A7079;
+}
+
+.card-text-info::before {
+    content: "\2022";
+    margin-right: 1px;
+}
+
+.card-text,
+.card-title {
+    color: #6A7079;
+    font-size: 11px;
+}
+
+.card-text-info {
+    font-size: 12px;
+    margin-bottom: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------右側內容------- */
+
+
+li {
+    text-decoration: none
+}
+
+.card-text-red:hover {
+    color: red;
+}
+
+.card-text-red {
+    color: #6C757D;
+}
+
+.card-header-tabs .nav-link {
+    color: #6A7079 !important;
+    font-weight: 600;
+}
+
+.card-header-tabs .nav-item:hover {
+    color: #000 !important;
+}
+
+#tab1 li,
+#tab2 li,
+.card {
+    font-size: 12px;
+    color: #6A7079;
+    font-weight: normal;
+}
+
+
+@media (max-width: 768px) {
+
+    /* .member-homepage .hi {
+        display: none;
+    } */
+
+    .Interview {
+        display: none;
+    }
+
+    .alert-box.alert {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .customer-service-info span {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+/* -------- 新增 -------- */
+
+
+
+#content h2 {
+    color: #2b3340;
+    border-left: 5px solid #fa1e50;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    padding-left: 20px;
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    white-space: nowrap;
+    word-wrap: break-word;
+}
+
+.have-TOP {
+    color: #3978FF;
+    border: 1px solid #3978FF;
+}
+
+    .have-TOP .pic {
+        width: 100px;
+        height: 95px;
+        margin-right: 20px;
+    }
+
+        .have-TOP .pic img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+        }
+
+    .have-TOP p {
+        font-size: 12px;
+        margin: 0;
+    }
+
+        .have-TOP p span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+.text-secondary {
+    --bs-text-opacity: 1;
+    color: rgba(var(--bs-secondary-rgb),var(--bs-text-opacity)) !important;
+}
+
+#useTOPModal .modal-header {
+    color: #3978FF;
+    background: #F4F7FF;
+}
+
+#useTOPModal .modal-title {
+    font-size: 16px;
+}
+
+#useTOPModal .modal-body {
+    font-size: 14px;
+}
+
+/* --- 電腦版 --- */
+@media (min-width: 992px) {
+
+    /* 處理內容偏移 */
+    .side-bar- {
+        padding-left: 0 !important;
+    }
+
+    .member-homepage {
+        --bs-gutter-x: 0rem;
+    }
+}
+
+/* ----- 職缺清單 ----- */
+.job-list .card-header {
+    background-image: linear-gradient(#fff, #f5f5f5);
+}
+
+.job-list .card-body {
+    padding: 0;
+}
+
+.job-card {
+    border-bottom: 1px solid #E9EAEB;
+    padding: 20px;
+}
+
+
+.job-title {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+}
+
+
+.job-card .company a {
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.job-card .company i {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(./img/ic_sheild_pinkred600.svg) no-repeat center/contain;
+    margin-left: 2px;
+}
+
+.job-intro > :nth-child(n+2):nth-child(-n+4) {
+    margin: 5px 0;
+}
+
+.job-conditions > :nth-child(-n+2)::after {
+    content: "|";
+    padding: 0 3px;
+}
+
+.job-conditions > :nth-child(-n+2)::after {
+    content: "|";
+    padding: 0 3px;
+}
+
+.job-salary {
+    color: #2369FF;
+    font-weight: 700;
+}
+
+.job-conditions {
+    display: flex;
+}
+
+.job-description {
+    max-height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .job-description::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        background-image: linear-gradient(transparent,#fff);
+    }
+
+    .job-description p {
+        margin: 0;
+    }
+/* --- 下架 --- */
+.is-discontinued {
+    background-color: #F4F5F5;
+}
+
+    .is-discontinued .job-description::after {
+        background-image: linear-gradient(transparent,#F4F5F5);
+    }
+
+    .is-discontinued .count-down-day {
+        display: none;
+    }
+
+    .is-discontinued .discontinued-btn {
+        display: none;
+    }
+
+    .is-discontinued .btn-box button.delete-btn {
+        margin-right: 0;
+    }
+
+    .is-discontinued .using-state .row {
+        justify-content: end;
+    }
+
+.for-pc {
+    display: none;
+}
+
+.for-sp {
+    display: block;
+}
+
+.using-state {
+    margin-top: 20px;
+}
+
+    .using-state .row {
+        padding: 0;
+        --bs-gutter-x: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .using-state .count-down-day {
+        background: #fff1f4;
+        /* border: 1px solid #fa1e50; */
+        border-radius: 6px;
+        color: #fa1e50;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+        .using-state .count-down-day .day {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+    .using-state .btn-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+        .using-state .btn-box button {
+            background-color: #fa1e50;
+            color: #fff;
+            font-size: 14px;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .using-state .btn-box .delete-btn {
+            margin: 0 6px;
+        }
+
+
+/* -- 頁數 -- */
+.spinner-job-loading {
+    width: 1rem;
+    height: 1rem;
+    border-style: dotted;
+}
+
+
+
+/* --- 電腦版 --- */
+@media (min-width: 992px) {
+
+    .for-pc {
+        display: block;
+    }
+
+    .for-sp {
+        display: none;
+    }
+
+    .using-state {
+        margin-top: 0;
+    }
+
+        .using-state .row {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: end;
+            height: 100%;
+        }
+
+    .use-TOP button {
+        width: 100%;
+    }
+
+
+
+    /* -- 頁數 -- */
+    .pagination {
+        display: flex;
+        align-items: center;
+        margin: 30px 0;
+        --bs-pagination-color: #000;
+        --bs-pagination-focus-box-shadow: none;
+    }
+
+    .page {
+        position: relative;
+        display: block;
+        padding: var(--bs-pagination-padding-y) var(--bs-pagination-padding-x);
+        font-size: var(--bs-pagination-font-size);
+        color: var(--bs-pagination-color);
+        text-decoration: none;
+        background-color: var(--bs-pagination-bg);
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+    .job-title:hover, a:hover, .company a:hover {
+        color: #6596ff;
+    }
+
+    .page-item:nth-child(n+3):nth-child(-n+6) {
+        font-size: 100px;
+        margin-left: 10px;
+    }
+}

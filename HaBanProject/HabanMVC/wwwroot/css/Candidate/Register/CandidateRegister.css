@@ -1,0 +1,132 @@
+body{
+    font: normal normal 12px Verdana,Arial,'新微軟正黑體',Helvetica,sans-serif;
+}
+
+/* body */
+.form_information{
+    width: 100%;
+    padding: 80px 0px 50px;
+    margin: auto;
+    max-width: 375px;
+}
+
+.form_information h1{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 25px;
+    border-left: 6px solid #FB6184;
+}
+.form_information .mobile{
+    padding-bottom: 30px;
+}
+
+.form_information .mobile .input-wrap {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: start;
+    align-items: flex-start;
+}
+.form_information .mobile h3, .verifyCode h3{
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.form_information .mobile .mobilenum{
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #BFC1C5;
+    border-radius: 4px;
+    width: 65%;
+}
+.form_information .mobile button{
+    font-size: 16px;
+    color: #FDA5B9;
+    border: solid 1px #FDBBCA;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 4px;
+}
+.form_information .col-auto{
+    display: inline;
+}
+.form_information .verifyCode{
+    padding-bottom: 30px;
+}
+
+.form_information .verifyCode .verifyCodenum{
+    font-size: 16px;
+    padding: 10px 16px;
+    border: 1px solid #BFC1C5;
+    border-radius: 4px;
+    
+}
+.form_information .nextstep button{
+    font-size: 16px;
+    background-color: #FDA5B9;
+    border: #FDA5B9;
+    color:white;
+    padding: 10px 16px;
+}
+
+.form_information .remark .text{
+    font-size: 13px;
+    color: #7f7f7f;
+}
+.form_information .or .hr{
+    font-size: 13px;
+    color: #80858C;
+    position: relative;
+}
+.form_information .or .hr span{
+    display: inline-block;
+    padding: 0 16px;
+    background: #fff;
+    position: relative;
+}
+.form_information .or .hr::before{
+    content: "";
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form_information .third_party-inbox{
+    padding-top: 30px;
+}
+.form_information .third_party-inbox a{
+    padding: 0 15px;
+}
+.form_information .third_party-inbox img{
+    border: 1px solid;
+    color: #d9d9d9;
+
+}
+.form_information .third_party-href img{
+    width: 40px;
+    padding: 5px;
+}
+.form_information a{
+    text-decoration: none;
+}
+.form_information a:hover {
+    color: #6596ff;
+    text-decoration: none;
+}
+.form_information .has-account{
+    font-size: 14px;
+    text-align: center;
+    padding-top: 32px;
+}
+
+

@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "JobNewStep3";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+<div style="margin-left: 1px;" class="row justify-content-between">
+
+    <h2 class="col-6">編輯職缺</h2>
+    <span class="remark col-6 text-end"><em>＊</em>為必填項目</span>
+</div>
+
+<ol class="stepsBox">
+    <li class="is-complete col-12 col-lg-3">1.工作內容與職缺資訊</li>
+    <li class="is-complete col-12 col-lg-3">2.職缺條件</li>
+    <li class="is-doing col-12 col-lg-3">3.應徵與面試</li>
+    <li class=" col-12 col-lg-3">4.觀看預覽</li>
+</ol>
+
+<div class="col-lg-12">
+    <div class="job-content">
+
+        <div class="card card-no-radius mb-3">
+            <div class="card-header card-title-p">
+                <div class="fw-bold d-flex justify-content-between align-items-center">
+                    <span>應徵與面試</span>
+                </div>
+            </div>
+            <div class="card-body text-secondary">
+
+                <table class="table table-striped table-rwd">
+
+                    <tbody>
+                        <tr class="opening-category">
+                            <td class="col-12 col-lg-2"><span class="mark-text-red p-1">*</span>職務聯絡人：</td>
+                            <td class="col-12 col-lg-10">
+                                <div class="input-group input-group-sm mb-3">
+
+                                    <input type="text" class="form-control" aria-label="Sizing example input"
+                                           aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td><span class="mark-text-red p-1">*</span>聯絡 Email：</td>
+                            <td>
+                                <div class="d-flex flex-wrap">
+
+                                    <div class="form-check col-6 ">
+                                        <input class="form-check-input" type="radio" name="ContactEmail" id="ContactEmail1">
+                                        <label class="form-check-label" for="ContactEmail1">
+                                            意者請將履歷自傳透過666蛤班應徵，<br>
+                                            合適者會另行通知面試
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check col-6">
+                                        <input class="form-check-input" type="radio" name="ContactEmail" id="ContactEmail2">
+                                        <label class="form-check-label" for="ContactEmail2">
+                                            輸入Email
+                                        </label>
+                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm">
+                                    </div>
+
+
+                                </div>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+                            <td><span class="mark-text-red p-1">*</span>備註：</td>
+                            <td>
+                                <div class="d-flex flex-wrap">
+
+                                    <div class="form-check col-6">
+                                        <input class="form-check-input" type="radio" name="Remark" id="Remark1" checked>
+                                        <label class="form-check-label" for="Remark1">
+                                            請直接投遞履歷，經篩選後會詢問可面試時間。
+                                        </label>
+                                    </div>
+
+
+                                    <div class="form-check col-6">
+                                        <input class="form-check-input" type="radio" name="Remark" id="Remark2" checked>
+                                        <label class="form-check-label" for="Remark2">
+                                            輸入備註文字
+                                        </label>
+                                        <input type="text" class="form-control" aria-label="Sizing example input"
+                                               aria-describedby="inputGroup-sizing-sm">
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="back-next row mb-4">
+                <a class="col-6 btn" href="~/Company/JobEditStep2">上一步</a>
+                <a class="next col-6 btn" href="~/Company/JobEditStep4">預覽畫面</a>
+            </div>
+        </div><!-- card end -->
+
+
+    </div><!-- job-content end -->
+
+</div>
+
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">職缺刊登管理</li>
+                <li class="breadcrumb-item" aria-current="page">職缺清單</li>
+                <li class="breadcrumb-item" aria-current="page">編輯職缺</li>
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+    <link href="~/css/jobnew/stylesheet.css" rel="stylesheet" />
+}
+
+

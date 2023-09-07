@@ -1,0 +1,72 @@
+﻿@{
+    ViewData["Title"] = "BuyTopStep1";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+<!-- 置頂制度 -->
+<div id="content" class="col-12 col-md-9 col-lg-12 px-0">
+   
+    <div class="d-flex justify-content-between">
+        <h2>置頂蛤蠣</h2>
+        <div class="edit">
+            <img src="~/images/company/buy/note.png" />
+            觀看購買紀錄
+        </div>
+    </div>
+
+    <ol class="stepsBox">
+        <li class="is-doing col-12 col-lg-3">1.置頂制度說明</li>
+        <li class=" col-12 col-lg-3">2.選取購買顆數</li>
+        <li class=" col-12 col-lg-3">3.確認訂單內容</li>
+        <li class=" col-12 col-lg-3">4.完成購買</li>
+    </ol>
+   
+    <div class="top-sticker-plan">
+        <h3>制度說明</h3>
+        <div class="KV">
+            <div class="pic">
+              
+                <img src="~/images/company/buy/stickertop.png" />
+            </div>
+            <div class="text">
+                <p class="Q">
+                    下禮拜活動需要一百人，卻還沒找到人？<br>
+                    收到的履歷低於預期？<br>
+                    想要增加職缺曝光度？<br>
+                    收到的履歷低於預期？
+                </p>
+                <h4 class="title">置頂蛤蠣</h4>
+                <p class="slogan">每日增加十倍曝光量</p>
+            </div>
+        </div>
+        <div class="explain alert-box alert text-center my-2" role="alert">
+            <div class="alert-text">
+                <p>置頂蛤蠣可使用於刊登的職缺上，讓該職缺維持7天的置頂效果，曝光率提升，徵才效率大增!<br>置頂蛤蠣將綁訂於企業帳戶中，不限購買張數。</p>
+            </div>
+            <span class="PS">*同樣使用置頂蛤蠣之職缺，排序將依其最後更新時間為排序基準。</span>
+        </div>
+        <button type="button">立即購買</button>
+
+    </div>
+
+</div>
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">置頂蛤蠣服務</li>
+               
+            </ol>
+        </nav>
+    </div>
+}
+
+
+@section topCSS{
+    <link href="~/css/company/buy/buy.css" rel="stylesheet" />
+}
+

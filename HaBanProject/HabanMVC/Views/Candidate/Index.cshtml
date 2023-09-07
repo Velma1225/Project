@@ -1,0 +1,397 @@
+﻿@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model CandidateIndexVM
+@{
+    Layout = "~/Views/Shared/_LayoutSidebarCandidate.cshtml";
+    ViewData["Title"] = "Index";
+}
+
+
+
+
+<!-- 內容放這邊 \(0ㄅ0)/ -->
+<!-- ---------------------- -->
+@section breadcrumb{
+    <div class="hi row m-0">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">我的帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">我的帳戶</li>
+            </ol>
+        </nav>
+    </div>
+
+}
+
+
+
+<div id="topbackground">
+    <ul class="a1 list-unstyled">
+
+        <li class="a2"><div><img class="img-fluid" src="~/images/candidate/photo/candidate-0002.jpg" /></div></li>
+
+        <!-- <li class="job-code">求職代碼：5606131</li> -->
+    </ul>
+    <ul class="list-unstyled hi">
+        <li class="fs-4 fw-bold mb-2">@Model.CandidateInfo.Name</li>
+        <li class="mb-1">預設履歷：<span class="res-name"><a href="#">@Model.CandidateInfo.ResumeName </a><a class="preview" href="#" style="font-size: 14px;" class="btn text-primary p-0 ps-1"><img src="~/images/candidate/index/ic_search.svg" /> 預覽</a></span></li>
+        <li class="mb-1">履歷狀態：<a class="a6-2" href="#">@(@Model.CandidateInfo.OpenOrClosed ==true?"開啟中":"關閉中")</a></li>
+        <li>收件信箱：<a style="font-size: 12px;" href="#">@Model.CandidateInfo.Email</a><span class="verify" style="color: #2B9DF8; font-size: 12px;padding-left: 5px;">已驗證</span></li>
+    </ul>
+
+
+</div>
+<!-- ---- -->
+<div class="my-2"></div>
+<div class="alert-box alert text-center my-2" role="alert">
+    溫馨提醒：666蛤班不會透過驗證簡訊要求會員點擊不明連結，若接獲請勿理會。<a href="#">更多說明»</a>
+</div>
+
+
+<div class="col-md-12 col-lg-12">
+    <div class="card card-no-radius mb-3" style="height: 200px;">
+        <div class="card-header card-title-p">
+            <div class="fw-bold d-flex justify-content-between align-items-center">
+                <span>主動應徵紀錄</span>
+
+                <a href="#" class="pe-3 fw-normal text-primary">更多</a>
+            </div>
+        </div>
+        <div class="card-body text-secondary">
+
+            <!-- <ul class="row list-unstyled">
+                <li class="col-12">針對您的媒合內容，挑選出幾家推薦的公司給您</li>
+                <li class="col-12"><a class="card-text-red" href="#">您尚未建立媒合內容</a></li>
+            </ul> -->
+            <ul class="row list-unstyled">
+
+                <li class="col-4 mb-2 record">應徵職務</li>
+                <li class="col-2 record">投遞履歷</li>
+                <li class="col-3 record">讀取狀態</li>
+                <li class="col-3 record">應徵日期</li>
+                @foreach (var item in Model.ApplicationRecords)
+                {
+                    <li class="col-4 record mb-2"><a href="#">@item.AppliedPosition</a></li>
+                    <li class="col-2 record mb-2"><a href="#">@item.ResumeName</a></li>
+                    <li class="col-3 record fw-bold mb-2">@(@item.ReadStatus == true? "已讀取":"未讀取")</li>
+                    <li class="col-3 record mb-2">@(@item.CreateAt.ToString("yyyy/MM/dd"))</li>
+                }
+                @*
+                <li class="col-3 record mb-2"><a href="#">BuildSchool股份有限公司</a></li>
+                <li class="col-3 record mb-2"><a href="#">.net工程師[全台最大辦公用品供應商]</a></li>
+                <li class="col-3 record fw-bold mb-2">已讀取</li>
+                <li class="col-3 record mb-2">2023/08/14 09:23</li>
+
+                <li class="col-3 record mb-2"><a href="#">BuildSchool股份有限公司</a></li>
+                <li class="col-3 record mb-2"><a href="#">呷哺信義店【晚班內場正職廚務人員】</a></li>
+                <li class="col-3 record fw-bold mb-2">已讀取</li>
+                <li class="col-3 record mb-2">2023/08/09 08:34</li>
+
+                <li class="col-3 record mb-2"><a href="#">BuildSchool股份有限公司</a></li>
+                <li class="col-3 record mb-2"><a href="#">有巢氏房屋 徵 不動產業務 時間彈性 無經驗可 有專人培訓 主管帶領挑戰高薪</a></li>
+                <li class="col-3 record fw-bold mb-2">未讀取</li>
+                <li class="col-3 record mb-2">尚未回覆</li>
+
+                <li class="col-3 record mb-2"><a href="#">BuildSchool股份有限公司</a></li>
+                <li class="col-3 record mb-2"><a href="#">放蕩餐酒館-急徵 調酒師</a></li>
+                <li class="col-3 record fw-bold mb-2">未讀取</li>
+                <li class="col-3 record mb-2">尚未回覆</li>
+
+                <li class="col-3 record mb-2"><a href="#">鉅恒國際股份有限公司</a></li>
+                <li class="col-3 record mb-2"><a href="#">資深美編設計師</a></li>
+                <li class="col-3 record fw-bold mb-2">已讀取</li>
+                <li class="col-3 record mb-2">2023/08/05 08:56</li>*@
+
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<!-- <div class="card card-no-radius">
+    <div class="card-header">
+
+        <ul class="nav nav-tabs card-header-tabs">
+            <li class="nav-item">
+                <a class="nav-link active nav-link-sm text-black p-2" data-toggle="tab"
+                    href="#tab1">主動應徵紀錄</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-sm text-black p-2" data-toggle="tab" href="#tab2">公司來訪紀錄</a>
+            </li>
+            <li class="nav-item tab-gap"></li>
+
+            <li class="">
+                <a class="me-2" style=" font-size: 11px; color: #0d6efd;" href="#">更多</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body">
+
+        <div class="tab-content" style="height: 140px;">
+            <div class="tab-pane fade show active" id="tab1">
+
+                <ul class="row list-unstyled">
+                    <li class="col-3 mb-2">公司名稱</li>
+                    <li class="col-3">應徵職務</li>
+                    <li class="col-3">讀取狀態</li>
+                    <li class="col-3">回應日期</li>
+
+                    <li class="col-3 record mb-2"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">.net工程師[全台最大辦公用品供應商]</a></li>
+                    <li class="col-3 record fw-bold mb-2">已讀取</li>
+                    <li class="col-3 record mb-2">2023/08/14 09:23</li>
+
+                    <li class="col-3 record mb-2"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">呷哺信義店【晚班內場正職廚務人員】</a></li>
+                    <li class="col-3 record fw-bold mb-2">已讀取</li>
+                    <li class="col-3 record mb-2">2023/08/09 08:34</li>
+
+                    <li class="col-3 record mb-2"><a href="#">有巢氏房屋東源盛不動產有限公司有巢氏房屋東源盛不動產有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">有巢氏房屋 徵 不動產業務 時間彈性 無經驗可 有專人培訓 主管帶領挑戰高薪</a></li>
+                    <li class="col-3 record fw-bold mb-2">未讀取</li>
+                    <li class="col-3 record mb-2">尚未回覆</li>
+
+                    <li class="col-3 record mb-2"><a href="#">今夜餐酒館有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">放蕩餐酒館-急徵 調酒師</a></li>
+                    <li class="col-3 record fw-bold mb-2">未讀取</li>
+                       <li class="col-3 record mb-2">尚未回覆</li>
+
+                    <li class="col-3 record mb-2"><a href="#">鉅恒國際股份有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">資深美編設計師</a></li>
+                    <li class="col-3 record fw-bold mb-2">已讀取</li>
+                    <li class="col-3 record mb-2">2023/08/05 08:56</li>
+
+
+
+
+                </ul>
+
+            </div>
+            <div class="tab-pane fade" id="tab2">
+
+                <ul class="row list-unstyled">
+                    <li class="col-3 mb-2">公司名稱</li>
+                    <li class="col-3">產業別</li>
+                    <li class="col-3">總職缺數</li>
+                    <li class="col-3">來訪日期</li>
+
+
+                    <li class="col-3 record mb-2"><a href="#">鉅恒國際股份有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">零售業</a></li>
+                    <li class="col-3 record fw-bold mb-2"><a href="#">12</a></li>
+                    <li class="col-3 record mb-2">2023/08/14 09:23</li>
+
+                    <li class="col-3 record mb-2"><a href="#">有巢氏房屋東源盛不動產有限公司有巢氏房屋東源盛不動產有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">房地產業</a></li>
+                    <li class="col-3 record fw-bold mb-2"><a href="#">16</a></li>
+                    <li class="col-3 record mb-2">2023/08/08 09:15</li>
+
+                    <li class="col-3 record mb-2"><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">餐飲業</a></li>
+                    <li class="col-3 record fw-bold mb-2"><a href="#">20</a></li>
+                    <li class="col-3 record mb-2">2023/08/06 12:33</li>
+
+                    <li class="col-3 record mb-2"><a href="#">.net工程師[全台最大辦公用品供應商]</a></li>
+                    <li class="col-3 record mb-2"><a href="#">科技業</a></li>
+                    <li class="col-3 record fw-bold mb-2"><a href="#">23</a></li>
+                    <li class="col-3 record mb-2">2023/08/04 08:12</li>
+
+                    <li class="col-3 record mb-2"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></li>
+                    <li class="col-3 record mb-2"><a href="#">科技業</a></li>
+                    <li class="col-3 record fw-bold mb-2"><a href="#">43</a></li>
+                    <li class="col-3 record mb-2">2023/08/03 02:28</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="row mt-2">
+
+
+    <div class="col-md-12 col-lg-6">
+        <div class="card card-no-radius mb-3" style="height: 200px;">
+            <div class="card-header card-title-p">
+                <div class="fw-bold d-flex justify-content-between align-items-center">
+                    <span>收藏職缺</span>
+
+                    <a href="/Candidate/CandidateFavoriteJob/" class="pe-3 fw-normal text-primary">更多</a>
+                </div>
+            </div>
+            <div class="card-body text-secondary">
+
+                <!-- <ul class="row list-unstyled">
+                    <li class="col-12">針對您的媒合內容，挑選出幾家推薦的公司給您</li>
+                    <li class="col-12"><a class="card-text-red" href="#">您尚未建立媒合內容</a></li>
+                </ul> -->
+                <ul class="row list-unstyled">
+                    <li class="col-6 mb-3">職缺名稱</li>
+                    <li class="col-6">公司名稱</li>
+                    <li class="col-12 d-none">目前沒有瀏覽記錄</li>
+                    @foreach (var item in Model.FavoriteJob)
+                    {
+                        <li class="col-6 browsing-history mb-2"><a href="#">@item.JobTitle</a></li>
+                        <li class="col-6 browsing-history mb-2"><a href="#">@item.CompanyName</a></li>
+                    }
+                    @* <li class="col-6 browsing-history mb-2"><a href="#">【數位轉型】UI UX 設計師-2023擴編徵才</a></li>
+                    <li class="col-6 browsing-history mb-2">BuildSchool股份有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">.net工程師[全台最大辦公用品供應商]</a></li>
+                    <li class="col-6 browsing-history mb-2">BuildSchool股份有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">ASP.NET MVC C# 網站後端工程師</a></li>
+                    <li class="col-6 browsing-history mb-2">BuildSchool股份有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">夾子園桃園永安旗艦店-出納行政助理</a></li>
+                    <li class="col-6 browsing-history mb-2">BuildSchool股份有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">夾子園桃園永安旗艦店-出納行政助理</a></li>
+                    <li class="col-6 browsing-history mb-2">BuildSchool股份有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">夾子園旗艦店-出納行政助理夾子園旗艦店-出納行政助理</a></li>
+                    <li class="col-6 browsing-history mb-2">BuildSchool股份有限公司</li>*@
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12 col-lg-6 ps-lg-1">
+        <div class="card card-no-radius mb-3" style="height: 200px;">
+            <div class="card-header card-title-p">
+                <div class="fw-bold d-flex justify-content-between align-items-center">
+                    <span>我的履歷</span>
+
+                    <a href="#" class="pe-3 fw-normal text-primary">編輯履歷</a>
+                </div>
+            </div>
+            <div class="card-body text-secondary pt-2">
+                <!-- <h5 class="card-title m-0">履歷星級
+                    <img src="../img/star-bright-2.svg" alt="...">
+                    <img src="../img/star-bright-2.svg" alt="...">
+                    <img src="../img/star-1.svg" alt="...">
+
+                </h5> -->
+                <p class="card-text mt-2">履歷完成度越高，就越有機會獲得邀請面試唷～</p>
+                <ul class="row list-unstyled">
+@*                    <p class="fw-bold m-0" style="color: #6596FF;"><img src="~/images/Candidate/Index/ok.svg" style="vertical-align: top;" alt="...">
+                    <p class="fw-bold m-0" style="color: #6596FF;"><img src="~/images/Candidate/Index/no.svg" style="vertical-align: top;" alt="...">*@
+                    <li class="col-6"><p class="fw-bold m-0" style="color: #6596FF;">基本資料</p>生日、居住地等</li>
+                    <li class="col-6"><p class="fw-bold m-0" style="color: #6596FF;">期望職務</p>職務名稱、上班時段等</li>
+                    <li class="col-6"><p class="fw-bold m-0" style="color: #6596FF;">學歷背景</p>最高學歷、校名等</li>
+                    <li class="col-6"><p class="fw-bold m-0" style="color: #6596FF;">專長技能</p>語言能力、證照等</li>
+                    <li class="col-6"><p class="fw-bold m-0" style="color: #6596FF;">工作經驗</p>兼職、實習等</li>
+                    <li class="col-6"><p class="fw-bold m-0" style="color: #6596FF;">其他項目</p>自傳、在校職務等</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="row mt-2">
+
+
+    <div class="col-md-12 col-lg-6">
+        <div class="card card-no-radius mb-3" style="height: 200px;">
+            <div class="card-header card-title-p">
+                <div class="fw-bold d-flex justify-content-between align-items-center">
+                    <span>最近瀏覽職缺</span>
+
+                    <a href="#" class="pe-3 fw-normal text-primary">清除</a>
+                </div>
+            </div>
+            <div class="card-body text-secondary">
+                <ul class="row list-unstyled">
+                    <li class="col-6 mb-3">職缺名稱</li>
+                    <li class="col-6">公司名稱</li>
+                    <li class="col-12 d-none">目前沒有瀏覽記錄</li>
+
+                    <li class="col-6 browsing-history mb-2"><a href="#">夾子園旗艦店-出納行政助理夾子園旗艦店-出納行政助理</a></li>
+                    <li class="col-6 browsing-history mb-2">中平夾子園商行中平夾子園商行中平夾子園商行</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">【數位轉型】UI UX 設計師-2023擴編徵才</a></li>
+                    <li class="col-6 browsing-history mb-2">翠峰精品行銷有限公司翠峰精品行銷有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">.net工程師[全台最大辦公用品供應商]</a></li>
+                    <li class="col-6 browsing-history mb-2">英屬開曼群島商史泰博股份有限公司台灣分公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">ASP.NET MVC C# 網站後端工程師</a></li>
+                    <li class="col-6 browsing-history mb-2">永慶房產集團永慶房屋仲介股份有限公司</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">夾子園桃園永安旗艦店-出納行政助理</a></li>
+                    <li class="col-6 browsing-history mb-2">中平夾子園商行</li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">夾子園桃園永安旗艦店-出納行政助理</a></li>
+                    <li class="col-6 browsing-history mb-2">翠峰精品行銷有限公司翠峰精品行銷有限公司</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12 col-lg-6 ps-lg-1">
+        <div class="card card-no-radius mb-3" style="height: 200px;">
+            <div class="fw-bold card-header card-title-p d-flex justify-content-between">
+                <span>收藏公司</span>
+                <a href="#" class="pe-3 fw-normal text-primary">更多</a>
+            </div>
+            <div class="card-body text-secondary">
+                <ul class="row list-unstyled">
+                    <li class="col-6 mb-3">公司名稱</li>
+                    <li class="col-6 mb-2 text-center">產業別</li>
+                    <li class="col-12 d-none">目前沒有瀏覽記錄</li>
+                    @foreach (var item in Model.FavoriteCompany)
+                    {
+                        <li class="col-6 browsing-history mb-2"><a href="#">@item.CompanyName</a></li>
+                        <li class="col-6 browsing-history mb-2 text-center"><a href="#">@item.IndustryCategory</a></li>
+                    }
+                    @*<li class="col-6 browsing-history mb-2"><a href="#">翠峰精品行銷有限公司翠峰精品行銷有限公司翠峰精品行銷有限公司翠峰精品行銷有限公司</a></li>
+
+                    <li class="col-6 browsing-history mb-2"><a href="#">零售業</a></li>
+
+                    <li class="col-6 browsing-history mb-2"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司英屬開曼群島商史泰博股份有限公司台灣分公司</a></li>
+
+                    <li class="col-6 browsing-history mb-2"><a href="#">科技業</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">永慶房產集團永慶房屋仲介股份有限公司永慶房產集團永慶房屋仲介股份有限公司</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">科技業</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">永慶房產集團永慶房屋仲介股份有限公司永慶房產集團永慶房屋仲介股份有限公司</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">房地產業</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">永慶房產集團永慶房屋仲介股份有限公司永慶房產集團永慶房屋仲介股份有限公司</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">永慶房產集團永慶房屋仲介股份有限公司永慶房產集團永慶房屋仲介股份有限公司</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">永慶房產集團永慶房屋仲介股份有限公司永慶房產集團永慶房屋仲介股份有限公司</a></li>
+                    <li class="col-6 browsing-history mb-2"><a href="#">永慶房產集團永慶房屋仲介股份有限公司永慶房產集團永慶房屋仲介股份有限公司</a></li>*@
+                </ul>
+                <!-- <p class="card-text card-text-info"><a href="#">【重要】666客服中心，將於2023/08/03暫停服務公告</a></p>
+                <p class="card-text card-text-info"><a href="#">【宣導】勿輕信任何管道所稱高薪聘請赴緬甸工作詐騙陷阱防範宣導</a></p>
+                <p class="card-text card-text-info"><a href="#">【重要】666網路平台-約定條款修訂公告</a></p>
+                <p class="card-text card-text-info"><a href="#">【活動-已結束】4月福委出任務，夏日登入喝手搖</a></p>
+                <p class="card-text card-text-info"><a href="#">【加碼活動-已結束】 新朋友限定！即日起至3月底，下載註冊送早餐</a></p>
+                <p class="card-text card-text-info"><a href="#">【宣導】勿輕信任何管道所稱高薪聘請赴緬甸工作詐騙陷阱防範宣導</a></p> -->
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+@*<partial name="~/Views/Candidate/PartialView/_JobSliderPartial.cshtml" model="Model" />*@
+
+
+
+@section topCSS{
+
+
+    <link href="~/css/Candidate/Index/Index.css" rel="stylesheet" />
+
+}
+
+@section endJS{
+
+}
+
+

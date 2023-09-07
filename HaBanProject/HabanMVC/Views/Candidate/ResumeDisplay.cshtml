@@ -1,0 +1,239 @@
+﻿
+@{
+    ViewData["Title"] = "ResumeDisplay";
+    Layout = "~/Views/Shared/_LayoutCandidate.cshtml";
+    
+}
+
+@section breadcrumb{
+    <div class="hi row mx-1">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">我的帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">履歷中心</li>
+                <li class="breadcrumb-item" aria-current="page">編輯 / 建立履歷</li>
+                <li class="breadcrumb-item" aria-current="page">預覽履歷</li>
+            </ol>
+        </nav>
+    </div>
+
+}
+
+<div class="container">
+    <div class="row">
+        <!-- <div class="aside-row"> -->
+        <div class="col-9 m-auto">
+            <aside class="from-module resume-aside">
+                <!-- 個人基本資料 -->
+                <section class="detailed-info">
+                    <div class="person_info">
+                        <div class="resume-title-wrap">
+                            <!-- todo編輯 -->
+                            <p class="resume-title mb-0">
+                                求職履歷
+
+                            </p>
+                            <p class="resume-time mb-0">更新日期：2023-08-11</p>
+                        </div>
+                        <div class="info-article-border">
+                            <label class="photo-box-edit">
+                                <img src="~/images/login_resume-img/ic_camera_lighten.svg" alt="">
+                                <div class="text">設定個人照</div>
+                                <input type="file" name="" id="">
+                            </label>
+                            <div class="info-box">
+                                <div class="info-inbox">
+                                    <div>
+                                        <p class="name mb-0">
+                                            姓名
+
+                                        </p>
+                                        <p class="simple-info mb-0">
+                                            <b>
+                                                <span>性別</span>
+                                            </b>
+                                            <b>
+                                                <span>18歲</span>
+                                            </b>
+                                            <b>
+                                                <span>待業中</span>
+                                            </b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="detailed-info-inbox">
+                                    <p class="detailed-info cell location mb-0">
+                                        <span class="material-symbols-outlined">home_pin</span>
+                                        <span>居住桃園市桃園區</span>
+                                    </p>
+                                    <p class="detailed-info cell photo mb-0">
+                                        <span class="material-symbols-outlined">phone_iphone</span>
+                                        <span>0986000000</span>
+                                    </p>
+                                    <p class="detailed-info cell email mb-0">
+                                        <span class="material-symbols-outlined">mail</span>
+                                        <span>xx@gmail.com</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 學歷背景 -->
+                <section class="detailed-info">
+                    <div class="education_bg">
+                        <div class="title-wrap">
+                            <div class="title-box">
+                                <h3 class="title mb-0">學歷背景</h3>
+                                <!-- <p class="txt mb-0">告訴我們你的就學經歷吧</p> -->
+                            </div>
+
+                        </div>
+                        <!-- 有值 -->
+                        <div class="education-content">
+                            <div class="education-list">
+                                <!-- 有值呈現 -->
+                                <div class="education-box all-box">
+                                    <!-- <div class="edit-btn-box">
+                                        <button class="edit-btn"></button>
+                                        <button class="delete-btn"></button>
+                                    </div> -->
+                                    <div class="education-title-wrap">
+                                        <h4 class="education-title">Bulid School大學</h4>
+                                        <p class="education-time"></p>
+                                    </div>
+                                    <p class="education-txt">
+                                        <span>資工系</span>
+                                        <span>資訊相關</span>
+                                        <span>畢業</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 工作經驗 -->
+                <section class="detailed-info">
+                    <div class="work_experience">
+                        <div class="title-wrap">
+                            <div class="title-box">
+                                <h3 class="title mb-0">工作經驗 </h3>
+                            </div>
+                        </div>
+                        <!-- 詳細工作經歷 -->
+                        <div class="experience-list">
+                            <!-- <div class="experience-box all-box" resumeid="">
+                                <div class="edit-btn-box">
+                                    <button class="edit-btn"></button>
+                                    <button class="delete-btn"></button>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">公司名稱</p>
+                                    <p class="experience-txt">Bulid School</p>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">產業類別</p>
+                                    <p class="experience-txt">資訊軟體</p>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">職務名稱</p>
+                                    <p class="experience-txt">軟體工程師</p>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">職務類型</p>
+                                    <p class="experience-txt">全職</p>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">職務類別</p>
+                                    <p class="experience-txt">資訊軟體</p>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">管理責任</p>
+                                    <p class="experience-txt">無</p>
+                                </div>
+                                <div class="experience-content">
+                                    <p class="experience-title">任職期間</p>
+                                    <p class="experience-txt">2023-4~2023-10</p>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="experience-box all-box">
+                            <div class="experience-title-wrap">
+                                <h4 class="experience-title">
+                                    <span>行政人員</span>
+                                    <span>Build School</span>
+                                </h4>
+                                <p class="experience-time is-pc">2023-5 至 2023-10 ( 6 個月 )</p>
+                            </div>
+                            <div class="experience-info">
+                                <p class="info">
+                                    <span>全職</span>
+                                    <span>軟體資訊業</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 專長技能 -->
+                <section class="detailed-info">
+                    <div class="title-wrap">
+                        <div class="title-box">
+                            <h3 class="title mb-0">專長技能</h3>
+                            <!-- <p class="text mb-0">駕照車輛、語言能力、電腦專長、工作專長...</p> -->
+                        </div>
+                    </div>
+                    <!-- 有值 -->
+                    <div class="skill">
+                        <div class="skill-box all-box">
+                            <!-- <div class="edit-btn-box">
+                                <button class="edit-btn"></button>
+                                <button class="delete-btn"></button>
+                            </div> -->
+                            <div class="skill-content">
+                                <p class="skill-title">駕照車輛</p>
+                                <p class="skill-txt"> 持有駕照：輕型機車、普通小型車</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- 其他項目-自傳 -->
+                <section class="detailed-info">
+                    <div class="title-wrap">
+                        <div class="title-box">
+                            <h3 class="title mb-0">自傳</h3>
+                            <!-- <p class="text mb-0">個人介紹</p> -->
+                        </div>
+                    </div>
+                    <!-- 有值 -->
+                    <div class="skill">
+                        <div class="skill-box all-box">
+                            <!-- <div class="edit-btn-box">
+                                <button class="edit-btn"></button>
+                                <button class="delete-btn"></button>
+                            </div> -->
+                            <div class="skill-content">
+                                <p class="skill-title">自傳內容</p>
+                                <p class="skill-txt">
+                                    我是一個充滿活力的年輕人，對於生活中的各種挑戰充滿熱情。我相信，每個人都有自己的獨特之處，而我最大的特點就是追求完美。無論是工作還是生活，我總是力求做到最好。<br>
+                                    我也擁有餐飲服務方面的經驗。我享受與客戶交流並提供他們最好的服務。我相信良好的溝通和細心的服務是滿足客戶需求的關鍵。<br>
+                                    另外值得一提的是，我擁有普通重型機車駕照，這讓我在運輸和外勤工作上更加靈活。<br>
+                                    如果您對我的申請感興趣，我非常期待有機會與您見面，謝謝您閱讀我的履歷自傳！
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+@section topCSS{
+    <link href="~/css/Candidate/resumedisplay/resumedisplay.css" rel="stylesheet" />
+}
+

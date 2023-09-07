@@ -1,0 +1,1711 @@
+﻿body {
+    width: auto;
+}
+
+
+.company_intro {
+    width: 100%;
+}
+
+
+.welface_desc {
+    width: 100%;
+}
+
+.intro {
+    width: 100%;
+}
+
+
+
+
+.wrapper-plus {
+    background: #2B3340;
+    padding-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+
+.head-section .bannerimg img {
+    height: 106px;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+.bannerimg {
+    margin-bottom: -73px;
+}
+
+.banner .logo {
+    margin: 0 auto 22px auto;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.head-section .logo::before {
+    content: "";
+    display: inline-block;
+    width: 122px;
+    height: 122px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(148deg, #cbb08b 11%, #fff5e6 18%, #beab8c 22%, #ddcdb1 34%, #ae976f 49%, #f8ebc0 56%, #a59387 66%, #93887c 82%, #f4e1cb 86%, #bcaf9e 94%);
+    border-radius: 16px;
+}
+
+.banner .logobox {
+    width: 120px;
+    height: 120px;
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 2px 0 0 2px;
+}
+
+.logobox img {
+    z-index: 3;
+    max-width: 100%;
+    position: relative;
+}
+
+.banner .awardimg {
+    display: inline-block;
+    width: 32px;
+    height: 43px;
+    background: url(~/images/Company/CompanyProfileEdit/badge.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    right: -21px;
+    bottom: -21px;
+    z-index: 5;
+}
+
+
+.head-section .companyname_area {
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+    padding: 0 16px;
+}
+
+.companyname_area .companyname {
+    color: #fff;
+    font-size: 20px;
+}
+
+.fixedheadsection .companyname_area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.companyname_area svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: top;
+    margin: 0 5px;
+}
+
+.fixedheadsection svg {
+    margin-left: -10px;
+}
+
+.headNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+    .headNav li {
+        margin-left: 16px;
+    }
+
+    .headNav a {
+        color: #fff;
+        font-size: 18px;
+        margin-right: 0;
+        font-size: 14px;
+    }
+
+.worklist {
+    display: none;
+}
+
+.headNav a:hover {
+    opacity: 0.7;
+}
+
+.headNav span {
+    color: #2B3340;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+    background: #fff;
+    margin-left: 4px;
+    vertical-align: top;
+}
+
+.add-save {
+    display: none;
+}
+
+.headNav ul {
+    display: flex;
+}
+
+
+
+
+
+.add-save .icon {
+    width: 22px;
+    margin-right: 6px;
+}
+
+.add-save img {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.jobnewDetail {
+    font-size: 12px;
+    padding: 15px 0 70px;
+}
+
+.path_location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px 16px 24px;
+}
+
+    .path_location .path-item {
+        color: #232A35;
+        font-size: 12px;
+    }
+
+.share-item {
+    display: none;
+}
+
+.path_location .icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 4px 12px 4px 8px;
+    border-radius: 50vh;
+    border: 1px solid;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in;
+}
+
+.path_location .fb {
+    color: #1877F2;
+}
+
+    .path_location .fb:hover {
+        color: #fff;
+        font-weight: 700;
+        background: #1877F2;
+    }
+
+.path_location .line {
+    color: #0a800a;
+}
+
+    .path_location .line:hover {
+        color: #fff;
+        font-weight: 700;
+        background: #00B900;
+    }
+
+.path_location .copy {
+    color: #6A7079;
+}
+
+    .path_location .copy:hover {
+        color: #fff;
+        font-weight: 700;
+        background: #6A7079;
+    }
+
+.share-item svg {
+    margin-right: 4px;
+}
+
+
+.fbicon {
+    background: url(~/images/Company/CompanyProfileEdit/fbicon_normal.svg);
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.fb:hover .fbicon {
+    background: url(~/images/Company/CompanyProfileEdit/fbicon_hover.svg);
+    vertical-align: baseline;
+}
+
+.icon .text {
+    margin-top: 2.8px;
+}
+
+.lineicon {
+    background: url(~/images/Company/CompanyProfileEdit/lineicon_normal.svg);
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.line:hover .lineicon {
+    background: url(~/images/Company/CompanyProfileEdit/lineicon_hover.svg);
+    vertical-align: baseline;
+}
+
+.copyicon {
+    background: url(~/images/Company/CompanyProfileEdit/copyicon_normal.svg);
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+}
+
+.copy:hover .copyicon {
+    background: url(~/images/Company/CompanyProfileEdit/copyicon_hover.svg);
+    vertical-align: baseline;
+}
+
+
+.companyProfile {
+    margin: 0 auto;
+    background: #fff;
+    clear: both;
+    font-size: 16px;
+}
+
+    .companyProfile h2 {
+        font-size: 20px;
+        line-height: 18px;
+        padding-top: 2px;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 24px;
+        padding-left: 8px;
+        border-left: 6px solid #FB6184;
+        color: #2B3340;
+        display: inline-block;
+    }
+
+    .companyProfile li {
+        display: inline-flex;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+        width: calc(100% - 30px);
+        vertical-align: top;
+        line-height: 2.5;
+    }
+
+    .companyProfile b {
+        font-size: 16px;
+        color: #666;
+        font-weight: normal;
+        margin-right: 16px;
+        white-space: nowrap;
+        line-height: 2.5;
+    }
+
+    .companyProfile .a-compInfo {
+        margin-left: 6px;
+    }
+
+    .companyProfile b.capital i {
+        display: inline-block;
+        padding: 0 4px;
+    }
+
+.map:hover {
+    /* opacity: 0.3; */
+    color: #6596ff;
+}
+
+.companyProfile .map .mapicon {
+    background: url(~/images/Company/CompanyProfileEdit/map.svg);
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: -3px;
+}
+
+.map:hover .mapicon {
+    background: url(~/images/Company/CompanyProfileEdit/maphover.svg);
+}
+
+.content_area {
+    color: #232A35;
+    margin: 16px auto 0 auto;
+}
+
+.map {
+    display: none;
+}
+
+
+
+
+h2 {
+    font-size: 22px;
+    line-height: 18px;
+    padding-top: 2px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 24px;
+    padding-left: 8px;
+    border-left: 6px solid #FB6184;
+    color: #2B3340;
+    display: inline-block;
+}
+
+h4 {
+    font-weight: bold;
+    color: #b2b2b2;
+    margin: 8px 0 15px 0;
+    font-size: 16px;
+}
+
+
+
+
+a.openBtn,
+a.closeBtn {
+    color: #2369FF;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+    a.openBtn::after,
+    a.closeBtn::after {
+        content: "";
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+    }
+
+    a.openBtn::after {
+        background: url(~/images/Company/CompanyProfileEdit/ic-arrow-down-blue.svg) center no-repeat;
+    }
+
+    a.closeBtn::after {
+        background: url(~/images/Company/CompanyProfileEdit/ic-arrow-up-blue.svg) center no-repeat;
+    }
+
+#sidebar {
+    color: #666;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+}
+
+.similar_company {
+    padding: 0 0 40px;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+    .similar_company .title {
+        font-weight: bold;
+        color: #2B3340;
+        margin-bottom: 24px;
+    }
+
+
+    .similar_company li {
+        padding: 0 0 16px 0;
+    }
+
+.similar a {
+    width: 85%;
+    display: block;
+    line-height: 1.6;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.similar span {
+    font-size: 14px;
+}
+
+
+
+.companyPhotobox {
+    position: relative;
+    width: 225px;
+    height: 170px;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+.companysimg li img {
+    width: 225px;
+    height: 170px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.companyImgList li,
+.companyImgListB li {
+    text-indent: -10000px;
+    width: 11px;
+    height: 11px;
+    background: url(~/images/Company/CompanyProfileEdit/Artboard.svg) 0px 0px no-repeat;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.companyImgList,
+.companyImgListB {
+    margin-top: 10px;
+    text-align: center;
+}
+
+
+
+#listArea .listArea-total {
+    font-size: 13px;
+    line-height: 20px;
+    color: #95999F;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+
+.wrapper .dropdown-item {
+    display: inline;
+    padding: 0;
+    padding-left: 5px;
+}
+
+
+
+/* .mydropitem{
+    display: inline;
+    padding: 0;
+    padding-left: 5px;
+} */
+
+.mydropdown-menu li:hover {
+    background-color: #F4F7FF;
+}
+
+    .mydropdown-menu li:hover a {
+        color: #2369FF;
+    }
+
+.mydropdown {
+    border: 1px solid #E9EAEB;
+    border-radius: 4px;
+    width: 100%;
+}
+
+/* 改成.mydropdown-toggle 多my 避開與style.css重合 */
+.mydropdown-toggle {
+    border: 0px transparent;
+    position: relative;
+    /* width: 330px; */
+    width: 100%;
+    text-align: left;
+}
+
+
+    /* 改成.dropdo-toggle 少wn 避開與style.css重合 */
+    .mydropdown-toggle::after {
+        display: inline-block;
+        margin-left: 0.255em;
+        vertical-align: 0.255em;
+        content: "";
+        border-top: 0.4em solid;
+        border-right: 0.4em solid transparent;
+        border-bottom: 0;
+        border-left: 0.4em solid transparent;
+        position: absolute;
+        right: 12px;
+        top: 17px;
+    }
+
+.dropdown-menu.show {
+    width: 100%;
+    height: 240px;
+    overflow-y: auto;
+}
+
+
+    .dropdown-menu.show::-webkit-scrollbar {
+        width: 0.5em;
+        /* height: 0.1em; */
+    }
+
+    .dropdown-menu.show::-webkit-scrollbar-track {
+        background-color: #F5F7FA;
+    }
+
+    .dropdown-menu.show::-webkit-scrollbar-thumb {
+        background-color: #ccc;
+    }
+
+
+
+.mydropdown-menu li {
+    padding: 10px 16px;
+    text-align: left;
+}
+
+
+.jobSumContent {
+    margin: 0px;
+    padding: 16px 0;
+    border-top: none;
+    border-bottom: 1px solid #E9EAEB;
+}
+
+
+
+
+
+
+.function_btn_new {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 6px;
+    white-space: nowrap;
+    position: absolute;
+    top: 20px;
+    right: 6px;
+    height: 30px;
+}
+
+
+.pagination_area {
+    padding: 20px 12px 0 16px;
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 14px;
+    gap: 20px;
+}
+
+.pagination a {
+    color: #232A35;
+}
+
+.pagecount {
+    margin: 0 24px;
+}
+
+.prevpage svg,
+.nextpage svg {
+    padding-bottom: 2px;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+}
+
+.prevpage {
+    opacity: 0.3;
+}
+
+
+.carousel .carousel-indicators button {
+    background-color: #fff;
+    width: 9px;
+    height: 9px;
+    background-color: #FA1E50;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+
+
+.carousel-inner img {
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+#carouselExampleIndicators {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+
+
+.carousel-indicators {
+    margin-bottom: 12px;
+}
+
+.environment_area .title {
+    font-weight: bold;
+    color: #2B3340;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+    .environment_area .title span {
+        font-size: 13px;
+        color: #95999F;
+    }
+
+.environment_area {
+    padding: 0 0 40px;
+    margin-bottom: 50px;
+}
+
+.company_welfare li {
+    display: inline-block;
+    padding: 4px 8px;
+    border: 1px solid #6596FF;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    color: #2369FF;
+}
+
+.company_welfare input {
+    width: 15px;
+    height: 15px;
+    padding-top: 10px;
+}
+
+.company_welfare label {
+    margin-right: 8px;
+}
+
+.company_welfare li:hover {
+    background-color: #F4F7FF;
+}
+
+.company_welfare a:hover {
+    color: #2369FF;
+}
+
+
+
+.wrapper p {
+    color: #232A35;
+    font-size: 16px;
+    line-height: 27px;
+    margin: 0;
+}
+
+
+
+
+.star_area {
+    display: flex;
+}
+
+    .star_area span {
+        margin-right: 6px;
+    }
+
+
+
+.star {
+    margin-bottom: 15px;
+}
+
+.employee {
+    margin-bottom: 12px;
+}
+
+.work_share li {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e1e6ed;
+    margin-top: 20px;
+}
+
+.work_share .comment {
+    padding: 0 5px;
+}
+
+.more {
+    margin: 30px auto 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.writecomment {
+    margin-right: 24px;
+}
+
+.company_chance .title {
+    display: none;
+}
+
+.workname {
+    width: 354px;
+    padding-left: 20px;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+a.workname {
+    color: #2369FF;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.work_detail {
+    padding-left: 20px;
+    padding-right: 15px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.workplace {
+    width: 180px;
+    text-align: center;
+    display: inline-block;
+    color: #232A35;
+}
+
+.date {
+    width: 99px;
+    text-align: right;
+    display: inline-block;
+}
+
+span.date {
+    padding-right: 24px;
+}
+
+
+.work_list_pc {
+    font-size: 14px;
+}
+
+    .work_list_pc li {
+        padding: 16px 0;
+        border-bottom: 1px solid #E9EAEB;
+    }
+
+.workdesc {
+    font-size: 14px;
+    color: #6f6f6f;
+    width: 354px;
+}
+
+.treatment {
+    color: #2B3340;
+}
+
+.workdesc p {
+    display: none;
+}
+
+.work_detail .btn_group {
+    padding-top: 15px;
+}
+
+.work_detail .apply {
+    display: none;
+}
+
+.work_detail .savework {
+    display: none;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-right: 10px;
+    border: 1px solid #FA3461;
+    color: #FA1E50;
+    background-color: #fff;
+}
+
+.work_list_pc li:hover .savework {
+    display: inline;
+    cursor: pointer;
+}
+
+.work_list_pc li:hover .apply {
+    background-color: #FA3461;
+    color: #fff;
+}
+
+.savework svg {
+    vertical-align: text-bottom;
+}
+
+.dropdown_area {
+    display: flex;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+
+
+.company_intro .closeBtn {
+    font-size: 16px;
+}
+
+.company_intro .intro {
+    margin-bottom: 16px;
+}
+
+.company_products {
+    margin-bottom: 17px;
+}
+
+.company_feature_legalitems {
+    margin-bottom: 17px;
+}
+
+.company_feature,
+.company_legalitems {
+    padding: 0 16px;
+}
+
+.company_welfare {
+    margin-bottom: 17px;
+}
+
+    .company_welfare .gift,
+    .company_welfare .insurance,
+    .company_welfare .welface_desc {
+        padding: 0 16px;
+    }
+
+.work_share {
+    margin-bottom: 17px;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.company_chance {
+    margin-bottom: 17px;
+    padding: 16px;
+    width: 100%;
+}
+
+
+.fixedheadsection {
+    background: #fff;
+    border-bottom: 2px solid #FB6184;
+    transition: all 0.2s ease-out;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    padding: 20px 0 12px;
+}
+
+.fixedcontainer {
+    margin: 0 auto;
+}
+
+.fixedheadsection h1 {
+    font-size: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 89%;
+    padding-left: 16px;
+}
+
+.fixedheadsection .headNav {
+    margin-top: 10px;
+}
+
+    .fixedheadsection .headNav a {
+        color: #6A7079;
+    }
+
+    .fixedheadsection .headNav .num {
+        background: #2B3340;
+        color: #fff;
+    }
+
+.fixedheadsection .add-save {
+    background: #FA1E50;
+    color: #fff;
+}
+
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+
+
+#writecommentModal .position {
+    display: inline-block;
+    width: 150px;
+    height: 20px;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.work_list_phone .treatmentArea {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+    .work_list_phone .treatmentArea .treatment {
+        color: #2B3340;
+    }
+
+    .work_list_phone .treatmentArea .date {
+        color: #7f7f7f;
+    }
+
+.work_list_phone li {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e6ed;
+}
+
+.work_list_phone .workname {
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 0;
+}
+
+.work_list_phone .workplace {
+    width: initial;
+    text-align: left;
+    display: block;
+    color: #95999f;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.work_list_pc {
+    display: none;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.pagination_area .report {
+    text-align: center;
+}
+
+.fixedcheckwork {
+    background: #fff;
+    padding: 16px 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #F4F5F5;
+    display: flex;
+}
+
+    .fixedcheckwork a {
+        color: #fff;
+        background: #FA1E50;
+        padding: 10px 0;
+        font-weight: bold;
+        display: inline-block;
+        height: 100%;
+        border-radius: 4px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .fixedcheckwork .save {
+        display: inline-block;
+        margin-right: 24px;
+        width: 35px;
+        height: 35px;
+    }
+
+        .fixedcheckwork .save img {
+            width: 100%;
+            height: 100%;
+            margin-top: 5px;
+        }
+
+
+.member-homepage .hi {
+    display: block !important;
+}
+
+.side-bar- {
+    display: none;
+}
+
+
+.company_information {
+    padding: 16px 0;
+    margin-bottom: 24px;
+    color: #2B3340;
+}
+
+    .company_information ul {
+        padding: 0 16px;
+    }
+
+.editTitle {
+    padding: 10px 16px;
+    background-color: #FAFBFD;
+    font-size: 18px;
+    border-top: 1px solid #E9EAEB;
+    border-bottom: 1px solid #E9EAEB;
+}
+
+.company_information .eidt_logo {
+    background-color: #F4F7FF;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #6596FF;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+
+    .company_information .eidt_logo input {
+        display: none;
+    }
+
+.company_information .compname {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.edit {
+    color: #2369FF;
+    cursor: pointer;
+}
+
+    .edit:hover {
+        opacity: 0.7;
+    }
+
+.editArea .title_area {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.editArea {
+    padding: 0;
+}
+
+    .editArea p {
+        padding: 0 16px;
+    }
+
+    .editArea .collapse .card,
+    .editArea .collapsing .card {
+        border: 0;
+        padding: 0;
+        font-size: 16px;
+        color: #232A35;
+    }
+
+    .editArea h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .editArea textarea {
+        margin: 0;
+        height: 140px;
+        max-height: 232px;
+        border-color: #BFC1C5;
+        border-radius: 4px;
+    }
+
+        .editArea textarea:focus-visible {
+            outline: none;
+            border-color: #404753;
+        }
+
+.edit_item select {
+    padding: 5px;
+    width: 100%;
+}
+
+    .edit_item select:focus-visible {
+        outline: none;
+    }
+
+.editArea .editbox input {
+    border-radius: 4px;
+    border: 1px solid #BFC1C5;
+    padding: 8px 16px;
+    flex-shrink: 2;
+    flex-grow: 2;
+}
+
+    .editArea .editbox input:focus-visible {
+        outline: none;
+        border-color: #404753;
+    }
+
+.editbox h5 {
+    font-size: 16px;
+}
+
+.editbox .required_icon {
+    color: #FA1E50;
+    display: inline;
+}
+
+.editbox {
+    background-color: #FAFBFD;
+    padding: 20px 16px;
+    margin-bottom: 20px;
+    outline: none;
+    font-size: 16px;
+}
+
+    .editbox .edit_item {
+        margin-bottom: 24px;
+    }
+
+.btn_area {
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .btn_area .close {
+        color: #FA1E50;
+        background: #FFF;
+        border: solid 1px #FA3461;
+        cursor: pointer;
+    }
+
+        .btn_area .close:hover {
+            color: #E01A47;
+            background: #FEF4F6;
+            border: solid 1px #E01A47;
+        }
+
+    .btn_area .save {
+        color: #fff;
+        background: #FA1E50;
+        border: solid 1px #FA1E50;
+        cursor: pointer;
+    }
+
+        .btn_area .save:hover {
+            color: #fff;
+            background: #FB6184;
+            border: solid 1px #FB6184;
+        }
+
+    .btn_area .butn {
+        display: inline-block;
+        padding: 10px 23px;
+        border-radius: 4px;
+        margin: 0 8px;
+    }
+
+select option:active {
+    background-color: blue;
+}
+
+select option selected {
+    background-color: red;
+}
+
+.label_list {
+    align-items: center;
+    background-color: #edf1fa;
+    border-radius: 50vh;
+    margin: 2px 6px 2px 0;
+    padding: 2px 8px;
+    color: #6596FF;
+    display: inline-flex;
+    margin-bottom: 10px;
+}
+
+    .label_list:hover {
+        background: #e6ebfa;
+    }
+
+    .label_list .delete_icon {
+        background: url(ci_edit_img/label_close.svg);
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-left: 4px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        border: 0;
+    }
+
+.edit_item .label_add {
+    border: 0;
+    background-color: transparent;
+    color: #2369FF;
+}
+
+    .edit_item .label_add img {
+        vertical-align: text-bottom;
+    }
+
+.text_area {
+    flex-grow: 2;
+    flex-shrink: 2;
+    display: flex;
+}
+
+.company_feature_edit {
+    margin-bottom: 20px;
+}
+
+.editbox .gift_edit,
+.editbox .insurance_edit,
+.editbox .welface_desc_edit,
+.editbox .feature_edit {
+    padding: 0 20px;
+}
+
+.editbox textarea {
+    height: initial;
+}
+
+.pic_area .pic_box {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+    .pic_area .pic_box .title {
+        margin-bottom: 15px;
+    }
+
+.pic_area .pic img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    height: 200px;
+}
+
+.pic_area .pic {
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.editArea .pic_box .title_area {
+    padding: 0;
+}
+
+.pic_area .no_pic img {
+    width: 80px;
+    height: 80px;
+}
+
+.pic_area .no_pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F4F7FF;
+    height: 200px;
+}
+
+.pic_box input[type=file] {
+    display: none;
+}
+
+.pic_box .pic .text {
+    color: #6596FF;
+}
+
+.pic_box label {
+    cursor: pointer;
+}
+
+.blank {
+    border: 1px dashed #91B4FF;
+    text-align: center;
+    border-radius: 4px;
+    padding: 26px 0;
+}
+
+.blank_area {
+    padding: 30px;
+    color: #2369FF;
+    cursor: pointer;
+}
+
+.blank:hover {
+    background: #FAFBFD;
+}
+
+
+
+@media screen and (min-width:960px) {
+    .banner {
+        width: 1000px;
+        margin: auto;
+    }
+
+    .path_location {
+        width: 1000px;
+    }
+
+
+
+
+
+    .fixedcontainer {
+        width: 1000px;
+    }
+
+
+
+
+    .head-section .companyname_area .companyname {
+        font-size: 28px;
+        margin-bottom: 56px;
+    }
+
+    .head-section .companyname_area svg {
+        margin: 0 5px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .head-section .banner .logobox {
+        width: 160px;
+        height: 160px;
+    }
+
+    .head-section .banner .logo {
+        width: 164px;
+        height: 164px;
+    }
+
+    .head-section .wrapper-plus .logo::before {
+        width: 164px;
+        height: 164px;
+    }
+
+    .banner .awardimg {
+        width: 42px;
+        height: 50px;
+    }
+
+    .wrapper .add-save {
+        display: inline-block;
+        font-size: 18px;
+        padding: 10px 16px;
+        border: 1.3px solid;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        vertical-align: bottom;
+    }
+
+    .wrapper .headNav a {
+        font-size: 18px;
+    }
+
+    .wrapper .headNav li {
+        margin-right: 50px;
+        margin-left: 0;
+    }
+
+    .wrapper .worklist {
+        display: list-item;
+    }
+
+    .head-section .wrapper-plus {
+        padding-bottom: 22px;
+    }
+
+    .wrapper .fixedheadsection {
+        padding: 25px 0 12px;
+    }
+
+        .wrapper .fixedheadsection h1 {
+            font-size: 28px;
+            max-width: 93%;
+            padding: 0;
+            text-overflow: initial;
+        }
+
+        .wrapper .fixedheadsection svg {
+            margin-left: 0;
+        }
+
+        .wrapper .fixedheadsection svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .wrapper .fixedheadsection .headNav {
+            margin-top: 40px;
+        }
+
+    .wrapper .share-item {
+        display: flex;
+        gap: 12px;
+    }
+
+    .wrapper .dropdown-menu.show {
+        width: 330px;
+    }
+
+    .companyProfile {
+        margin: 0 auto;
+        padding: 28px 0 15px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+        .companyProfile li {
+            display: inline-flex;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            width: calc(50% - 30px);
+            vertical-align: top;
+            line-height: 2.5;
+        }
+
+    .map {
+        display: inline;
+    }
+
+    .path_location {
+        padding: 0 0 10px 0;
+    }
+
+    .jobnewDetail {
+        padding: 32px 0 70px;
+    }
+
+    .company_intro {
+        padding: 25px 0 50px;
+    }
+
+
+    .company_products {
+        margin-bottom: 17px;
+        padding: 25px 0 50px;
+    }
+
+    .company_feature_legalitems {
+        margin-bottom: 17px;
+        padding: 25px 0 50px;
+    }
+
+    .company_chance .title {
+        display: flex;
+        background-color: #f5f7fa;
+        height: 36px;
+        align-items: center;
+        font-size: 14px;
+    }
+
+    .dropdown_area {
+        margin-bottom: 30px;
+    }
+
+    .workdesc p {
+        margin-top: 8px;
+        color: #6f6f6f;
+        font-size: 14px;
+        display: block;
+    }
+
+    .work_detail .apply {
+        border-radius: 4px;
+        border: 1px solid #FA3461;
+        color: #FA3461;
+        padding: 7px 12px;
+        font-weight: 700;
+        display: inline-block;
+    }
+
+    .company_welfare {
+        margin-bottom: 17px;
+        padding: 25px 0 50px;
+    }
+
+    .work_share {
+        margin-bottom: 17px;
+        padding: 25px 24px 50px 0;
+        font-size: 16px;
+    }
+
+    .company_chance {
+        margin-bottom: 17px;
+        padding: 25px 24px 50px 0;
+        width: 100%;
+    }
+
+    .work_list_pc {
+        display: block;
+    }
+
+    .pagination_area {
+        padding: 20px 12px 0 16px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .pagination {
+        justify-content: initial;
+    }
+
+    .pagination_area .report {
+        text-align: left;
+    }
+
+
+    .work_list_phone {
+        display: none;
+    }
+
+
+
+    .carousel-inner img {
+        height: 170px;
+        object-fit: cover;
+    }
+
+    #carouselExampleIndicators {
+        width: 225px;
+        height: 210px;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        height: 170px;
+    }
+
+    .similar a {
+        width: 204px;
+    }
+
+    .fixedcheckwork {
+        display: none;
+    }
+
+    .side-bar- {
+        display: block;
+    }
+
+    .company_information .eidt_logo {
+        width: 160px;
+        height: 160px;
+    }
+
+    .editArea {
+        border: 1px solid #E9EAEB;
+    }
+
+    .editTitle {
+        border-top: 0;
+    }
+
+    .editbox {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+        .editbox .edit_item {
+            display: flex;
+            align-items: center;
+        }
+
+    .company_feature_edit,
+    .company_legalitems_edit {
+        padding: 0 20px;
+    }
+
+
+    .editbox h5 {
+        width: 120px;
+        margin-top: 10px;
+    }
+
+    .editArea .title_area {
+        padding: 0 30px;
+    }
+
+    .editArea p {
+        padding: 0 30px;
+    }
+
+    .edit_item select {
+        width: initial;
+    }
+
+    .company_information ul {
+        padding: 0 30px;
+    }
+
+    .company_information .edit_item {
+        padding: 0 20px;
+    }
+
+    .company_feature,
+    .company_legalitems {
+        padding: 0 30px;
+    }
+
+    .company_welfare .gift,
+    .company_welfare .insurance,
+    .company_welfare .welface_desc {
+        padding: 0 30px;
+    }
+
+    .pic_area {
+        display: flex;
+        gap: 20px;
+    }
+}

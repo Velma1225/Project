@@ -1,0 +1,277 @@
+﻿@model List<ChatOverviewViewModel>
+@{
+    ViewData["Title"] = "ChatOverview";
+    Layout = "~/Views/Shared/_LayoutSidebarCandidate.cshtml";
+}
+
+<div class="chatOverviewArea">
+    <div class="chatOverview_flexbox">
+        <div class="chatOverview">
+            <div class="title">
+                <h2>聊聊通知</h2>
+            </div>
+            <div class="filter">
+                <label class="check" for="selectedAll">
+                    <input type="checkbox" name="" id="selectedAll">
+                    <span>全選</span>
+                    <span class="delete">
+                        <div class="pic">
+                        </div>
+                        刪除所選對話
+                    </span>
+                </label>
+                <span class="allMessage allMessage_Computer" type="button" data-bs-toggle="dropdown">
+                    所有訊息
+                    <div class="dropdown">
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">所有訊息</a></li>
+                            <li><a class="dropdown-item" href="#">未讀訊息</a></li>
+                        </ul>
+                    </div>
+
+                </span>
+                <span class="allMessage allMessage_Mobile" data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
+                    所有訊息
+                </span>
+
+            </div>
+            <!-- Modal -->
+            <div class="allMessage">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                     aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title" id="exampleModalLabel">
+                                    訊息類別 <span>(單選)</span>
+                                </h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="category">
+                                    所有訊息
+                                </div>
+                                <div class="category">
+                                    未讀訊息
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn clear"
+                                        data-bs-dismiss="modal">
+                                    清除重選
+                                </button>
+                                <button type="button" class="btn summit">確定送出</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="nav flex-column nav-pills chat_company_overview" id="v-pills-tab" role="tablist"
+             aria-orientation="vertical">
+            <partial name="~/Views/Candidate/PartialView/ChatOverview/_ChatListPartial.cshtml" model="Model" />
+
+@* 
+            <button class="nav-link chat_company active" id="v-pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true">
+
+
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+            <button class="nav-link chat_company" id="v-pills-profile-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                    aria-selected="false">
+
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+            <button class="nav-link chat_company" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                    aria-selected="false">
+
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+            <button class="nav-link chat_company" id="v-pills-messages-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                    aria-selected="false">
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+            <button class="nav-link chat_company" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">
+
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+            <button class="nav-link chat_company" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">
+
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+            <button class="nav-link chat_company" id="v-pills-settings-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                    aria-selected="false">
+
+                <input type="checkbox" class="checkone">
+                <div class="comp_logo">
+                    <img src="~/images/Candidate\ChatOverview\kubuke.png" alt="">
+                </div>
+                <div class="text">
+                    <div class="compname">
+                        <div class="name">可不可熟成紅茶北區*******************</div>
+                        <div class="datetime">
+                            07:36
+                        </div>
+                    </div>
+                    <a class="position">
+                        可不可熟成紅茶-淡水北新店-工讀人員(早晚班)
+                        *******************************************
+                    </a>
+                    <p class="chatmessage">
+                        <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                        下午一點到十點唷*******************************************
+                    </p>
+                </div>
+            </button>
+ *@
+
+        </div>
+    </div>
+</div>
+
+
+@section topCSS{
+
+    <link href="~/css/candidate/chatoverview/chatoverview.css" rel="stylesheet" />
+
+}
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">我的帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">聊聊總覽</li>
+            </ol>
+        </nav>
+    </div>
+}

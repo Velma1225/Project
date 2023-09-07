@@ -1,0 +1,34 @@
+﻿@using HabanMVC.Services;
+@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model List<FavoriteJobVM>
+
+@foreach (var item in Model)
+{
+
+@*        <li class="col-5 record">
+        <span class="ps-1 fs-6"><a href="#">@item.JobTitle</a></span>
+        </li>
+    <li class="col-4 text-content record"><span class="ps-3">@item.CompanyName</span></li>
+    <li class="col-3 record">
+            <span style="vertical-align: top;" class="pe-4 fs-6">@(@item.CreateAt.ToString("yyyy/MM/dd"))</span><span class="pe-2 ps-3">
+                <a href="#">
+                    <span class="material-symbols-outlined">
+                        close
+                    </span>
+                </a>
+            </span>
+        </li>*@
+    <li class="col-5 record"><span class="ps-3 fs-6"><a href="#">@item.JobTitle</a></span></li>
+    <li class="col-3 record"><span class="ps-3 fs-6"><a href="#">@item.CompanyName</a></span></li>
+
+    <li class="col-4 text-content record">
+        <span style="vertical-align: top;" class="pe-4 fs-6">@(@item.CreateAt.ToString("yyyy/MM/dd"))</span><span class="pe-2 ps-3">
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    close
+                </span>
+            </a>
+        </span>
+    </li>
+}

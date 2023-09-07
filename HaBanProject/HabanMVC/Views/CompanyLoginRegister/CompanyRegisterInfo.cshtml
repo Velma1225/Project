@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "CompanyRegisterInfo";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+<section>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="form_information">
+                <h1 class="title text-center">立即成為企業 VIP 會員</h1>
+                <p class="title_description">急徵才嗎? 加入我們找人才就是快</p>
+                <form class="form-list">
+                    <div class="account">
+                        <h3 class="text mb-0">
+                            帳號(統編)
+                        </h3>
+                        <input type="text" class="accountnum w-100" placeholder="請輸入統一編號，例 : 49267213">
+                    </div>
+                    <div class="password">
+                        <h3 class="text mb-0">密碼</h3>
+                        <div class="input-password">
+                            <input type="password" class="passwordnum w-100" placeholder="密碼需由6-20個英文字母或數字組成">
+                            <!-- TODO 密碼顯示 -->
+                            <div class="icon-box">
+                                <a href="#" class="is-password-icon show-password" id="show-password"></a>
+                                <a href="#" class="is-password-icon close-password" id="close-password"
+                                   style="display: none;"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="login">
+                        <h3 class="text mb-0">公司名稱</h3>
+                        <input type="text" class="inputemail w-100" id="" placeholder="例 : HaBan公司">
+                    </div>
+                    <!-- TODO 選擇產業 -->
+                    <div class="industry_category">
+                        <h3 class="text mb-0">產業類別</h3>
+                        <input type="industry_choose" class="industry_choose w-100" id="" placeholder="請選擇產業類別">
+                        <i class="drop-input-icon"></i>
+                    </div>
+                    <div class="login">
+                        <h3 class="text mb-0">聯絡信箱</h3>
+                        <input type="email" class="inputemail w-100" id="" placeholder="例 : example@HaBan.com">
+                    </div>
+                    <div class="mobile">
+                        <h3 class="text mb-0">公司電話</h3>
+                        <div class="col-auto">
+                            <input type="mobile" class="mobilenum w-100" id="" placeholder="例 : 03-1234567"
+                                   maxlength="10">
+                            <!-- </div>
+                            <div class="col-auto">
+                                <button type="submit" class="sendverifyCode">發送驗證碼</button>
+                            </div> -->
+                        </div>
+                        <div name="agree">
+                            <label for="agreeCheckbox" class="checkbox">
+                                <input type="checkbox" value="true" id="agree" name="agree">
+                                <p>
+                                    我已閱讀並同意<a target="_black" href="#">服務條款</a>、
+                                    <a target="_black" href="#">企業徵才刊登契約書</a>、
+                                    <a target="_black" href="#">隱私權聲明</a>、
+                                    <a href="#" target="_blank">免責聲明</a>。
+                                </p>
+                            </label>
+                        </div>
+                        <div class="nextstep pb-3 text-center">
+                            <button type="submit" class="rounded w-100 disable">快速登入</button>
+                            <!-- </div>
+                            <div class="href-box text-center">
+                                <a id="login-link" href="#">快速登入</a>
+                            </div> -->
+                </form>
+            </div>
+        </div>
+</section>
+
+@section topCSS{
+
+    <link href="~/css/company/registerinfo/companyregisterinfo.css" rel="stylesheet" />
+}
+

@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewData["Title"] = "BuyTopStep1";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+<div id="content" class="col-12 col-md-9 col-lg-12 px-0">
+    <!-- 右側內容 -->
+    <div class="d-flex justify-content-between">
+        <h2>置頂蛤蠣</h2>
+        <div class="edit">
+            <img src="~/images/company/buy/note.png" />
+            觀看購買紀錄
+        </div>
+    </div>
+
+    <ol class="stepsBox">
+        <li class="is-complete col-12 col-lg-3">1.置頂制度說明</li>
+        <li class="is-complete col-12 col-lg-3">2.選取購買張數</li>
+        <li class="is-complete col-12 col-lg-3">3.確認訂單內容</li>
+        <li class="is-doing col-12 col-lg-3">4.完成購買</li>
+    </ol>
+    <!-- 完成購買 -->
+    <div class="alert-complete alert-box alert text-center my-2" role="alert">
+        <div class="alert-text">
+            <span class="material-symbols-outlined">task_alt</span>
+            <span>您已經完成置頂蛤蠣購買，666蛤班祝您找到好人才!</span>
+        </div>
+
+        <span class="call">有任何置頂蛤蠣使用問題歡迎來電，客服專線：00-0000-0000</span>
+    </div>
+
+    <div class="order-content">
+        <div class="order card card-no-radius mb-3">
+            <div class="card-header card-title-p">
+                <ul class="fw-bold d-flex justify-content-between align-items-center">
+                    <li class="col-4">訂單編號</li>
+                    <li class="col-4">訂單明細</li>
+                    <li class="col-4">訂單金額</li>
+                </ul>
+            </div>
+            <div class="card-body text-secondary">
+                <ul class="row list-unstyled">
+                    <li class="col-4">8704711911</li>
+                    <li class="col-4">置頂蛤蠣/1顆</li>
+                    <li class="col-4">1,800元</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="order-cost card card-no-radius mb-3">
+            <div class="card-header card-title-p">
+                <div class="fw-bold d-flex justify-content-between align-items-center">
+                    <span>訂單內容</span>
+                </div>
+            </div>
+            <div class="card-body text-secondary">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th class="col-6">購買日期:</th>
+                            <td class="col-6">109年8月25日</td>
+                        </tr>
+                        <tr>
+                            <th class="col-6">購買項目:</th>
+                            <td class="col-6">置頂蛤蠣/1顆</td>
+                        </tr>
+                        <tr>
+                            <th class="col-6">購買費用:</th>
+                            <td class="col-6">1,800元</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="back-next row">
+            <button type="button" class="col-6 btn">訂單管理</button>
+            <button type="button" class="next col-6 btn">開始使用置頂蛤蠣</button>
+        </div>
+    </div>
+
+</div>
+
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">置頂蛤蠣服務</li>
+
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+    <link href="~/css/company/buy/buy.css" rel="stylesheet" />
+}

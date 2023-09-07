@@ -1,0 +1,455 @@
+﻿@model ChatViewModel
+@{
+    ViewData["Title"] = "Chat";
+    Layout = "~/Views/Shared/_LayoutCandidate.cshtml";
+}
+
+
+
+<div class=" chatArea col-md-12 col-12 container">
+    <div class="d-flex align-items-start">
+        <!-- 公司 -->
+        <div class="returnlist_flexbox">
+            <div class="returnlist">
+                <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                     width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.4884 4.51093C12.8044 4.82923 12.8057 5.34147 12.4937 5.66139L12.4842 5.67102L6.91252 11.2023L18.6445 11.2023C19.0976 11.2023 19.4648 11.5696 19.4648 12.0226C19.4648 12.4711 19.1049 12.8356 18.6581 12.8428L18.6445 12.8429L6.91252 12.8429L12.4842 18.3742C12.8025 18.6902 12.8075 19.2024 12.4979 19.5246L12.4884 19.5343C12.1724 19.8526 11.6602 19.8577 11.338 19.548L11.3283 19.5385L4.34394 12.6048C4.024 12.2872 4.0208 11.7717 4.33434 11.4502L4.34394 11.4405L11.3283 4.50671C11.6498 4.18753 12.1692 4.18942 12.4884 4.51093Z"
+                          fill="#353D49"></path>
+                </svg>
+                返回通知列表
+            </div>
+            <div class="nav flex-column nav-pills chat_company_overview" id="v-pills-tab" role="tablist"
+                 aria-orientation="vertical">
+
+                @for (int j = 0; j < Model.ChatList.Count; j++)
+                {
+
+                    <button class="nav-link chat_company @(j == 0 ? "active" : "") " id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">
+
+                        <div class="comp_logo">
+                            <img src="~/images/Candidate/Chat/@Model.ChatList[@j].Pic" alt="">
+                        </div>
+                        <div class="text">
+                            <div class="compname">
+                                <div class="name">@Model.ChatList[@j].SenderName</div>
+                                <div class="datetime">
+                                    @Model.ChatList[@j].MessageTime.ToString("yyyy/M/d")
+                                </div>
+                            </div>
+                            <a class="position">
+                                @Model.ChatList[@j].JobName
+                            </a>
+                            <p class="chatmessage">
+                                <img src="~/images/Candidate\ChatOverview\checked.svg" alt="">
+                                @Model.ChatList[@j].ChatContent
+                            </p>
+                        </div>
+                    </button>
+ 
+                   
+                }
+
+
+
+                @* <partial name="~/Views/Candidate/PartialView/Chat/_ChatPartial.cshtml" model="Model.ChatList" /> *@
+@* 
+                <button class="nav-link chat_company active" id="v-pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true">
+                    <div class="comp_logo">
+                        <img src="~/images/Candidate/Chat/kubuke.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="compname">
+                            <div class="name">可不可熟成紅茶北區******************************</div>
+                            <div class="datetime">
+                                07:36
+                            </div>
+                        </div>
+                        <a class="position">
+                            可不可熟成紅茶-淡水北新店-工讀人員(早晚班)***********************************
+                        </a>
+                        <p class="chatmessage">
+                            <img src="~/images/Candidate/Chat/checked.svg" alt="">
+                            下午一點到十點唷****************************************
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-link chat_company" id="v-pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false">
+                    <div class="comp_logo">
+                        <img src="~/images/Candidate/Chat/kubuke.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="compname">
+                            <div class="name">可不可熟成紅茶北區</div>
+                            <div class="datetime">
+                                07:36
+                            </div>
+                        </div>
+                        <a class="position">
+                            可不可熟成紅茶-淡水北新店-工讀人員(早晚班)888888888888888888888888
+                        </a>
+                        <p class="chatmessage">
+                            <img src="~/images/Candidate/Chat/checked.svg" alt="">
+                            下午一點到十點唷
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-link chat_company" id="v-pills-disabled-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled"
+                        aria-selected="false">
+                    <div class="comp_logo">
+                        <img src="~/images/Candidate/Chat/kubuke.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="compname">
+                            <div class="name">可不可熟成紅茶北區</div>
+                            <div class="datetime">
+                                07:36
+                            </div>
+                        </div>
+                        <a class="position">
+                            可不可熟成紅茶-淡水北新店-工讀人員(早晚班)888888888888888888888888
+                        </a>
+                        <p class="chatmessage">
+                            <img src="~/images/Candidate/Chat/checked.svg" alt="">
+                            下午一點到十點唷
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-link chat_company" id="v-pills-messages-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false">
+                    <div class="comp_logo">
+                        <img src="~/images/Candidate/Chat/kubuke.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="compname">
+                            <div class="name">可不可熟成紅茶北區</div>
+                            <div class="datetime">
+                                07:36
+                            </div>
+                        </div>
+                        <a class="position">
+                            可不可熟成紅茶-淡水北新店-工讀人員(早晚班)888888888888888888888888
+                        </a>
+                        <p class="chatmessage">
+                            <img src="~/images/Candidate/Chat/checked.svg" alt="">
+                            下午一點到十點唷
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-link chat_company" id="v-pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false">
+                    <div class="comp_logo">
+                        <img src="~/images/Candidate/Chat/kubuke.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="compname">
+                            <div class="name">可不可熟成紅茶北區</div>
+                            <div class="datetime">
+                                07:36
+                            </div>
+                        </div>
+                        <a class="position">
+                            可不可熟成紅茶-淡水北新店-工讀人員(早晚班)888888888888888888888888
+                        </a>
+                        <p class="chatmessage">
+                            <img src="~/images/Candidate/Chat/checked.svg" alt="">
+                            下午一點到十點唷
+                        </p>
+                    </div>
+                </button>
+                <button class="nav-link chat_company" id="v-pills-settings-tab" data-bs-toggle="pill"
+                        data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false">
+                    <div class="comp_logo">
+                        <img src="~/images/Candidate/Chat/kubuke.png" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="compname">
+                            <div class="name">可不可熟成紅茶北區</div>
+                            <div class="datetime">
+                                07:36
+                            </div>
+                        </div>
+                        <a class="position">
+                            可不可熟成紅茶-淡水北新店-工讀人員(早晚班)**********************
+                        </a>
+                        <p class="chatmessage">
+                            <img src="~/images/Candidate/Chat/checked.svg" alt="">
+                            下午一點到十點唷
+                        </p>
+                    </div>
+                </button>
+            *@
+            </div>
+        </div>
+        <!-- 聊天 -->
+        <div class=" tab-content" id="v-pills-tabContent">
+            <div class="chat_header">
+                <div class="flexbox">
+                    <div class="companyname">
+                        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"
+                             width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M12.4884 4.51093C12.8044 4.82923 12.8057 5.34147 12.4937 5.66139L12.4842 5.67102L6.91252 11.2023L18.6445 11.2023C19.0976 11.2023 19.4648 11.5696 19.4648 12.0226C19.4648 12.4711 19.1049 12.8356 18.6581 12.8428L18.6445 12.8429L6.91252 12.8429L12.4842 18.3742C12.8025 18.6902 12.8075 19.2024 12.4979 19.5246L12.4884 19.5343C12.1724 19.8526 11.6602 19.8577 11.338 19.548L11.3283 19.5385L4.34394 12.6048C4.024 12.2872 4.0208 11.7717 4.33434 11.4502L4.34394 11.4405L11.3283 4.50671C11.6498 4.18753 12.1692 4.18942 12.4884 4.51093Z"
+                                  fill="#353D49"></path>
+                        </svg>
+                        <div class="text">
+                            <a href="">@Model.ActiveCompany</a>
+                            <div>@Model.ActiveJobName</div>
+                        </div>
+                    </div>
+
+                    @* <div class="deleteimg"><img src="~/images/Candidate/Chat/delete rotated.svg" alt=""></div> *@
+                </div>
+            </div>
+
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                 aria-labelledby="v-pills-home-tab" tabindex="0">
+            @*     <div class="day">
+                    8/20
+                </div> *@
+              
+
+                @for (int i=0;i<Model.CurrentChat.Count;i++)
+                {
+                    
+                    if (i != 0 && Model.CurrentChat[i-1].MessageTime < Model.CurrentChat[i].MessageTime)
+                    {
+                        <div class="day">
+                            @Model.CurrentChat[i].MessageTime.ToString("yyyy/M/d")
+                        </div>
+                    }
+                    else if(i ==0)
+                    {
+                        <div class="day">
+                            @Model.CurrentChat[i].MessageTime.ToString("yyyy/M/d")
+                        </div>
+                    }
+
+                        <div class="message @(Model.CurrentChat[i].SenderAccount == 1 ? "localUser":"remoteUser")">
+                            <div class="pic"><img src="~/images/Candidate/Chat/@Model.CurrentChat[i].Pic" alt=""></div>
+
+                        <div class="text_area">
+                            <div class="text">
+                                @Model.CurrentChat[i].ChatContent
+                            </div>
+                            <div class="datetime">
+                                @Model.CurrentChat[i].MessageTime.ToString("HH:mm")
+                            </div>
+                        </div>
+                    </div>
+                } 
+
+               
+
+@* 
+                <div class="message localUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+
+                    <div class="text_area">
+                        <div class="text">
+                            嗨~想請問這份工作的上班及下班時間?
+                        </div>
+                        <div class="datetime">
+                            @Model.CurrentChat[0].MessageTime.Hour:@Model.CurrentChat[0].MessageTime.Minute
+                        </div>
+                    </div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+                    <div class="text_area">
+                        <div class="text">
+                            下午一點到十點唷
+                        </div>
+                        <div class="datetime">
+                            10:00
+                        </div>
+                    </div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+                    <div class="text_area">
+                        <div class="text">
+                            下午一點到十點唷
+                        </div>
+                        <div class="datetime">
+                            10:00
+                        </div>
+                    </div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+                    <div class="text_area">
+                        <div class="text">
+                            下午一點到十點唷
+                        </div>
+                        <div class="datetime">
+                            10:00
+                        </div>
+                    </div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+                    <div class="text_area">
+                        <div class="text">
+                            下午一點到十點唷
+                        </div>
+                        <div class="datetime">
+                            10:00
+                        </div>
+                    </div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+                    <div class="text_area">
+                        <div class="text">
+                            下午一點到十點唷
+                        </div>
+                        <div class="datetime">
+                            10:00
+                        </div>
+                    </div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="pic"><img src="~/images/Candidate/Chat/kubuke.png" alt=""></div>
+                    <div class="text_area">
+                        <div class="text">
+                            下午一點到十點唷
+                        </div>
+                        <div class="datetime">
+                            10:00
+                        </div>
+                    </div>
+                </div>
+ *@
+
+            </div>
+
+            <div class="tab-pane chat_pane fade" id="v-pills-profile" role="tabpanel"
+                 aria-labelledby="v-pills-profile-tab" tabindex="0">
+                <div class="message localUser">
+
+                    <div class="text">嗨~想請問這份工作的上班及下班時間?</div>
+
+                </div>
+                <div class="message remoteUser">
+
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+            </div>
+            <div class="tab-pane chat_pane fade" id="v-pills-disabled" role="tabpanel"
+                 aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                <div class="message localUser">
+
+                    <div class="text">嗨~想請問這份工作的上班及下班時間?</div>
+
+                </div>
+                <div class="message remoteUser">
+
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+                <div class="message remoteUser">
+                    <div class="text">下午一點到十點唷</div>
+                </div>
+            </div>
+            <div class="tab-pane chat_pane fade" id="v-pills-messages" role="tabpanel"
+                 aria-labelledby="v-pills-messages-tab" tabindex="0">
+                ...
+            </div>
+            <div class="tab-pane chat_pane fade" id="v-pills-settings" role="tabpanel"
+                 aria-labelledby="v-pills-settings-tab" tabindex="0">
+                ...
+            </div>
+
+
+            <div class="message_wrapper">
+                <div class="message_area">
+                    <a href="" class="apply">
+                        <img src="~/images/Candidate/Chat/redairplane.svg" alt="">
+                        <span>蛤快投</span>
+                    </a>
+                    <textarea name="" id="" rows="1" placeholder="你想說什麼..."></textarea>
+                    <div class="send">
+                        <div class="enter">
+                            <input type="checkbox" name="" id="">
+                            <span>按 Enter 傳送訊息</span>
+                        </div>
+
+                        <div class="sendbtn">傳送</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+@section topCSS{
+    <link href="~/css/candidate/chat/chat.css" rel="stylesheet" />
+
+}
+@section breadcrumb{
+    
+        <div class="hi row mt-3 ps-2">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                <li class="breadcrumb-item" aria-current="page">我的帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">聊聊</li>
+                </ol>
+            </nav>
+        </div>
+   
+
+}

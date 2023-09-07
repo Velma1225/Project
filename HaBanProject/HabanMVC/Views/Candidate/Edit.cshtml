@@ -1,0 +1,129 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_LayoutSidebarCandidate.cshtml";
+    ViewData["Title"] = "Edit";
+}
+
+
+<!-- 內容放這邊 \(0ㄅ0)/ -->
+<!-- ---------------------- -->
+@section breadcrumb{
+    <div class="hi row m-0">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">我的帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">帳號資料編輯</li>
+            </ol>
+        </nav>
+    </div>
+
+}
+
+            <div id="content">
+                <div style="margin-left: 1px;" class="row justify-content-between">
+
+                    <h2 class="col-6">帳號資料編輯</h2>
+                    <span class="col-6 text-end"><em>＊</em>為必填項目</span>
+                </div>
+                <div id="form-area" class="form-data-style">
+                    <div class="card p-2 fw-bold">
+                        編輯/修改帳戶資料
+                    </div>
+
+
+                    <form name="form1" method="post" action="?">
+                        <table class="m-0" cellspacing="0">
+                            <!-- <span>編輯/修改帳戶資料</span> -->
+                            <tbody>
+                                <tr>
+                                    <th class="w4"><em>*</em><span>帳　　號</span>:</th>
+                                    <td>
+                                        xxx12345678
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="w4"><em>*</em><span>密　　碼</span>:</th>
+                                    <td class="fs-6">
+                                        *********<a title="變更會員登入密碼" class="orbtn" href="#"><span class="px-2 btn btn-primary p-1 ms-3">變更會員登入密碼</span></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="w4"><em>*</em><span>姓　　名</span>:</th>
+                                    <td>
+                                        <input type="text" class="textfield" style="width: 30%;" size="20" maxlength="10" id="name"
+                                               name="name" value="">
+                                        <span id="msg1" class="neg" style="display:none;">請填寫您的尊姓大名</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="w4"><span>性　　別</span>:</th>
+                                    <td>
+                                        <label for="gender1">
+                                            <input type="radio" id="gender1" name="gender"
+                                                   value="1" > 男
+                                        </label>
+                                        <label for="gender2">
+                                            <input type="radio" id="gender2" name="gender"
+                                                   value="2" > 女
+                                        </label>
+                                        <label for="gender3">
+                                            <input type="radio" id="gender3" name="gender"
+                                                   value="3" > 不公開
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="w4"><em>*</em><span>行動電話</span>:</th>
+                                    <td>
+                                        <p class="m-0">0936289716</p>
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <th class=""><em>*</em><span>E - m a i l </span>:</th>
+                                    <td>
+                                        <input type="text" style="width:80%;" class="textfield" size="40"
+                                               id="email" name="email" value="xxxx12345678@gmail.com">
+                                        <span id="msg3" class="neg" style="display:none;">您尚未填寫或Email格式錯誤</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="hidden" value="resume" name="module">
+                        <input type="hidden" value="data" name="action">
+                    </form>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-5 text-end">
+                        <button class="me-2 btn btn-danger border-danger fw-bold mt-2 px-3 py-1">儲存</button>
+
+                    </div>
+                    <div class="col-5">
+                        <button class=" btn text-danger border-danger fw-bold mt-2 px-3 py-1">取消</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+@*<partial name="~/Views/Candidate/PartialView/_JobSliderPartial.cshtml" model="Model" />*@
+
+
+
+@section topCSS{
+
+
+    <link href="~/css/Candidate/Edit/Edit.css" rel="stylesheet" />
+
+}
+
+@section endJS{
+
+}
+
+

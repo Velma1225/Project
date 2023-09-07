@@ -1,0 +1,249 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>666HaBan</title>
+    <!-- Bootstrap@5.3.0 -->
+   @* <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">*@   
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- googlefonts-icons -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+    <link href="~/css/layoutindex/header-style.css" rel="stylesheet" />
+    <link href="~/css/layoutindex/footer-style.css" rel="stylesheet" />
+    @await RenderSectionAsync("topCSS", required: false)
+    @await RenderSectionAsync("topJS", required: false)
+</head>
+
+<body>
+    @await RenderSectionAsync("topModal", required: false)
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a class="haban-logo" href="#">
+                            <picture>
+                                <source type="image/webp" srcset="~/images/layout-img/logo_666_b_slogan.png"
+                                        media="(min-width: 992px)">
+                                <img class="haban-logo-main" src="~/images/layout-img/logo_666_b_slogan_white.png" alt="666蛤班">
+                            </picture>
+                            <img class="haban-logo-mascot" src="~/images/layout-img/logo_666_b_ha_head.png" alt="">
+                        </a>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="item-group collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <div class="content">
+
+                            <ul class="item-list navbar-nav ms-auto mb-2 mb-lg-0">
+                                <button class="btn-close" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+                                        aria-expanded="true" aria-label="Close">
+                                </button>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">找工作</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" target="_blank">
+                                        <img class="comp_banner" src="~/images/layout-img/img_tooltip_sale.svg" alt="徵才限時0元">
+                                    </a>
+                                    <a class="ad-plan nav-link" href="#">徵才方案</a>
+                                </li>
+                                <li class="is-m">
+                                    <img class="comp_img" src="~/images/layout-img/menu_bg_ha_activity@2x.png" alt="年度代言人 蛤們"
+                                         loading="lazy">
+                                </li>
+                            </ul>
+
+
+                            <div class="member-list">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            <span class="icon material-symbols-outlined">
+                                                business_center
+                                            </span>
+                                            求職會員
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="material-symbols-outlined">person</span>
+                                                    求職註冊
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="material-symbols-outlined">login</span>
+                                                    求職登入
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                           aria-expanded="false">
+                                            <span class="icon material-symbols-outlined">
+                                                home_work
+                                            </span>
+                                            企業徵才
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="material-symbols-outlined">person</span>
+                                                    企業註冊
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="material-symbols-outlined">login</span>
+                                                    企業登入
+                                                </a>
+                                            </li>
+                                            <hr>
+                                            <li>
+
+                                                <a class="dropdown-item" href="#">
+                                                    <span class="material-symbols-outlined">storefront</span>
+                                                    企業方案
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- 內容放這邊 \(0ㄅ0)/ -->
+    @RenderBody()
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row footer-top-content  footer-content">
+                <div class=" footer-box logo-box col-6">
+
+                    <img class="qrcode-img" src="~/images/layout-img/ic_q_rcode.jpg" alt="qr-code">
+                    <div class="app-inbox">
+                        <h5 class="title">666蛤班<br>官方LINE</h5>
+
+                    </div>
+                </div>
+                <div class="href-wrap footer-box col-6">
+                    <div class="href-box">
+                        <h6 class="title">關於我們</h6>
+                        <a href="#">蛤班簡介</a>
+                        <a href="#">徵才方案</a>
+                        <a href="#">加入我們</a>
+                        <a href="#">網站地圖</a>
+                    </div>
+                    <div class="href-box">
+                        <h6 class="title">服務專區</h6>
+                        <a href="#" target="_blank">地區找工作</a>
+                        <a href="#" target="_blank">產業找工作</a>
+                        <a href="#" target="_blank">職務找工作</a>
+                        <a href="#" target="_blank">幫助中心</a>
+                    </div>
+                    <div class="href-box">
+                        <h6 class="title">會員條款</h6>
+                        <a href="#">刊登契約</a>
+                        <a href="#">免責聲明</a>
+                        <a href="#">服務條款</a>
+                        <a href="#">隱私權聲明</a>
+                    </div>
+                    <div class="href-box">
+                        <h6 class="title">合作專區</h6>
+                        <a href="#">廣告合作</a>
+                        <a href="#">申訴專線</a>
+                        <a href="#">網站公告</a>
+                        <a href="#">投資者專區 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-content">
+                <div class="footer-bottom-top-wrap">
+                    <div class="row footer-content">
+                        <div class="footer-box col-lg-8   col-6">
+                            <a href="#">
+                                <img class="logo-img" src="~/images/layout-img/logo_666_b_white.png"
+                                     alt="蛤班 logo">
+                            </a>
+                            <p class="slogan">下班店長請指示</p>
+                        </div>
+                        <div class="footer-box justify-content-end col-lg-4 col-6">
+                            <a href="#" target="_blank">
+                                <img class="media-img" src="~/images/layout-img/ic_ig.svg" alt="蛤班 IG">
+                            </a>
+                            <a href="#" target="_blank">
+                                <img class="media-img" src="~/images/layout-img/ic_fb.svg" alt="蛤班 FB">
+                            </a>
+                            <a href="#" target="_blank">
+                                <img class="media-img" src="~/images/layout-img/ic_youtube.svg" alt="蛤班 Youtube">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-end-wrap">
+                    <div class="copyright">
+                        <p>© 2023 by HaBan Technology Co., Ltd. All Rights Reserved.</p>
+                    </div>
+                    <div class="text-content">
+                        <p class="is-pc me-4">
+                            客服專線：00-0000-0000
+                        </p>
+                        <p>機構地址 台北市大安區忠孝東路三段xx號xx號樓之x</p>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap@5.3.0 -->
+    @*<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>*@
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @*<script src="~/js/site.js" asp-append-version="true"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
+
+    @await RenderSectionAsync("endCSS", required: false)
+    @await RenderSectionAsync("endJS", required: false)
+
+</body>
+
+</html>

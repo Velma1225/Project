@@ -1,0 +1,287 @@
+﻿@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model List<ApplicationRecordViewModel>
+@{
+    //ViewData["Title"] = "666HaBan-Index";
+    Layout = "~/Views/Shared/_LayoutSidebarCandidate.cshtml";
+
+
+
+    ViewData["Title"] = "JobRecord";
+
+    //int Active = (int)ViewData["active"];
+    int activePage = (int)ViewData["ActivePage"];
+    int pages = (int)ViewData["Pages"];
+
+
+}
+@section breadcrumb{
+    <div class="hi row m-0">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">我的帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">應徵紀錄</li>
+            </ol>
+        </nav>
+    </div>
+
+}
+
+
+@*<partial name="~/Views/HaBan/PartialView/_CompanySliderPartial.cshtml" model="Model" />*@
+
+@*@foreach (var item in Model)
+                {
+
+                <div class="slider-item">
+                <a href="@item.Hyperlink" target="_blank" class="logo">
+                <div class="border">
+                <img src="~/images/index/@item.ImageUrl" alt="@item.ImageAlt">
+                </div>
+                <h3 class="company"
+                style="max-width: 95px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                @item.Name
+                </h3>
+                <p class="salary">月薪最高 $ @item.HighestPaying K</p>
+
+                </a>
+                </div>
+                }*@
+
+
+
+<!-- 內容放這邊 \(0ㄅ0)/ -->
+<!-- ---------------------- -->
+
+
+
+            <div id="content">
+                <h2>應徵紀錄</h2>
+                <!-- <div class="card">
+                    <div class="card-header card-header-1 p-1">
+                        <ul class="row list-unstyled my-1">
+                            <li class="col-12 text-start ps-3 pe-0"><input class="mx-2" type="checkbox"><a href="#">刪除勾選職務</a>｜<a href="#">放入收藏夾</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="card-header card-header-2 p-1 py-2">
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                            <li class="col-6"><span class="ps-2">職缺名稱 / 公司名稱</span></li>
+                            <li class="col-6 text-end"><span class="pe-3 text-start">應徵內容</span><span class="pe-5">應徵日期</span></li>
+                        </ul>
+
+                    </div>
+                </div> -->
+                <div class="card">
+                    <!-- <div class="card-header card-header-1 p-1">
+                        <ul class="row list-unstyled my-1">
+                            <li class="col-12 text-start ps-3 pe-0"><input class="mx-2" type="checkbox"><a href="#">刪除勾選職務</a>｜<a href="#">放入收藏夾</a></li>
+
+                        </ul>
+                    </div> -->
+                    <div class="card-header card-header-2 p-1 py-2">
+
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                <li class="col-3 record"><span class="ps-3">應徵職務</span></li>
+                            <li class="col-3 record">
+                    <span class="pe-5 ">投遞履歷</span>
+                            </li>
+                            <li class="col-3 record">
+                    <span class="pe-5 ">讀取狀態</span>
+                            </li>
+                            <li class="col-3 text-center record">
+                    <span class="pe-5">應徵日期</span>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="card-body p-1 py-2">
+
+                        <ul class="row justify-content-between mb-0 list-unstyled">
+                            <partial name="~/Views/Candidate/PartialView/JobRecord/JobRecord.cshtml" model="Model" />
+                            @*<li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>
+
+                            <li class="col-4 record mb-2 fs-6"><span class="ps-3"><a href="#">英屬開曼群島商史泰博股份有限公司台灣分公司</a></span></li>
+                            <li class="col-4 record fs-6">
+                                <span class="pe-5 "><a href="#">香港商呷哺呷哺餐飲管理香港控股有限公司香港商呷哺呷哺餐飲管理香港控股有限公司</a></span>
+                            </li>
+                            <li class="col-4 text-center record fs-6">
+                                <span class="pe-5">2023/08/14</span>
+                            </li>*@
+
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+@*                <nav class="mt-1" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link border-0" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link border-0" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link border-0" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link border-0" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link border-0" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>*@
+                <nav class="mt-1" aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link border-0" href="/Candidate/JobRecord/@(pages-pages+1)">&laquo;</a>
+                        </li>
+
+                        @for (int i = 1; i <= pages; i++)
+                        {
+                            <li class="page-item @(i==activePage? "active":"")"><a class="page-link border-0" href="/Candidate/JobRecord/@i">@i</a></li>
+                        }
+
+
+                        <li class="page-item">
+                            <a class="page-link border-0" href="/Candidate/JobRecord/@(pages)">&raquo;</a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+
+            </div>
+
+
+
+
+@*<partial name="~/Views/Candidate/PartialView/_JobSliderPartial.cshtml" model="Model" />*@
+
+
+
+@section topCSS{
+
+
+    <link href="~/css/Candidate/JobRecord/JobRecord.css" rel="stylesheet" />
+
+}
+
+@section endJS{
+
+}
+
+

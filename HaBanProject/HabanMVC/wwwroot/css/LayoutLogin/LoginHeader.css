@@ -1,0 +1,25 @@
+body{
+    font: normal normal 12px Verdana,Arial,'新微軟正黑體',Helvetica,sans-serif;
+}
+/* header */
+.header .logo-wrapper{
+    margin: 0 150px;
+    padding: 24px 0 16px;
+}
+.header img{
+    width: 138px;
+    height: 54px;
+}
+@media (max-width: 768px) {
+    .header .logo-wrapper {
+    display: block;
+    width: 100%;
+    background: none repeat 0 0 scroll transparent;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 15px 0 8px 0;
+    text-align: center;
+    text-indent: 0;
+    border-bottom: 1px solid #f2f2f2;
+    }
+}

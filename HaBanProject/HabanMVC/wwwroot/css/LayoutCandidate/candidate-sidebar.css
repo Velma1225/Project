@@ -1,0 +1,55 @@
+﻿
+/* 求職者用 Header修改 */
+header .dropdown-menu a.dropdown-item {
+    margin-left: 0;
+}
+/* 求職者用 Header修改 end */
+
+body {
+    font-family: 'Arial', Microsoft JhengHei, '微軟正黑體', sans-serif;
+}
+
+
+.side-bar .list-group a {
+    text-decoration: none;
+    color: #6A7079;
+}
+
+.side-bar .list-group .count {
+    color: #999999;
+}
+
+.side-bar .list-group li {
+    border-top: none;
+    border-bottom: none;
+    font-size: 11px;
+}
+
+.side-bar .list-group .count {
+    color: #999999;
+}
+
+
+.side-bar .list-group-item a:hover {
+    color: black;
+}
+
+.side-bar .customer-service-info .list-group-item p:nth-child(n+1) {
+    text-align: center;
+    margin: 2px;
+}
+
+.breadcrumb,
+.breadcrumb li a {
+    color: #232A35;
+    font-size: 11px;
+}
+
+.member-homepage .container {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+a {
+    text-decoration: none;
+}

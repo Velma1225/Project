@@ -1,0 +1,144 @@
+﻿@using HabanMVC.Services;
+@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Company;
+@model List<MembershipCategoriesVM>
+@{
+    ViewData["Title"] = "BuyPoStep1";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+<div id="content" class="col-12 col-md-9 col-lg-12 px-0">
+    <div class="d-flex justify-content-between">
+        <h2>新鮮美味蛤會員開通</h2>
+        <div class="edit">
+      
+            <img src="~/images/company/buy/note.png" />
+            觀看購買紀錄
+        </div>
+    </div>
+
+    <ol class="stepsBox">
+        <li class="is-doing col-12 col-lg-3">1.選擇付費方案</li>
+        <li class=" col-12 col-lg-3">2.了解徵才刊登契約</li>
+        <li class=" col-12 col-lg-3">3.確認訂單內容</li>
+        <li class=" col-12 col-lg-3">4.完成購買</li>
+    </ol>
+    <!-- 購買方案 -->
+   
+    <div class="ad-plan row">
+        @foreach (var item in Model)
+        {
+        <div class="plan col-5">
+            <h3>方案</h3>
+            <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active" id="list-30day-list" data-bs-toggle="list" href="#list-30day" role="tab" aria-controls="list-30day">@item.MembershipName</a>
+
+                <a class="list-group-item list-group-item-action" id="list-90day-list" data-bs-toggle="list" href="#list-90day" role="tab" aria-controls="list-90day">
+                        @item.MembershipName<br>
+                    <span class="free-day">+ 30天(贈)</span>
+                </a>
+
+                <a class="list-group-item list-group-item-action" id="list-365day-list" data-bs-toggle="list" href="#list-365day" role="tab" aria-controls="list-365day">
+                        @item.MembershipName<br>
+                    <span class="free-day">+ 90天(贈)</span>
+                </a>
+            </div>
+        </div>
+        <div class="plan-content col-7">
+            <h3>方案內容</h3>
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-30day" role="tabpanel" aria-labelledby="list-30day-list">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>優惠價</th>
+                                <td class="price">
+                                    2,800元<br>
+                                    <span class="orig-price">4,200元</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>平均日繳</th>
+                                <td>93元/日</td>
+                            </tr>
+                            <!-- <tr>
+                              <th>暫停天數</th>
+                              <td>90天</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-primary w-100">開通</button>
+                </div>
+
+
+                <div class="tab-pane fade" id="list-90day" role="tabpanel" aria-labelledby="list-90day-list">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>優惠價</th>
+                                <td class="price">
+                                    5,200元<br>
+                                    <span class="orig-price">9,000元</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>平均日繳</th>
+                                <td>43元/日</td>
+                            </tr>
+                            <!-- <tr>
+                              <th>暫停天數</th>
+                              <td>90天</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn btn-primary w-100">開通</button>
+                </div>
+
+                <div class="tab-pane fade" id="list-365day" role="tabpanel" aria-labelledby="list-365day-list">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th>優惠價</th>
+                                <td class="price">
+                                    18,000元<br>
+                                    <span class="orig-price">32,000元</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>平均日繳</th>
+                                <td>40元/日</td>
+                            </tr>
+                            <!-- <tr>
+                              <th>暫停天數</th>
+                              <td>120天</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                    <button type="button" class="btn w-100">開通</button>
+                </div>
+
+            </div>
+        </div>
+   
+            }
+</div>
+
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                <li class="breadcrumb-item" aria-current="page">新鮮美味蛤會員開通</li>
+            </ol>
+        </nav>
+    </div>
+}
+
+@section topCSS{
+
+   
+    <link href="~/css/company/buy/buy.css" rel="stylesheet" />
+}

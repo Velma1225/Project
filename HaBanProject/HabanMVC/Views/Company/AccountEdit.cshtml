@@ -1,0 +1,107 @@
+﻿@using HabanMVC.ViewModels.Company;
+@model AccountEditViewModel
+@{
+    ViewData["Title"] = "AccountEdit";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+}
+
+@section breadcrumb{
+    <div class="hi row mt-3 ps-2">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                <li class="breadcrumb-item" aria-current="page">帳號資料編輯</li>
+            </ol>
+        </nav>
+    </div>
+}
+
+<div class="row">
+    
+    <div class="col-12 col-lg-12">
+
+        <div id="content">
+            <div style="margin-left: 1px;" class="row justify-content-between">
+
+                <h2 class="col-6">帳號資料編輯</h2>
+                <span class="col-6 text-end"><em>＊</em>為必填項目</span>
+            </div>
+            <div id="form-area" class="form-data-style">
+                <div class="card p-2 fw-bold">
+                    編輯/修改帳戶資料
+                </div>
+
+
+                <form name="form1" method="post" action="?">
+                    <table class="m-0" cellspacing="0">
+                        <!-- <span>編輯/修改帳戶資料</span> -->
+                        <tbody>
+                            <tr>
+                                <th class="w4"><em>*</em><span>帳　　號</span>:</th>
+                                <td>
+                                    @*xxx12345678*@
+                                    @Model.CompanyId
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="w4"><em>*</em><span>密　　碼</span>:</th>
+                                <td class="fs-6">
+                                    *********<a title="變更會員登入密碼" class="orbtn" href="#"><span class="px-2 btn btn-primary p-1 ms-3">變更企業會員登入密碼</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="w4"><em>*</em><span>公司名稱</span>:</th>
+                                <td>
+                                    <input type="text" style="width:80%;" value="@Model.CompanyName">
+                                    <span id="msg1" class="neg" style="display:none;">請填寫您的尊姓大名</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="w4"><em>*</em><span>產業類別</span>:</th>
+                                <td>
+                                    <input type="text" value="@Model.IndustryCategory">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class=""><em>*</em><span>E - m a i l </span>:</th>
+                                <td>
+                                    <input type="email" style="width:80%;" class="textfield" size="40" value="@Model.Email">
+                                    @*<span id="msg3" class="neg" style="display:none;">您尚未填寫或Email格式錯誤</span>*@
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="w4"><em>*</em><span>公司電話</span>:</th>
+                                <td>
+                                    <input type="text" value="@Model.Mobile">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+@*                    <input type="hidden" value="resume" name="module">
+                    <input type="hidden" value="data" name="action">*@
+                </form>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-5 text-end">
+                    <button class="me-2 btn btn-danger border-danger fw-bold mt-2 px-3 py-1">儲存</button>
+
+                </div>
+                <div class="col-5">
+                    <button class=" btn text-danger border-danger fw-bold mt-2 px-3 py-1">取消</button>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+   
+
+
+@section topCSS{
+    <link href="~/css/company/accountedit/accountedit.css" rel="stylesheet" />
+}
+

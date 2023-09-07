@@ -1,0 +1,12 @@
+﻿@using HabanMVC.ViewModels.Company;
+  
+@model List<SimilarCompanyViewModel>
+
+
+@foreach (var item in Model)
+{
+    <li>
+        <a href="">@item.CompanyName</a>
+        <span>@item.CompanyDistrict</span>
+    </li>
+}

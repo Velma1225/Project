@@ -1,0 +1,311 @@
+body {
+    font-family: 'Arial', Microsoft JhengHei, '微軟正黑體', sans-serif;
+}
+.member-list .dropdown-menu img {
+    width: 18px;
+    height: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input:focus {
+    outline: none;
+}
+.nav-item.tab-gap {
+    flex-grow: 1.5;
+}
+
+.nav-link-sm {
+    font-size: 0.5rem;
+}
+
+
+
+.breadcrumb,
+.breadcrumb li a {
+    color: #232A35;
+    font-size: 11px;
+}
+
+.member-homepage .container {
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+
+
+/* ------------- */
+
+.safe {
+    width: 94%;
+}
+
+
+@media (max-width: 768px) {
+
+    /* .member-homepage .hi {
+        display: none;
+    } */
+
+    .Interview {
+        display: none;
+    }
+
+    .alert-box.alert {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .customer-service-info span {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* ----- */
+
+#content h2 {
+    color: #2b3340;
+    border-left: 5px solid #fa1e50;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+#content {
+    font-family: 'Arial', Microsoft JhengHei, '微軟正黑體', sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 100px;
+}
+
+#content a {
+    color: #6596FF;
+    text-decoration: none;
+}
+
+#content .card-header-2 {
+    background: #F9F9F9;
+}
+
+.card {
+    border-radius: 0;
+}
+
+#content .card-header-2 {
+    background: url("../img/findTalent_combine.png") repeat-x scroll 0 -680px transparent;
+    height: 30px;
+    /* position: relative; */
+    font-weight: 900;
+}
+
+input.btn-query {
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    margin: 0;
+    padding: 0 10px;
+    color: #49474A;
+    cursor: pointer;
+    border: 1px solid #D5D5D5;
+    background: url(../img/inputbtn_bk.png) repeat-x 0 0;
+    text-decoration: none;
+}
+
+.input-collection_company {
+    color: gray;
+}
+
+#content em {
+    color: red;
+    /* font-size: 12px; */
+}
+
+.card-body .list-group {
+    border-radius: 0;
+}
+
+
+
+#form-area table {
+    width: 100%;
+    margin: 7px 0 6px;
+    color: #4A4A4A;
+    border: 1px solid #E3E3E3;
+    table-layout: fixed;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.btn.btn-primary.p-1.ms-3 {
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+
+#form-area input,
+#form-area select {
+    vertical-align: middle;
+    _vertical-align: baseline
+}
+
+#form-area label input {
+    margin: 0 2px 0 0;
+}
+
+#form-area textarea {
+    width: 580px;
+    height: 71px;
+    line-height: 22px;
+    padding-left: 5px
+}
+
+#form-area .textfield {
+    padding: 1px 2px
+}
+
+#form-area label {
+    padding-right: 25px
+}
+
+
+
+
+#topOption {
+    background-color: #FFF;
+    border-left: 1px solid #E2E2E2;
+    border-right: 1px solid #E2E2E2;
+    border-top: 1px solid #E2E2E2;
+    height: 31px;
+    overflow: hidden;
+    padding: 1px;
+    position: relative
+}
+
+.new-topOption-inner ul li {
+    height: 31px;
+    display: inline-block
+}
+
+.new-topOption-inner ul li div {
+    height: 31px;
+    float: left;
+    line-height: 31px;
+    text-align: center
+}
+
+#form-area .textfield,
+#form-area input[type=text],
+#listArea .searchBar input[type=text] {
+    background: url("../img/new-input_bk.png") no-repeat 0 0 scroll transparent;
+    border: 1px solid #cacaca;
+    height: 28px;
+    padding: 0 0 0 4px;
+    line-height: 28px\9
+}
+
+#form-area input[type=text] {
+    width: 140px;
+    width: 135px\9;
+}
+
+
+
+p.formnote {
+    float: right;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 3px;
+    font-size: 12px;
+    position: absolute;
+    top: 7px;
+    right: 0
+}
+
+p.formnote em {
+    color: #fa1e50;
+    padding-right: 3px
+}
+
+
+#form-area table {
+    width: 100%;
+    margin: 7px 0 6px;
+    color: #4A4A4A;
+    border: 1px solid #E3E3E3;
+    table-layout: fixed;
+    position: relative
+}
+
+.card.p-2.fw-bold {
+    background: url("../img/bg_account_page.png") repeat-x scroll 0 -27px transparent;
+    border-color: #e2e2e2;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    color: #232a35;
+    font-size: 13px;
+    font-weight: bold;
+    height: 33px;
+
+    text-align: left
+}
+
+#form-area th {
+    width: 106px;
+    line-height: 25px;
+    padding-right: 10px;
+    border: 1px solid #E3E3E3;
+    border-right: 0 none;
+    background-color: #fafafa;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: right
+}
+
+#form-area td {
+    line-height: 25px;
+    padding: 12px 0 12px 15px;
+    border: 1px solid #E3E3E3;
+    border-left: 0 none
+}
+
+#form-area th span {
+    padding-right: 1px
+}
+
+#form-area .w3 span {
+    letter-spacing: 1em
+}
+
+#form-area .w4 span {
+    letter-spacing: 0.5em
+}
+
+#form-area .w5 span {
+    letter-spacing: 0.2em
+}
+
+#form-area .w6 span {
+    letter-spacing: 0
+}
+
+#form-area .we span {
+    letter-spacing: 0.08em
+}
+
+#form-area th em {
+    color: #fa1e50;
+    padding-right: 3px
+}

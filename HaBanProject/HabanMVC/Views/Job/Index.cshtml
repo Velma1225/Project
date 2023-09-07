@@ -1,0 +1,530 @@
+﻿@using HabanMVC.ViewModels.Job.Index;
+@model JobIndexViewModel
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutIndex.cshtml";
+}
+
+
+@section topCSS{
+    <link rel="stylesheet" href="~/css/Job/Index/Job_Index.css" />
+}
+
+<section class="top-section sticky-top">
+
+    <div class="top-section-wrap">
+
+        <div class="search-part">
+            <!-- for sp -->
+            <div class="for-sp">
+                <div class="search-bar">
+                    <a class="btn to-index" href="#" role="button">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        首頁
+                    </a>
+                    <form class="search-input" action="">
+                        <input type="search" class="form-control" placeholder="試試搜尋職務、公司">
+                    </form>
+                    <a class="btn member-center" href="#" role="button">
+                        <img src="./images/ic_account.svg" alt="" class="login-for-sp1">
+                    </a>
+
+                </div>
+                <div class="search-filters-and-subscribe">
+                    <div class="search-filters">
+                        <div id="location-distance" data-bs-toggle="modal" data-bs-target="#location-distance-md">
+                            地區/距離<span>1</span>
+                        </div>
+                        <div id="job-category" data-bs-toggle="modal" data-bs-target="#job-category-md">
+                            職務類別<span>1</span>
+                        </div>
+                        <div class="advance-filters" id="modal-trigger" data-bs-toggle="modal"
+                             data-bs-target="#advModal-sp">
+                            進階<span>1</span>
+                            <img src="./images/ic_filter_white700.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="subscribe">
+                        <a type="button" class="btn btn-subscribe" data-bs-toggle="modal"
+                           data-bs-target="#subscribeModal">
+                            訂閱
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+</section>
+
+
+<div class="search-header sticky-top">
+    <div class="search-group">
+        <!-- for pc -->
+        <form class="search-bar for-pc row g-0">
+            <div class="col-2">
+                <div id="location-distance" data-bs-toggle="modal" data-bs-target="#location-distance-md">
+                    地區<span class="function-btn-separator">/</span>距離
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="job-category" data-bs-toggle="modal" data-bs-target="#job-category-md">
+                    職務類別
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="search-input">
+                    <span class="material-symbols-outlined">
+                        search
+                    </span>
+                    <label for="input-search" class="visually-hidden">Search</label>
+                    <input type="text" class="form-control" id="input-search" placeholder="試試搜尋職務/公司">
+                </div>
+            </div>
+            <div class="col-auto">
+                <button type="submit" class="btn btn-danger btn-search">搜尋</button>
+            </div>
+        </form>
+        <div class="search-filter-and-subsribe for-pc">
+            <div class="search-filters-bar">
+                <div class="dropdown filter filter-update">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        更新日期
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-filter">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                不拘
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault2">
+                            <label class="form-check-label" for="flexRadioDefault2">
+                                本日最新
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault3">
+                            <label class="form-check-label" for="flexRadioDefault3">
+                                三日內
+                            </label>
+                        </div>
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault4">
+                            <label class="form-check-label" for="flexRadioDefault4">
+                                一週內
+                            </label>
+                        </div> -->
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault5">
+                            <label class="form-check-label" for="flexRadioDefault5">
+                                二週內
+                            </label>
+                        </div> -->
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                id="flexRadioDefault6">
+                            <label class="form-check-label" for="flexRadioDefault6">
+                                一個月內
+                            </label>
+                        </div> -->
+                    </div>
+
+                </div>
+
+                <div class="gap-line"></div>
+
+                <div class="dropdown filter filter-employment">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        職務性質
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-filter">
+                        <!-- <h5>職務性質</h5> -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                不拘
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                全職
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                兼職
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                   id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">
+                                打工
+                            </label>
+                        </div>
+
+                        <!-- <h5>隱藏產業</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                隱藏派遣
+                            </label>
+                        </div> -->
+                    </div>
+
+                </div>
+
+                <div class="gap-line"></div>
+
+                <div class="dropdown filter filter-salary">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        薪資待遇
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-filter  dropdown-menu-salary">
+                        <h5>自訂薪資</h5>
+
+                        <div class="input-group input-group-salary">
+                            <select class="form-select" id="inputGroupSelect01">
+                                <option selected>月薪</option>
+                                <option value="1">時薪</option>
+                                <!-- <option value="2">日薪</option>
+                                <option value="3">週薪</option>
+                                <option value="4">年薪</option>
+                                <option value="5">部分月薪</option>
+                                <option value="6">論件計酬</option> -->
+                            </select>
+                        </div>
+
+                        <div class="input-salary-range">
+                            <input type="text" class="form-control" placeholder="如28000">
+                            <span class="mx-2">-</span>
+                            <input type="text" class="form-control" placeholder="選填">
+                        </div>
+
+                        <div class="form-check form-check-salary">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                包含面議
+                            </label>
+                        </div>
+
+
+                        <button class="btn btn-outline-danger btn-salary-send" type="button">送出</button>
+
+                    </div>
+
+                </div>
+
+                <div class="gap-line"></div>
+
+                <div class="dropdown filter filter-shifts">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        上班班別
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-filter">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                日班
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                晚班
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                大夜班
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                假日班
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="gap-line"></div>
+
+                <div class="dropdown filter filter-experience">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        工作經驗
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-filter">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                無經驗可
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                1-3年
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                3年以上
+                            </label>
+                        </div>
+                        <!-- <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                3-5年
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                5-10年
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                10年以上
+                            </label>
+                        </div> -->
+                    </div>
+
+                </div>
+
+                <div class="gap-line"></div>
+
+                <div class="dropdown filter filter-feature">
+                    <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                        職缺特色
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-filter">
+                        <!-- <h5>服務業最愛</h5> -->
+                        <div class="feature-items">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    交通津貼
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    伙食津貼
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    週休二日
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    無須輪班
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    彈性上下班
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    國外駐點工作
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="gap-line"></div>
+
+                <!-- Button trigger modal -->
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                        aria-controls="offcanvasRight">
+                    進階
+                    <img src="./images/filter.svg" alt="">
+                </button>
+
+
+                <div class="filter-clear">
+                    <button type="button" class="btn">清除條件</button>
+                </div>
+            </div>
+
+            <div class="subscribe">
+
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn-outline-primary btn-subscribe" data-bs-toggle="modal"
+                        data-bs-target="#subscribeModal">
+                    <i></i>訂閱
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container-find-jobs">
+    <div class="search-result">
+        <div class="search-result-header">
+            <h2>全部工作職缺</h2>
+            <div class="order-by">
+
+                排序：
+                <button type="button" class="btn">預設</button>
+                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip" data-bs-title="按經歷排序有到無">
+                    經歷
+                    <i></i>
+                </button>
+                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip" data-bs-title="按學歷排序高到低">
+                    學歷
+                    <i></i>
+                </button>
+                <button type="button" class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                        data-bs-custom-class="custom-tooltip" data-bs-title="按刊登時間排序新到舊">
+                    刊登時間
+                    <i></i>
+                </button>
+
+
+            </div>
+        </div>
+        <div class="jobs-group">
+            @foreach (var item in Model.JobList)
+            {
+                <a href="/Job/Description/@item.Id">
+                    <div class="job-card" job-id="yO0R0k" job-url="">
+                        <div class="job-intro">
+                            <h3 class="job-title">@item.JobTitle</h3>
+                            <div class="company">
+                                <a href="@item.CompanyUrl">
+                                    @item.Company<i></i>
+                                </a>
+                            </div>
+                            <div class="job-salary">@item.SalaryPayment</div>
+                            <div class="job-conditions">
+                                <div class="job-area">@item.City<span>-</span>@item.District</div>
+                                <div class="job-experience">經歷<span>@item.JobTenure</span></div>
+                                <div class="job-education">學歷<span>@item.Education</span></div>
+                            </div>
+                            <div class="job-description for-pc">
+                                <p>
+                                    @item.JobDescription
+                                </p>
+                            </div>
+                @*            <div class="job-tags">
+                                <div><span>關渡站走路7分鐘</span></div>
+                                <div><span>回復率100%</span></div>
+                                <div><span>防疫企業</span></div>
+                            </div>*@
+                        </div>
+
+                        <div class="job-favorite">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#jobFavoriteModal">
+                                <i></i>
+                            </button>
+                        </div>
+
+                        <div class="job-apply col-auto for-pc">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal"
+                                    data-bs-target="#applyModal">
+                                <i></i>蛤快投
+                            </button>
+                        </div>
+
+                    </div>
+
+
+                </a>
+                
+            }
+            <div class="job-loading for-sp">
+                <div class="spinner-border spinner-job-loading" role="status"></div>
+                資料讀取中...
+            </div>
+
+
+
+
+        </div>
+        <nav aria-label="Page navigation example" class="for-pc">
+            <ul class="pagination justify-content-end for-pc">
+                <li class="page-item">
+                    <a class="page"><i class="fa-solid fa-angle-left"></i> 上一頁</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                <li class="page-item">
+                    <a class="page" href="#">下一頁 <i class="fa-solid fa-angle-right"></i></a>
+                </li>
+                <span>第1/50頁</span>
+            </ul>
+        </nav>
+    </div>    
+
+    <div class="fast-filters-and-map for-pc">
+        <div class="fast-filters">
+            <div>
+                <span>新鮮人看過來！</span>
+                @foreach (var item in Model.FreshSearchList)
+                {
+                    <a href="@item.KeywordUrl" class="btn">
+                        @item.SearchItem
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                }
+            </div>
+        </div>
+        <div class="search-map">
+            <p>
+                想睡飽？
+                <a href="">用地圖找離家近工作</a>
+            </p>
+        </div>
+    </div>
+</div>

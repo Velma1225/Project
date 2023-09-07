@@ -1,0 +1,18 @@
+﻿@using HabanMVC.ViewModels;
+@using HabanMVC.ViewModels.Candidate;
+@model List<ApplicationRecordViewModel>
+
+@foreach (var item in Model)
+{
+
+    <li class="col-3 record mb-2 fs-6"><span class="ps-3"><a href="#">@item.AppliedPosition</a></span></li>
+    <li class="col-3 record fs-6">
+        <span class="pe-5 "><a href="#">@item.CompanyName</a></span>
+    </li>
+    <li class="col-3 record fs-6">
+        <span class="pe-5 "><a href="#">@item.Resume</a></span>
+    </li>
+    <li class="col-3 text-center record fs-6">
+        <span class="pe-5">@item.CreationDate</span>
+    </li>
+}

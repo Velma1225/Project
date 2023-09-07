@@ -1,0 +1,278 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap@5.3.0 -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- googlefonts-icons -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="~/css/layoutindex/header-style.css" rel="stylesheet" />
+    <link href="~/css/layoutcompany/footer-style.css" rel="stylesheet" />
+    <link href="~/css/layoutcompany/company-sidebar.css" rel="stylesheet" />
+    @await RenderSectionAsync("topCSS", required: false)
+    @await RenderSectionAsync("topJS", required: false)
+</head>
+<body>
+    @await RenderSectionAsync("topModal", required: false)
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a class="haban-logo" href="#">
+                            <picture>
+                                <source type="image/webp" srcset="~/images/layout-img/logo_666_b_slogan.png"
+                                        media="(min-width: 992px)">
+                                <img class="haban-logo-main"
+                                     src="~/images/layout-img/logo_666_b_slogan_white.png" alt="666蛤班">
+                            </picture>
+                            <img class="haban-logo-mascot" src="~/images/layout-img/logo_666_b_ha_head.png"
+                                 alt="">
+                        </a>
+                    </div>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+
+                    <div class="item-group collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <div class="content">
+
+                            <ul class="item-list navbar-nav ms-auto mb-2 mb-lg-0">
+                                <button class="btn-close" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+                                        aria-expanded="true" aria-label="Close">
+                                </button>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">找工作</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" target="_blank">
+                                        <img class="comp_banner"
+                                             src="~/images/layout-img/img_tooltip_sale.svg" alt="徵才限時0元">
+                                    </a>
+                                    <a class="ad-plan nav-link" href="#">徵才方案</a>
+                                </li>
+                                <li class="is-m">
+                                    <img class="comp_img" src="~/images/layout-img/menu_bg_ha_activity@2x.png"
+                                         alt="年度代言人 蛤們" loading="lazy">
+                                </li>
+                            </ul>
+
+                            <div class="member-list">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button"
+                                           data-bs-toggle="dropdown" aria-expanded="false">
+                                            <!-- <i class="fa-solid fa-briefcase"></i> -->
+                                            <span class="icon material-symbols-outlined">
+                                                business_center
+                                            </span>
+                                            Hi,新朋友
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    企業帳戶
+                                                </a>
+                                            </li>
+                                            <li class="for-sp">
+                                                <a class="dropdown-item" href="#">
+                                                    會員開通
+                                                </a>
+                                            </li>
+                                            <li class="for-sp">
+                                                <a class="dropdown-item" href="#">
+                                                    購買置頂蛤蜊
+                                                </a>
+                                            </li>
+                                            <li class="for-sp">
+                                                <a class="dropdown-item" href="#">
+                                                    使用置頂蛤蜊
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    聊聊通知
+                                                </a>
+                                            </li>
+                                            <li class="for-sp">
+                                                <a class="dropdown-item" href="#">
+                                                    刊登新職缺
+                                                </a>
+                                            </li>
+                                            <li class="for-sp">
+                                                <a class="dropdown-item" href="#">
+                                                    編輯職缺清單
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    求職者應徵紀錄
+                                                </a>
+                                            </li>
+                                            <li class="for-sp">
+                                                <a class="dropdown-item" href="#">
+                                                    公司介紹編輯
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    帳號資料編輯
+                                                </a>
+                                            </li>
+
+
+                                            <hr>
+                                            <li>
+                                                <a class="dropdown-item" href="#">
+                                                    回666蛤班首頁
+                                                </a>
+                                            </li>
+                                            <hr>
+                                            <li>
+                                                <a class="dropdown-item justify-content-center" href="#">
+                                                    登出
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Breadcrumb & Sidebar -->
+    <div class="member-homepage container safe mt-4">
+        <!-- 自訂麵包屑 -->
+        @await RenderSectionAsync("breadcrumb", required: false)
+        @*<div class="hi row m-0">
+            <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="./myAccount.html" class="text-decoration-none">企業帳戶首頁</a></li>
+                    <li class="breadcrumb-item" aria-current="page">企業帳戶</li>
+                </ol>
+            </nav>
+        </div>*@
+        <div class="row">
+            <div class="side-bar d-none d-lg-block col-lg-3 px-3">
+                <ul class="list-group text-center">
+                    <li class="list-group-item fw-bold" style="color: #005290;background-color: #F4F5F5;">
+                        徵才廣告管理
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../../Gina/ResumeEdit/ResumeEdit.html">
+                            <span style="vertical-align: bottom;margin-left: 1px;margin-right: 1px;">會員開通</span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+                            <span style="vertical-align: bottom;margin-left: 2px;">購買置頂蛤蠣</span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#">
+
+                            <span style="vertical-align: bottom;margin-left: 2px;">使用置頂蛤蠣</span>
+                        </a>
+                    </li>
+                    </li>
+                    <li class="list-group-item fw-bold" style="color: #005290;background-color: #F4F5F5;">通知中心</li>
+                    <li class="list-group-item">
+                        <a href="../../Ponpon/chat/chat.html">聊聊通知</a><span class="count">
+                            (0)
+                        </span>
+                    </li>
+                    <li class="list-group-item fw-bold" style="color: #005290;background-color: #F4F5F5;">職缺刊登管理</li>
+                    <li class="list-group-item"><a href="../../Gina/ResumeCenter/ResumeCenter.html">刊登新職缺</a></li>
+
+                    <li class="list-group-item">
+                        <a href="../application_record/application_record.html">職缺清單</a><span class="count"> </span>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="../collection_company/collection_company.html">求職者應徵紀錄</a><span class="count"></span>
+                    </li>
+
+
+                    <li class="list-group-item fw-bold" style="color: #005290;background-color: #F4F5F5;">企業資料管理中心</li>
+                    <li class="list-group-item">
+                        <a href="../application_record/application_record.html">公司介紹編輯</a><span class="count"> </span>
+                    </li>
+                    <li class="list-group-item border-bottom">
+                        <a href="../account_profile_editing/account_profile_editing.html">帳號資料編輯</a>
+                    </li>
+
+                </ul>
+                <ul class="customer-service-info list-group text-center mt-2 mb-2">
+                    <li class="list-group-item fw-bold" style="color: #005290;background-color: #F4F5F5;">客服資訊</li>
+                    <li class="list-group-item border-bottom text-start">
+                        <p>服務時間：<span>08:30-18:00</span></p>
+                        <p><span>週一至週六</span></p>
+                        <p>客服電話：<span>00-0000-0000</span></p>
+                        <p>客服傳真：<span>00-0000-0000</span></p>
+                        <p>我有問題？<a class="text-primary" href="#"><span>前往協助</span></a></p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id ="content" class="col-12 col-lg-9 px-0">
+                <!-- 右側內容 -->
+                @RenderBody()
+
+              
+
+            </div>
+        </div>
+
+    </div>
+    
+
+
+    <!-- footer -->
+    <footer class="footer-station-list">
+        <div class="footer-station-icons">
+            <a href="#" class="footer-station-icons_item-theme-ig" target="_blank"></a>
+            <a href="#" class="footer-station-icons_item-theme-fb" target="_blank"></a>
+            <a href="#" class="footer-station-icons_item-theme-youtube" target="_blank"></a>
+        </div>
+        <div class="footer-station-info">
+            <p class="footer-station-info_item is-pc">客服專線：00-0000-0000</p>
+            <p class="footer-station-info_item is-pc">服務時間：週一至週五 10：00 - 18：00</p>
+            <p class="footer-station-info_item">機構地址：台北市大安區忠孝東路三段xx號xx號樓之x</p>
+        </div>
+        <div class="footer-station-info_copyright">
+            <small>© 2023 by HaBan Technology Co., Ltd. All Rights Reserved.</small>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap@5.3.0 -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    @*<script>
+        $(document).ready(function () {
+            $('.nav-link').mouseover(function () {
+                $(this).trigger('click');
+            });
+        });
+    </script>*@
+    @await RenderSectionAsync("endCSS", required: false)
+    @await RenderSectionAsync("endJS", required: false)
+</body>
+
+</html>
+
+
+

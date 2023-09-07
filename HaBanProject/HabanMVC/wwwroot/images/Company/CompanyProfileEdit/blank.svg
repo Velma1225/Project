@@ -1,0 +1,18 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-540 -1150) translate(120 1059) translate(0 65) translate(420 26)">
+                        <path d="M0 0H60V60H0z"/>
+                        <path stroke="#BDD2FF" stroke-width="3.516" d="M25.898 10.957h8.262c2.589 0 4.688 2.099 4.688 4.688v8.554h0H21.21v-8.554c0-2.59 2.099-4.688 4.687-4.688z"/>
+                        <rect width="41.895" height="28.359" x="9.082" y="20.039" fill="#D3E1FF" rx="4.688"/>
+                        <path fill="#BDD2FF" d="M13.77 18.281h32.52c2.588 0 4.687 2.099 4.687 4.688v8.554H9.082V22.97c0-2.59 2.099-4.688 4.688-4.688z"/>
+                        <rect width="3.516" height="6.445" x="16.23" y="28.477" fill="#F4F7FF" rx="1.758"/>
+                        <rect width="3.516" height="6.445" x="40.313" y="28.477" fill="#F4F7FF" rx="1.758"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

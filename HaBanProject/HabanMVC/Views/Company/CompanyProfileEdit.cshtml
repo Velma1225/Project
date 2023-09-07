@@ -1,0 +1,557 @@
+﻿@using HabanMVC.ViewModels.Company;
+@model CompanyProfileEditViewModel
+@{
+    ViewData["Title"] = "ProfileEdit";
+    Layout = "~/Views/Shared/_LayoutSidebarCompany.cshtml";
+
+}
+
+<div class="editArea">
+    <div class="editTitle">
+        公司資料編輯
+        <img src="~/images/Company/CompanyProfileEdit/edit.svg" alt="">
+    </div>
+
+    <div class="companyProfile company_information">
+
+        <div class="title_area">
+            <h2>公司資料</h2>
+
+            <div class="edit">
+                <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                編輯
+            </div>
+        </div>
+        <div class="editbox">
+            <h3>編輯公司基本資料</h3>
+            <div class="edit_item">
+                <h5>
+                    公司名稱
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="填上完整公司名稱">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    統一編號
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="輸入八碼統一編號">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    員工人數
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="number" placeholder="例:1000" min="1">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    產業類別
+                    <div class="required_icon">*</div>
+                </h5>
+                <select name="" id="">
+                    <option value="">餐飲／旅遊 ／美容美髮類</option>
+                    <option value="">資訊軟體系統類</option>
+                    <option value="">客服／門市／業務／貿易類</option>
+                    <option value="">操作／技術／維修類</option>
+                    <option value="">醫療/保健服務類</option>
+                </select>
+
+            </div>
+            <!-- <div class="edit_item">
+                <h5>
+                    資 本 額
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="例:一千萬">
+            </div> -->
+            <div class="edit_item">
+                <h5>
+                    人事聯絡
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="例:人資部">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    公司電話
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="tel" placeholder="02-xxxxxxx">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    公司傳真
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="02-xxxxxxx">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    公司網址
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="company@gmail.com">
+            </div>
+            <div class="edit_item">
+                <h5>
+                    聯絡地址
+                    <div class="required_icon">*</div>
+                </h5>
+                <input type="text" placeholder="填上完整聯絡地址">
+            </div>
+
+
+            <div class="btn_area">
+                <div class="close butn">取消</div>
+                <div class="save butn">儲存</div>
+            </div>
+        </div>
+
+        <div class="blank_area">
+            <div class="blank">
+                <img src="~/images/Company/CompanyProfileEdit/blank.svg" alt="">
+                <div class="text">新增公司資料</div>
+            </div>
+        </div>
+
+        <label class="eidt_logo">
+            <img src="~/images/Company/CompanyProfileEdit/camera.svg" alt="">
+            <div class="text">設定公司照片</div>
+            <input type="file" name="" id="">
+        </label>
+        <div class="compname">
+            @Model.CompanyName
+        </div>
+        <ul>
+            <li><b>統一編號</b>@Model.CompanyAccount</li>
+            <li><b>員工人數</b>@Model.StaffNumber 人</li>
+            <li><b>公司電話</b>@Model.CompanyPhone</li>
+            <!-- <li><b class="capital">資<i></i>本<i></i>額</b>暫不提供 <a class="a-compInfo" href="https://www.518.com.tw/21091">經濟部商業司查詢</a></li> -->
+            <li class="industry"><b>產業類別</b><a href="https://www.518.com.tw/job-index.html?ac=1008001001" title="餐飲業">餐飲業</a></li>
+            <li><b>公司傳真</b>@Model.Fax</li>
+            <li class="comp_site">
+                <b>公司網址</b>
+                <a href=@Model.CompanySite target="_blank">@Model.CompanySite</a>
+            </li>
+            <li><b>人事聯絡</b>@Model.PersonnelContact</li>
+            <li class="companyAddress">
+                <b>聯絡地址</b>
+                <span>
+                    @Model.Address
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content_area">
+        <div class="content">
+            <!-- 公司簡介 -->
+
+            <div class="company_intro" id="company_intro_id">
+
+
+                <div class="title_area">
+                    <h2>公司簡介</h2>
+
+                    <div class="edit" data-bs-toggle="collapse" href="#collapseExample">
+                        <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                        編輯
+                    </div>
+                </div>
+                <!-- <div class="edit_intro">
+                    <p class="d-inline-flex gap-1">
+                    </p>
+                      <div class="collapse" id="collapseExample">
+                        <div class="card card-body">
+                            <h3>編輯簡介</h3>
+                          <textarea name="" id="" cols="30" rows="10">sdfsdf</textarea>
+                        </div>
+                      </div>
+                </div> -->
+
+                <div class="editbox edit_intro">
+                    <h3>編輯簡介</h3>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <div class="btn_area">
+                        <div class="close butn">取消</div>
+                        <div class="save butn">儲存</div>
+                    </div>
+                </div>
+
+                <p class="intro">
+                    @Html.Raw( @Model.Introduction)
+                </p>
+                <a class="openBtn d-none">展開更多</a>
+                <a class="closeBtn">收合簡介</a>
+            </div>
+
+
+
+            <!-- 產品服務 -->
+            <div class="company_products" id="company_products_id">
+
+                <div class="title_area">
+                    <h2>產品服務</h2>
+
+                    <div class="edit">
+                        <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                        編輯
+                    </div>
+                </div>
+                <div class="editbox ">
+                    <h3>編輯產品及服務</h3>
+                    <textarea name="" id="" cols="30" rows="5"></textarea>
+                    <div class="btn_area">
+                        <div class="close butn">取消</div>
+                        <div class="save butn">儲存</div>
+                    </div>
+                </div>
+
+                <p>
+                    @Html.Raw( @Model.ProductContent)
+                </p>
+
+                <a class="openBtn d-none">展開更多</a>
+                <a class="closeBtn d-none">收合簡介</a>
+            </div>
+            <!-- 公司特色及法定項目 -->
+            <!-- <div class="company_feature_legalitems" id="company_feature_legalitems_id">
+
+                <div class="title_area">
+                    <h2>公司制度</h2>
+
+                    <div class="edit">
+                        <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                        編輯
+                    </div>
+                </div>
+                <div class="editbox">
+                    <h3>編輯公司制度</h3>
+                    <div class="company_feature_edit">
+                        <div class="edit_item">
+                            <h5>
+                                公司特色
+                            </h5>
+                            <div class="text_area">
+                                <input type="text">
+                                <button class="label_add">
+                                    <img src="~/images/Company/CompanyProfileEdit/label_add.svg" alt="">
+                                    新增
+                                </button>
+                            </div>
+                        </div>
+                        <div class="label_list">
+                            <span>員工購物優惠</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>定期聚會</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>生日會</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>產業培訓/教育訓練</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>員工分紅</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                    </div>
+
+                    <div class="company_legalitems_edit">
+                        <div class="edit_item">
+                            <h5>
+                                法定項目
+                            </h5>
+                            <div class="text_area">
+                                <input type="text">
+                                <button class="label_add">
+                                    <img src="~/images/Company/CompanyProfileEdit/label_add.svg" alt="">
+                                    新增
+                                </button>
+                            </div>
+                        </div>
+                        <div class="label_list">
+                            <span>勞保</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>健保</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>加班費</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>育嬰假</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                        <div class="label_list">
+                            <span>特別休假</span>
+                            <button class="delete_icon"></button>
+                        </div>
+                    </div>
+
+
+                    <div class="btn_area">
+                        <div class="close butn">取消</div>
+                        <div class="save butn">儲存</div>
+                    </div>
+                </div>
+                <div class="company_feature">
+                    <h4>公司特色</h4>
+                    <ul>
+                        <li>
+                            <a href="">員工購物優惠</a>
+                        </li>
+                        <li>
+                            <a href="">定期聚會</a>
+                        </li>
+                        <li>
+                            <a href="">生日會</a>
+                        </li>
+                        <li>
+                            <a href="">產業培訓/教育訓練</a>
+                        </li>
+                        <li>
+                            <a href="">員工分紅</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="company_legalitems">
+                    <h4>法定項目</h4>
+                    <ul>
+                        <li>
+                            <a href="">勞保</a>
+                        </li>
+                        <li>
+                            <a href="">健保</a>
+                        </li>
+                        <li>
+                            <a href="">加班費</a>
+                        </li>
+                        <li>
+                            <a href="">育嬰假</a>
+                        </li>
+                        <li>
+                            <a href="">特別休假</a>
+                        </li>
+                        <li>
+                            <a href="">勞退提撥金</a>
+                        </li>
+                    </ul>
+                </div>
+            </div> -->
+            <!-- 員工福利 -->
+
+            <div class="company_welfare">
+
+
+                <div class="title_area">
+                    <h2>公司福利</h2>
+
+                    <div class="edit">
+                        <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                        編輯
+                    </div>
+                </div>
+
+                <div class="editbox">
+                    <h3>編輯福利</h3>
+                    <div class="feature_edit">
+                        <h4>公司特色</h4>
+                        <label for="">
+                            <input type="checkbox" name="" id="">
+                            外商公司
+                        </label>
+                        <label for="">
+                            <input type="checkbox" name="" id="">
+                            上市櫃公司
+                        </label>
+                        <label for="">
+                            <input type="checkbox" name="" id="">
+                            進修補助
+                        </label>
+                        <label for="">
+                            <input type="checkbox" name="" id="">
+                            員購優惠
+                        </label>
+                    </div>
+                    <div class="gift_edit">
+                        <h4>獎金禮品</h4>
+                        <textarea name="" id="" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="insurance_edit">
+                        <h4>保險撫卹</h4>
+                        <textarea name="" id="" cols="30" rows="3"></textarea>
+                    </div>
+                    <div class="welface_desc_edit">
+                        <h4>福利說明</h4>
+                        <textarea name="" id="" cols="30" rows="3"></textarea>
+                    </div>
+
+
+                    <div class="btn_area">
+                        <div class="close butn">取消</div>
+                        <div class="save butn">儲存</div>
+                    </div>
+                </div>
+                <div class="company_feature">
+                    <h4>公司特色</h4>
+                    <ul>
+                        <partial name="~/Views/Company/PartialView/CompanyProfile/_CompanyFeaturePartial.cshtml" model="Model.CompanyFeature" />
+                        @* <li>
+                            <a href="">外商公司</a>
+                        </li>
+                        <li>
+                            <a href="">上市櫃公司</a>
+                        </li>
+                        <li>
+                            <a href="">員購優惠</a>
+                        </li>
+                        <li>
+                            <a href="">進修補助</a>
+                        </li> *@
+
+                    </ul>
+                </div>
+
+                <div class="gift">
+                    <h4>獎金禮品</h4>
+                    <p>@Html.Raw(Model.Gift)</p>
+                </div>
+                <div class="insurance">
+                    <h4>保險撫卹</h4>
+                    <p>@Html.Raw(Model.Insurance)</p>
+                </div>
+                <div class="welface_desc">
+                    <h4>福利說明</h4>
+                    <p>
+                        @Html.Raw(Model.WelfareDetail)
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+        <div id="sidebar">
+
+
+
+            <div class="environment_area">
+
+                <div class="title">
+                    <h2>
+                        環境照片
+
+                    </h2>
+
+                </div>
+                <div class="pic_area">
+
+                    <div class="pic_box pic_one">
+                        <div class="title_area">
+                            <div class="title">環境照片1</div>
+                            <label class="edit" for="input_pic_one">
+                                <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                                編輯
+                            </label>
+                        </div>
+                        <label class="pic">
+                            <img src="/images/Company/CompanyProfile/@Model.EnvironmentPic[0].EnvironmentPicPath" alt="...">
+                            <input type="file" id="input_pic_one">
+                        </label>
+                    </div>
+                    <div class="pic_box pic_two">
+                        <div class="title_area">
+                            <div class="title">環境照片2</div>
+                            <label class="edit" for="input_pic_two">
+                                <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                                編輯
+                            </label>
+                        </div>
+                        <label class="pic">
+                            <img src="/images/Company/CompanyProfile/@Model.EnvironmentPic[1].EnvironmentPicPath" alt="...">
+                            <input type="file" id="input_pic_two">
+                        </label>
+                    </div>
+                    <div class="pic_box pic_three">
+                        <div class="title_area">
+                            <div class="title">環境照片3</div>
+                            <label class="edit" for="input_pic_three">
+                                <img src="~/images/Company/CompanyProfileEdit/edit_blue.svg" alt="">
+                                編輯
+                            </label>
+                        </div>
+                        <label class="pic no_pic">
+                            <img src="~/images/Company/CompanyProfileEdit/camera.svg" alt="">
+                            <div class="text">設定環境照片</div>
+                            <input type="file" id="input_pic_three">
+                        </label>
+                    </div>
+                </div>
+
+                <div id="carouselExampleIndicators" class="carousel slide d-none">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="0" class="active" aria-current="true"
+                                aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators"
+                                data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/images/Company/CompanyProfileEdit/environment_pic.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/images/Company/CompanyProfileEdit/environment_pic_1.jpg" class="d-block w-100" alt="...">
+                        </div>
+
+                    </div>
+                    <div class="control prev">
+                        <button class="carousel-control-prev " type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <i class="fa-solid fa-angle-left"></i>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                    </div>
+                    <div class="control next">
+                        <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <i class="fa-solid fa-angle-right"></i>
+                            <span class="visually-hidden bg-black">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+</div>
+
+
+@section topCSS{
+
+
+
+    <link href="~/css/company/companyprofileedit/companyprofileedit.css" rel="stylesheet" />
+}

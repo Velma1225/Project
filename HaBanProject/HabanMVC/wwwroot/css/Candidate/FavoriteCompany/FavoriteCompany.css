@@ -1,0 +1,162 @@
+body {
+    font-family: 'Arial', Microsoft JhengHei, '微軟正黑體', sans-serif;
+}
+
+.member-list .dropdown-menu img {
+    width: 18px;
+    height: 18px;
+}
+
+input:focus {
+    outline: none;
+}
+
+.nav-item.tab-gap {
+    flex-grow: 1.5;
+}
+
+.nav-link-sm {
+    font-size: 0.5rem;
+}
+
+.side-bar- .list-group a {
+    text-decoration: none;
+    color: #6A7079;
+}
+
+.side-bar- .list-group .count {
+    color: #999999;
+}
+
+.side-bar- .list-group li {
+    border-top: none;
+    border-bottom: none;
+    font-size: 11px;
+}
+
+.side-bar- .list-group .count {
+    color: #999999;
+}
+
+
+.side-bar- .list-group-item a:hover {
+    color: black;
+}
+
+.side-bar- .customer-service-info .list-group-item p:nth-child(n+1) {
+    text-align: center;
+    margin: 2px;
+}
+
+.breadcrumb,
+.breadcrumb li a {
+    color: #232A35;
+    font-size: 11px;
+}
+
+.member-homepage .container {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+.record {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+    .record:nth-child(n+60) {
+        display: none;
+    }
+
+
+/* ------------- */
+
+.safe {
+    width: 94%;
+}
+
+
+@media (max-width: 768px) {
+
+    /* .member-homepage .hi {
+        display: none;
+    } */
+    .Interview {
+        display: none;
+    }
+
+    .alert-box.alert {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .customer-service-info span {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* ----- */
+
+#content h2 {
+    color: #2b3340;
+    border-left: 5px solid #fa1e50;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+#content {
+    font-family: 'Arial', Microsoft JhengHei, '微軟正黑體', sans-serif;
+    text-decoration: none;
+    font-size: 12px;
+    /* margin-bottom: 417px; */
+}
+
+    #content a {
+        color: #6596FF;
+        text-decoration: none;
+    }
+
+    #content .card-header-2 {
+        background: #F9F9F9;
+    }
+
+.card {
+    border-radius: 0;
+}
+.active > .page-link {
+    color: gray !important;
+    background-color: transparent;
+}
+
+
+#content .card-header-2 {
+    background: url("../../../images/candidate/favoritejob/findTalent_combine.png") repeat-x scroll 0 -680px transparent;
+    height: 30px;
+    /* position: relative; */
+}
+
+input.btn-query {
+    display: inline-block;
+    height: 29px;
+    line-height: 29px;
+    margin: 0;
+    padding: 0 10px;
+    color: #49474A;
+    cursor: pointer;
+    border: 1px solid #D5D5D5;
+    background: url(../../../images/candidate/favoritejob/inputbtn_bk.png) repeat-x 0 0;
+    text-decoration: none;
+}
+
+.input-collection_company {
+    color: gray;
+}
